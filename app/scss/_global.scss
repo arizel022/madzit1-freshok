@@ -1,0 +1,15 @@
+body{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "Ruba" sans-serif;
+    background-color: $bg;
+    color: $default;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
