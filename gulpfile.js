@@ -63,14 +63,11 @@ gulp.task('defaul', gulp.series('build'));
 // НАСТРОЙКА БИЛДА - end
 
 
-
-
-
-
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'app/js/**/*.js',
+        '!app/js/main.min.js'
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
