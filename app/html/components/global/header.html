@@ -104,6 +104,7 @@
                         <svg class="header__users-icon" width="25" height="32">
                             <use href="images/icon/sprite.svg#user"></use>
                         </svg>
+                        <span class="sr-only">user</span>
                     </button>
                 </li>
                 <li class="header__users-item">
@@ -112,6 +113,7 @@
                         <svg class="header__users-icon" width="32" height="29">
                             <use href="images/icon/sprite.svg#like"></use>
                         </svg>
+                        <span class="sr-only">like</span>
                     </button>
                 </li>
                 <li class="header__users-item">
@@ -120,6 +122,7 @@
                         <svg class="header__users-icon" width="32" height="32">
                             <use href="images/icon/sprite.svg#cart"></use>
                         </svg>
+                        <span class="sr-only">card</span>
                     </button>
                 </li>
             </ul>
@@ -136,7 +139,7 @@
                 <div class="modal__box">
                     <ul class="modal__list">
                         <li class="modal__item">
-                            @@include('../card.html', {
+                            @@include('../global/card.html', {
                             "imageName1" : "1-1x",
                             "imageName2" : "1-2x",
                             "imageMob" : "1-1x-mob",
@@ -146,7 +149,7 @@
                             })
                         </li>
                         <li class="modal__item">
-                            @@include('../card.html', {
+                            @@include('../global/card.html', {
                             "imageName1" : "3-1x-card",
                             "imageName2" : "3-2x-card",
                             "imageMob" : "3-1x-card",
