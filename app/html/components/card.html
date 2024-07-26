@@ -1,0 +1,25 @@
+<article class="card">
+    <picture>
+        <source srcset="./images/card/@@imageName1.jpg 1x, ./images/card/@@imageName2.jpg 2x" media="(min-width: 320px)">
+        <img class="card__img" src="./images/card/@@imageMob.jpg" alt="a pineapple" width="60" height="60">
+    </picture>
+    <div class="card__content">
+        <h2 class="card__title">@@title</h2>
+        <span class="card__price">@@price</span>
+    </div>
+    <form class="card__form">
+        <button class="card__btn card__btn--minus" >
+            <span class="sr-only">minus button</span>
+        </button>
+        <label class="card__form-label" for="number">
+            <input class="card__form-input" name="number" id="number" type="number" value="1" required >
+        </label>
+        <button class="card__btn card__btn--plus">
+            <span class="sr-only">plus button</span>
+        </button>
+        <span class="card__price">@@price2</span>
+    </form>
+    <button class="card__close-btn" type="button">
+        <span class="sr-only">close button</span>
+    </button>
+</article>
