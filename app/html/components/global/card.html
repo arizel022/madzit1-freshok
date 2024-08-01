@@ -1,25 +1,38 @@
-<article class="card">
-    <picture>
-        <source srcset="./images/card/@@imageName1.jpg 1x, ./images/card/@@imageName2.jpg 2x" media="(min-width: 320px)">
-        <img class="card__img" src="./images/card/@@imageMob.jpg" alt="@@imgAlt" width="60" height="60">
-    </picture>
-    <div class="card__content">
-        <h2 class="card__title">@@title</h2>
-        <span class="card__price">@@price</span>
+<div class="basket-card">
+        <picture>
+            <source srcset="./images/card/@@imageName1.jpg 1x, ./images/card/@@imageName2.jpg 2x"
+                media="(min-width: 320px)">
+            <img class="basket-card__img" src="./images/card/@@imageMob.jpg" alt="@@imgAlt" width="60"
+                height="60">
+        </picture>
+        <div class="basket-card__content">
+            <h4 class="basket-card__title">@@title</h4>
+            <span class="basket-card__price">
+                @@price
+                <span class="currency">
+                    &#8372;
+                </span>
+            </span>
     </div>
-    <form class="card__form">
-        <button class="card__btn card__btn--minus" >
-            <span class="sr-only">minus button</span>
+    <form class="counter">
+        <button class="counter__btn counter__btn--minus" type="button">
+            <span class="sr-only">кнопка минус</span>
         </button>
-        <label class="card__form-label" for="number">
-            <input class="card__form-input" name="number" id="number" type="number" value="1" required >
+        <label class="counter__form-label" for="number">
+            <span class="sr-only">введите количество товара</span>
+            <input class="counter__form-input" name="@@name" id="@@id" type="number" value="1" required>
         </label>
-        <button class="card__btn card__btn--plus">
-            <span class="sr-only">plus button</span>
+        <button class="counter__btn counter__btn--plus" type="button">
+            <span class="sr-only">кнопка плюс</span>
         </button>
-        <span class="card__price">@@price2</span>
+        <span class="counter__price">
+            @@price2
+            <span class="currency">
+                &#8372;
+            </span>
+        </span>
     </form>
-    <button class="card__close-btn" type="button">
-        <span class="sr-only">close button</span>
+    <button class="basket-card__close-btn" type="button">
+        <span class="sr-only">удалить добавленные товары из корзины</span>
     </button>
-</article>
+</div>
