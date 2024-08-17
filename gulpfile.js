@@ -66,6 +66,7 @@ gulp.task('defaul', gulp.series('build'));
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/swiper/swiper.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])

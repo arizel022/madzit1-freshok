@@ -1,0 +1,180 @@
+.hero {
+    position: relative;
+
+    &__container {
+        max-width: 1920px;
+        padding: 0;
+    }
+
+    &__content {
+        max-width: 1290px;
+        width: 70%;
+        padding: 24px 24px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    &__title {
+        width: 100%;
+        font-family: "Ruda", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #505050;
+        margin-bottom: 7px;
+    }
+
+    &__subtitle {
+        display: block;
+        color: #cf3e3b;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 140%;
+        color: #505050;
+        margin-bottom: 32px;
+    }
+
+    &__swiper-slide {
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        padding: 142px 0;
+
+        &--slide1 {
+            @media (min-width: 1200px) {
+                background-image: url('../images/hero/1-1x.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/1-2x.jpg');
+                }
+            }
+        }
+
+        &--slide2 {
+            @media (min-width: 1200px) {
+                background-image: url('../images/hero/2-1x.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/2-2x.jpg');
+                }
+            }
+        }
+
+        &--slide3 {
+            @media (min-width: 1200px) {
+                background-image: url('../images/hero/3-1x.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/3-2x.jpg');
+                }
+            }
+        }
+    }
+
+    &__swiper-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 6px;
+        color: #505050;
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 270px;
+        z-index: 5;
+        transition: color 0.5s, background-color 0.5s, outline 0.5s;
+
+        &:hover {
+            color: $green;
+            background-color: #e0edcf;
+        }
+
+        &:focus {
+            outline: 3px solid #97B86B;
+        }
+
+        &:active {
+            color: $green;
+            background-color: #f3f3f2;
+        }
+
+        &--prev {
+            right: 60px;
+
+            .hero__swiper-icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--next {
+            left: 60px;
+
+            &.disabled {
+                pointer-events: none;
+                color: #c1c1c1;
+            }
+        }
+    }
+
+    &__swiper-icon {
+        fill: currentColor;
+    }
+
+    &__advantages {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: -23px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -5;
+            background-color: #F6F6F6;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 65px;
+        padding: 50px 30px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 24px;
+        max-width: 255px;
+        width: 100%;
+    }
+
+    &__advantages-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 7px;
+    }
+
+    &__advantages-text {
+        color: #212121;
+    }
+}
