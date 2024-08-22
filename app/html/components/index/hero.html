@@ -1,88 +1,100 @@
 <section class="hero">
-    <div class="container hero__container">
-        <div class="hero__swiper-wrapper swiper">
-            <button class="hero__swiper-btn hero__swiper-btn--prev">
-                <span class="sr-only">следующий слайд</span>
-                <svg class="hero__swiper-icon" width="19" height="32">
-                    <use href="images/icon/sprite.svg#arrow-big"></use>
-                </svg>
-            </button>
-            <div class="hero__swiper-box swiper-wrapper">
-                <div class="hero__swiper-slide hero__swiper-slide--slide1 swiper-slide">
+    <h2 class="sr-only">акционные товары</h2>
+    <div class="swiper hero__swiper">
+        <button class="hero__swiper-btn hero__swiper-btn--next" type="button">
+            <span class="sr-only">следующий слайд</span>
+            <svg class="hero__swiper-icon" width="19" height="32">
+                <use href="images/icon/sprite.svg#arrow-big"></use>
+            </svg>
+        </button>
+        <div class="swiper-wrapper hero__swiper-wrapper">
+            <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide1 swiper-slide">
+                <div class="container hero__container">
                     <div class="hero__content">
-                        <h2 class="hero__title">
+                        <h3 class="hero__title">
                             свежачок вам в хату
                             <span class="hero__subtitle">
                                 скидка -50%
                             </span>
-                        </h2>
+                        </h3>
                         <p class="hero__text">
                             Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
                         </p>
-                        <button class="button">Купить сейчас</button>
+                        <a class="hero__link button" href="#">Купить сейчас</a>
                     </div>
                 </div>
-                <div class="hero__swiper-slide hero__swiper-slide--slide2 swiper-slide">
+            </div>
+            <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide2">
+                <div class="container  hero__container">
                     <div class="hero__content">
-                        <h2 class="hero__title">
+                        <h3 class="hero__title">
                             накрути себе томатов
                             <span class="hero__subtitle">
                                 акция: 3 кг по цене 1
                             </span>
-                        </h2>
+                        </h3>
                         <p class="hero__text">
                             Только с 12 по 15 июля скидка на домашние помидорчики
                         </p>
-                        <button class="button">Купить сейчас</button>
+                        <a class="hero__link button" href="#">Купить сейчас</a>
                     </div>
                 </div>
-                <div class="hero__swiper-slide hero__swiper-slide--slide3 swiper-slide">
+            </div>
+            <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide3">
+                <div class="container hero__container">
                     <div class="hero__content">
-                        <h2 class="hero__title">
+                        <h3 class="hero__title">
                             Пусть остальные
                             позеленеют от зависти
                             <span class="hero__subtitle">
                                 Распродажа зелени
                             </span>
-                        </h2>
-                        <button class="button">Купить сейчас</button>
+                        </h3>
+                        <a class="hero__link button" href="#">Купить сейчас</a>
                     </div>
                 </div>
             </div>
-            <button class="hero__swiper-btn hero__swiper-btn--next disabled">
-                <span class="sr-only">предыдущий слайд</span>
-                <svg class="hero__swiper-icon" width="19" height="32">
-                    <use href="images/icon/sprite.svg#arrow-big"></use>
-                </svg>
-            </button>
         </div>
+        <button class="hero__swiper-btn hero__swiper-btn--prev" type="button" disabled>
+            <span class="sr-only">предыдущий слайд</span>
+            <svg class="hero__swiper-icon" width="19" height="32">
+                <use href="images/icon/sprite.svg#arrow-big"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="container">
         <div class="hero__advantages">
-            <ul class="hero__list">
-                <li class="hero__item">
+            <ul class="hero__advantages-list">
+                <li class="hero__advantages-item">
                     <svg class="hero__advantages-icon" width="50" height="50">
                         <use href="images/icon/sprite.svg#scooter"></use>
                     </svg>
                     <div class="hero__advantages-box">
-                        <h3 class="hero__advantages-title">Бесплатная доставка</h3>
-                        <span class="hero__advantages-text">Для заказов на сумму от 500 ₴</span>
+                        <span class="hero__advantages-title">Бесплатная доставка</span>
+                        <p class="hero__advantages-text">
+                            Для заказов на сумму от 500
+                            <span class="currency">
+                                &#8372;
+                            </span>
+                        </p>
                     </div>
                 </li>
-                <li class="hero__item">
+                <li class="hero__advantages-item">
                     <svg class="hero__advantages-icon" width="50" height="50">
                         <use href="images/icon/sprite.svg#return-box"></use>
                     </svg>
                     <div class="hero__advantages-box">
-                        <h3 class="hero__advantages-title">Возврат товара</h3>
-                        <span class="hero__advantages-text">Если товары были испорчены</span>
+                        <span class="hero__advantages-title">Возврат товара</span>
+                        <p class="hero__advantages-text">Если товары были испорчены</p>
                     </div>
                 </li>
-                <li class="hero__item">
+                <li class="hero__advantages-item">
                     <svg class="hero__advantages-icon" width="50" height="50">
                         <use href="images/icon/sprite.svg#24h"></use>
                     </svg>
                     <div class="hero__advantages-box">
-                        <h3 class="hero__advantages-title">Поддержка 24/7</h3>
-                        <span class="hero__advantages-text">Лучшие операторы</span>
+                        <span class="hero__advantages-title">Поддержка 24/7</span>
+                        <p class="hero__advantages-text">Лучшие операторы</p>
                     </div>
                 </li>
             </ul>

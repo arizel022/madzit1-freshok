@@ -1,17 +1,24 @@
 .hero {
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 50px 0 30px;
+
+    &__swiper {
+        top: -50px;
+    }
 
     &__container {
-        max-width: 1920px;
-        padding: 0;
+        display: flex;
+        flex-grow: 1;
     }
 
     &__content {
-        max-width: 1290px;
-        width: 70%;
+        width: 100%;
         padding: 24px 24px;
         border-radius: 4px;
-        background: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     &__title {
@@ -93,9 +100,10 @@
         height: 60px;
         border-radius: 6px;
         color: #505050;
-        background: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
         position: absolute;
-        top: 270px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 5;
         transition: color 0.5s, background-color 0.5s, outline 0.5s;
 
@@ -114,19 +122,19 @@
         }
 
         &--prev {
-            right: 60px;
+            left: 60px;
 
-            .hero__swiper-icon {
-                transform: rotate(180deg);
+            &:disabled {
+                pointer-events: none;
+                color: #c1c1c1;
             }
         }
 
         &--next {
-            left: 60px;
+            right: 60px;
 
-            &.disabled {
-                pointer-events: none;
-                color: #c1c1c1;
+            .hero__swiper-icon {
+                transform: rotate(180deg);
             }
         }
     }
@@ -138,36 +146,26 @@
     &__advantages {
         display: flex;
         justify-content: center;
-        position: relative;
-        top: -23px;
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100vw;
-            height: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -5;
-            background-color: #F6F6F6;
-        }
     }
 
-    &__list {
+    &__advantages-list {
         display: flex;
         gap: 65px;
-        padding: 50px 30px;
     }
 
-    &__item {
+    &__advantages-item {
         display: flex;
         gap: 24px;
-        max-width: 255px;
+        max-width: 265px;
         width: 100%;
     }
 
+    &__advantages-icon {
+        flex-shrink: 0;
+    }
+
     &__advantages-title {
+        display: block;
         font-weight: 600;
         font-size: 16px;
         line-height: 140%;
