@@ -1,3 +1,4 @@
+
 $(function () {
 
     $(document).ready(function () {
@@ -41,3 +42,29 @@ $('.counter__btn--plus').click(function () {
     $input.change();
     return false;
 });
+
+// var swiper = new Swiper(".hero__swiper-wrapper", {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+  
+//     navigation: {
+//       nextEl: ".hero__swiper-btn--next",
+//       prevEl: ".hero__swiper-btn--prev",
+//     },
+//   });
+
+// import Swiper from 'swiper/bundle';
+
+// import styles bundle
+// import 'swiper/css/bundle';
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    
+    navigation: {
+      nextEl: '.hero__swiper-btn--next',
+      prevEl: '.hero__swiper-btn--prev',
+    },
+  });
+
