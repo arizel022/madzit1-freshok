@@ -8,6 +8,8 @@ $(function () {
     });
 });
 
+var mixer = mixitup('.grid');
+
 
 (() => {
     const refs = {

@@ -71,7 +71,6 @@ body {
     }
 }
 
-
 .close-button {
     display: flex;
     justify-content: center;
@@ -126,10 +125,21 @@ body {
         }
     }
 
-    &--card{
+    &--card {
         top: 114px;
         right: 24px;
         width: 24px;
-        height: 24px;  
+        height: 24px;
     }
+}
+
+.icon {
+    fill: currentColor;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
 }

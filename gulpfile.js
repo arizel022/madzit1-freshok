@@ -67,6 +67,7 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/swiper-bundle.js',
+        'node_modules/mixitup/dist/mixitup.min.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])
