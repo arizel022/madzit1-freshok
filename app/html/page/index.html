@@ -2,10 +2,146 @@
 "title" : "Интернет магазин продуктов FreShok"
 })
 
-<body >
+<body>
     <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
     @@include('../components/global/header.html')
     @@include('../components/index/hero.html')
+    <section class="product">
+        <div class="container">
+            <h2 class="title">Топовые товары</h2>
+            <ul class="filter">
+                <li class="filter__item">
+                    <button class="filter__btn" type="button" data-filter="all">
+                        Все товары
+                    </button>
+                </li>
+                <li class="filter__item">
+                    <button class="filter__btn" type="button" data-filter=".fruits">
+                        Фрукты
+                    </button>
+                </li>
+                <li class="filter__item">
+                    <button class="filter__btn" type="button" data-filter=".vegetables">
+                        овощи
+                    </button>
+                </li>
+                <li class="filter__item">
+                    <button class="filter__btn" type="button" data-filter=".drinks">
+                        Напитки
+                    </button>
+                </li>
+                <li class="filter__item">
+                    <button class="filter__btn" type="button" data-filter=".grocery">
+                        бакалея
+                    </button>
+                </li>
+            </ul>
+            <ul class="grid">
+                @@include('../components/global/product-card.html', {
+                'category' : 'fruits',
+                'new' : '',
+                'discount50' : '',
+                'discount30' : 'none',
+                'hit' : 'none',
+                'imagFileName' : '1',
+                'productName' : 'Ананас, 1кг',
+                'oldPriceVaule' : '199',
+                'currentPriceVaule' : '99',
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'vegetables',
+                'new' : 'none',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : 'none',
+                'imagFileName' : '2',
+                'productName' : 'Лимон, 1кг',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '49',
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'vegetables',
+                'new' : 'none',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : '',
+                'imagFileName' : '3',
+                'productName' : 'Питахайя красная с белой мякотью, 1шт',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '101'
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'fruits',
+                'new' : 'none',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : 'none',
+                'imagFileName' : '4',
+                'productName' : 'Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '60'
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'drinks',
+                'new' : 'none',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : '',
+                'imagFileName' : '5',
+                'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '19'
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'drinks',
+                'new' : 'none',
+                'discount50' : 'none',
+                'discount30' : '',
+                'hit' : 'none',
+                'imagFileName' : '6',
+                'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+                'oldPriceVaule' : '49',
+                'currentPriceVaule' : '19'
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'grocery',
+                'new' : '',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : 'none',
+                'imagFileName' : '7',
+                'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '219'
+                })
+
+                @@include('../components/global/product-card.html', {
+                'category' : 'grocery',
+                'new' : '',
+                'discount50' : 'none',
+                'discount30' : 'none',
+                'hit' : 'none',
+                'imagFileName' : '8',
+                'productName' : 'Перец оранжевый, 1кг',
+                'oldPrice' : 'none',
+                'oldPriceVaule' : '',
+                'currentPriceVaule' : '100',
+                })
+            </ul>
+            <a class="product__link" href="#">Показать еще</a>
+        </div>
+    </section>
     @@include('../components/global/footer-scripts.html')
 </body>
 

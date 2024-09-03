@@ -1,0 +1,53 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 51px;
+
+    &__btn {
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #505050;
+        border-radius: 3px;
+        position: relative;
+        transition: color 0.5s, outline 0.5s;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            border-bottom: 2px solid transparent;
+            position: absolute;
+            bottom: -2px;
+            transition: border-color 0.5s;
+        }
+
+        &:hover {
+            color: $green;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            &::before {
+                border-color: #E0EDCF;
+            }
+        }
+
+        &.mixitup-control-active {
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                border-bottom: 2px solid #E0EDCF;
+                position: absolute;
+                bottom: -2px;
+                transition: border-color 0.5s;
+            }
+        }
+    }
+}
