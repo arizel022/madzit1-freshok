@@ -1,0 +1,30 @@
+.partners {
+    padding: 72px 0;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 140px;
+        overflow: hidden;
+        padding: 5px 0;
+    }
+
+    &__link {
+        opacity: .50;
+        border-radius: 3px;
+        transition: opacity 0.5s, outline 0.5s;
+
+        &:hover {
+            opacity: 100;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            opacity: .70;
+        }
+    }
+}
