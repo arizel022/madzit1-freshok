@@ -1,26 +1,9 @@
 .stock {
     padding: 72px 0;
     background-color: #F5F5F5;
-    text-align: center;
 
     &__filter-wrraper{
         margin-bottom: 48px;
-    }
-
-    &__card-link {
-        transition: color 0.5s, opacity 0.5s;
-
-        &:hover {
-            color: $green;
-        }
-
-        &:focus {
-            opacity: .70;
-        }
-
-        &:active {
-            opacity: .50;
-        }
     }
 
     &__link{

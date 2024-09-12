@@ -11,6 +11,11 @@
     }
 
     &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
         opacity: .50;
         border-radius: 3px;
         transition: opacity 0.5s, outline 0.5s;

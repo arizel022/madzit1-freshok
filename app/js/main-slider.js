@@ -11,9 +11,7 @@ const swiper = new Swiper('.swiper', {
 
   var swiper2 = new Swiper(".mySwiper2",{
     slidesPerView: 6,
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true,
+    
     autoplay: {
       delay: 1500,
       disableOnInteraction: false,

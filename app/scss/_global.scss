@@ -199,8 +199,10 @@ body {
 
 
 .product-price {
+    display: flex;
+    flex-direction: column;
+    
     &--old {
-        display: block;
         color: #C1C1C1;
         margin-bottom: 3px;
         position: relative;
@@ -211,7 +213,6 @@ body {
 
         &::before {
             content: '';
-            display: block;
             border-top: 1px solid #C1C1C1;
             width: 45px;
             position: absolute;
@@ -231,7 +232,7 @@ body {
         color: #505050;
     }
 
-    &--stock {
+    &--flex {
         display: flex;
         flex-flow: row-reverse;
         align-items: baseline;

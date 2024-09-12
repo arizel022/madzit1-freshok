@@ -9,7 +9,7 @@
     <section class="product">
         <div class="container">
             <h2 class="title">Топовые товары</h2>
-            <div class="product__filter-wrraper"  data-ref="container-1">
+            <div class="product__filter-wrraper" data-ref="container-1">
                 <ul class="filter">
                     <li class="filter__item">
                         <button class="filter__btn" type="button" data-filter="all">
@@ -144,33 +144,60 @@
             </div>
         </div>
     </section>
-    @@include('../components/index/advertising.html',{
-    'colorWhite' : 'color-white',
-    'colorBlack' : 'color-black',
-    })
+
+    <section class="advertising">
+        <div class="container">
+            <h2 class="sr-only">рекламные баннеры</h2>
+            <div class="advertising__list">
+                @@include('../components/global/advertising-card.html',{
+                'size' : 'advertising-card--big',
+                'bg' : 'advertising-card--first',
+                'uptitle' : 'свежайшие фрукты',
+                'title' : 'начни фруктовое лето <br> всего От 19 &#8372;',
+                'light' : 'advertising-card--light'
+                })
+
+                @@include('../components/global/advertising-card.html',{
+                'size' : '',
+                'bg' : 'advertising-card--second',
+                'uptitle' : 'сезонная распродажа',
+                'title' : 'овощепад <br> до -50%',
+                'light' : ''
+                })
+
+                @@include('../components/global/advertising-card.html',{
+                'size' : '',
+                'bg' : 'advertising-card--third',
+                'uptitle' : 'ням-ням',
+                'title' : 'свежий <br> хлебчик',
+                'light' : ''
+                })
+            </div>
+        </div>
+    </section>
     <section class="stock">
         <div class="container">
             <h2 class="title">Акции</h2>
             <div class="stock__filter-wrraper" data-ref="container-2">
                 <ul class="filter">
                     <li class="filter__item">
-                        <button class="filter__btn filter__btn--stock " type="button" data-filter="all">
+                        <button class="filter__btn" type="button" data-filter="all">
                             Все товары
                         </button>
                     </li>
                     <li class="filter__item">
-                        <button class="filter__btn filter__btn--stock" type="button" data-filter=".new">
+                        <button class="filter__btn" type="button" data-filter=".new">
                             Новинки
                         </button>
                     </li>
                     <li class="filter__item">
-                        <button class="filter__btn ilter__btn--stock" type="button" data-filter=".hits">
+                        <button class="filter__btn" type="button" data-filter=".hits">
                             хиты
                         </button>
                     </li>
                 </ul>
-                <ul class="stock-list">
-                    @@include('../components/global/product-card-stock.html', {
+                <ul class="grid">
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'new',
                     'new' : '',
                     'discount50' : 'none',
@@ -186,7 +213,7 @@
                     'star' : '4.9',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'new',
                     'new' : '',
                     'discount50' : 'none',
@@ -203,7 +230,7 @@
                     'star' : '4.9',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'hits',
                     'new' : '',
                     'discount50' : 'none',
@@ -219,7 +246,7 @@
                     'star' : '5.0',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'new',
                     'new' : '',
                     'discount50' : 'none',
@@ -235,7 +262,7 @@
                     'star' : '5.0',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'hits',
                     'new' : '',
                     'discount50' : 'none',
@@ -251,7 +278,7 @@
                     'star' : '4.5',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'new',
                     'new' : 'none',
                     'discount50' : 'none',
@@ -267,7 +294,7 @@
                     'star' : '4.9',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'hits',
                     'new' : 'none',
                     'discount50' : 'none',
@@ -283,7 +310,7 @@
                     'star' : '4.8',
                     })
 
-                    @@include('../components/global/product-card-stock.html', {
+                    @@include('../components/global/stock-card.html', {
                     'category' : 'hits',
                     'new' : 'none',
                     'discount50' : 'none',
@@ -317,37 +344,38 @@
             <ul class="news__list">
                 <li class="news__item">
                     @@include('../components/global/news-card.html', {
-                    'time' : '2024-07-15',
-                    'timeText' : 'июль',
-                    'timeNumber' : '15',
+                    'datetime' : '2024-07-15',
+                    'month' : 'июль',
+                    'day' : '15',
                     'imagFileName' : '1',
-                    'alt' : 'Клубника',    
+                    'alt' : 'Клубника',
                     'title' : 'Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!'
                     })
                 </li>
                 <li class="news__item">
                     @@include('../components/global/news-card.html', {
-                    'time' : '2024-05-07',
-                    'timeText' : 'май',
-                    'timeNumber' : '07',
+                    'datetime' : '2024-05-07',
+                    'month' : 'май',
+                    'day' : '07',
                     'imagFileName' : '2',
-                    'alt' : 'Манго',  
+                    'alt' : 'Манго',
                     'title' : 'Шикарнейший выбор манго в нашем онлайн-маркете'
                     })
                 </li>
                 <li class="news__item">
                     @@include('../components/global/news-card.html', {
-                    'time' : '2024-02-20',
-                    'timeText' : 'февраль',
-                    'timeNumber' : '20',
+                    'datetime' : '2024-02-20',
+                    'month' : 'февраль',
+                    'day' : '20',
                     'imagFileName' : '3',
-                    'alt' : 'папайя',  
+                    'alt' : 'папайя',
                     'title' : 'Всё, что вы хотели знать о папайя'
                     })
                 </li>
             </ul>
         </div>
     </section>
+    @@include('../components/global/footer.html')
     @@include('../components/global/footer-scripts.html')
 </body>
 
