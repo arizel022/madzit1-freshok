@@ -1,4 +1,3 @@
-
 $(function () {
 
     $(document).ready(function () {
@@ -8,8 +7,17 @@ $(function () {
     });
 });
 
-var mixer = mixitup('.grid');
+var containerEl1 = document.querySelector('[data-ref="container-1"]');
+var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
+var config = {
+  controls: {
+    scope: 'local'
+  }
+};
+
+var mixer1 = mixitup(containerEl1, config);
+var mixer2 = mixitup(containerEl2, config);
 
 (() => {
     const refs = {
@@ -45,28 +53,4 @@ $('.counter__btn--plus').click(function () {
     return false;
 });
 
-// var swiper = new Swiper(".hero__swiper-wrapper", {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-  
-//     navigation: {
-//       nextEl: ".hero__swiper-btn--next",
-//       prevEl: ".hero__swiper-btn--prev",
-//     },
-//   });
-
-// import Swiper from 'swiper/bundle';
-
-// import styles bundle
-// import 'swiper/css/bundle';
-
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    
-    navigation: {
-      nextEl: '.hero__swiper-btn--next',
-      prevEl: '.hero__swiper-btn--prev',
-    },
-  });
 

@@ -1,0 +1,56 @@
+.stock-card {
+    display: flex;
+    height: 100%;
+    outline: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 12px;
+    transition: outline 0.5s;
+
+    &:hover {
+        outline-color: $green;
+    }
+
+    &__link {
+        display: flex;
+        transition: color 0.5s, opacity 0.5s;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:focus {
+            opacity: .70;
+        }
+
+        &:active {
+            opacity: .50;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__bottom {
+        margin-top: auto;
+        flex-grow: 1;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+}

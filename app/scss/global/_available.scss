@@ -1,0 +1,20 @@
+.available {
+
+    &__item {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 100%;
+
+        &--in-stock {
+            color: $green;
+        }
+
+        &--ends {
+            color: #cf3e3b;
+        }
+
+        &--not-available {
+            color: #c1c1c1;
+        }
+    }
+}

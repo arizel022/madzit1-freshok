@@ -1,0 +1,62 @@
+<li class="grid__item mix @@category">
+    <article class="stock-card">
+            <a class="stock-card__link" href="product-page.html">
+            <div class="stock-card__inner">
+                <div class="badges badges--stock">
+                    <span class="badges__item badges__item--stock badges__item--new @@new">
+                        Новинка
+                    </span>
+                    <span class="badges__item badges__item--stock badges__item--discount @@discount50">
+                        -50%
+                    </span>
+                    <span class="badges__item badges__item--stock badges__item--discount @@discount30">
+                        -30%
+                    </span>
+                    <span class="badges__item badges__item--stock badges__item--hit @@hit">
+                        хит
+                    </span>
+                </div>
+                <picture>
+                    <source srcset="./images/stock/@@imagFileName-1x.jpg 1x, ./images/stock/@@imagFileName-2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                    <img class="stock-card__img" src="./images/stock/@@imagFileName-1x.jpg" alt="@@productName"
+                        width="100" height="100">
+                </picture>
+            </div>
+            <div class="stock-card__content">
+                <h3 class="stock-card__title">@@productName</h3>
+                <div class="stock-card__bottom">
+                    <div class="available available--stoct">
+                        <span class="available__item available__item--in-stock @@stock">в наличии</span>
+                        <span class="available__item available__item--ends @@ends">заканчивается</span>
+                        <span class="available__item available__item--not-available @@not-available">нет в наличии</span>
+                    </div>
+                    <div class="stock-card__box">
+                        <div class="product-price product-price--flex">
+                            <span class="product-price__item product-price--old @@oldPrice">
+                                @@oldPriceVaule
+                                <span class="currency">
+                                    &#8372;
+                                </span>
+                            </span>
+                            <span class="product-price__item product-price--font">
+                                @@currentPriceVaule
+                                <span class="currency">
+                                    &#8372;
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="star">
+                            @@star
+                            <svg class="star__icon" width="16" height="16">
+                                <use href="images/icon/sprite.svg#star"></use>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </a>
+        </article>
+</li>

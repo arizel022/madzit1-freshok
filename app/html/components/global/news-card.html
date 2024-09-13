@@ -1,0 +1,17 @@
+<article class="news-card">
+    <time class="news-card__time" datetime='@@datetime'>
+        @@month
+        <span class="news-card__number">
+            @@day
+        </span>
+    </time>
+    <picture>
+        <source srcset="./images/news-card/@@imagFileName-1x.jpg 1x, ./images/news-card/@@imagFileName-2x.jpg 2x" media="(min-width: 1200px)">
+        <img class="news-card__img" src="./images/card/@@imagFileName-1x.jpg" alt="@@alt" width="410" height="240">
+    </picture>
+    <a class="news-card__link" href="#">
+        <h3 class="news-card__title">
+            @@title
+        </h3>
+    </a>
+</article>
