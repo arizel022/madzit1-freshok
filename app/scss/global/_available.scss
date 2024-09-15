@@ -5,15 +5,15 @@
         font-weight: 600;
         line-height: 100%;
 
-        &--in-stock {
+        &--green {
             color: $green;
         }
 
-        &--ends {
+        &--red {
             color: #cf3e3b;
         }
 
-        &--not-available {
+        &--grey {
             color: #c1c1c1;
         }
     }

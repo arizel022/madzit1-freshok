@@ -1,10 +1,9 @@
 <header class="header">
     <div class="container">
-        <h2 class="sr-only">главное меню</h2>
         <nav class="menu">
             <div class="menu__top">
                 <ul class="menu__list">
-                    <li class="menu__item menu__item--margin">
+                    <li class="menu__item">
                         <a class="menu__link menu__link--icon" href="#">
                             <svg class="menu__icon" width="32" height="22">
                                 <use href="images/icon/sprite.svg#truck"></use>
@@ -48,40 +47,40 @@
                     </button>
                     <ul class="main-menu__list">
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Овощи и фрукты</a>
+                            <a class="main-menu__link" href="#">Овощи и фрукты</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Бакалея</a>
+                            <a class="main-menu__link" href="#">Бакалея</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Молочные продукты</a>
+                            <a class="main-menu__link" href="#">Молочные продукты</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Хлеб</a>
+                            <a class="main-menu__link" href="#">Хлеб</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Мясо</a>
+                            <a class="main-menu__link" href="#">Мясо</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Колбаса</a>
+                            <a class="main-menu__link" href="#">Колбаса</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Рыба</a>
+                            <a class="main-menu__link" href="#">Рыба</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Алкоголь</a>
+                            <a class="main-menu__link" href="#">Алкоголь</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Напитки</a>
+                            <a class="main-menu__link" href="#">Напитки</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Торты</a>
+                            <a class="main-menu__link" href="#">Торты</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Мясо</a>
+                            <a class="main-menu__link" href="#">Мясо</a>
                         </li>
                         <li class="main-menu__item">
-                            <a class="main-menu__btn" href="#">Чай, кофе</a>
+                            <a class="main-menu__link" href="#">Чай, кофе</a>
                         </li>
                     </ul>
                 </div>
@@ -99,83 +98,79 @@
                 <ul class="menu__user">
                     <li class="menu__user-item">
                         <button class="menu__user-btn" type="button">
-                            <svg class="menu__user-icon" width="25" height="32">
+                            <svg class="icon menu__user-icon" width="25" height="32">
                                 <use href="images/icon/sprite.svg#user"></use>
                             </svg>
                             <span class="sr-only">пользователь</span>
                         </button>
                     </li>
                     <li class="menu__user-item">
-                        <button class="menu__user-btn" type="button">
+                        <button class="button-favorites menu__user-btn" type="button">
                             <span class="menu__user-num">12</span>
-                            <svg class="menu__user-icon" width="32" height="29">
+                            <svg class="icon button-favorites__icon" width="32" height="29">
                                 <use href="images/icon/sprite.svg#like"></use>
                             </svg>
                             <span class="sr-only">понравившиеся товары</span>
                         </button>
                     </li>
                     <li class="menu__user-item">
-                        <button class="menu__user-btn" type="button" data-modal-open>
+                        <button class="button-basket menu__user-btn" type="button" data-modal-open>
                             <span class="menu__user-num">12</span>
-                            <svg class="menu__user-icon" width="32" height="32">
+                            <svg class="icon button-basket__icon" width="32" height="32">
                                 <use href="images/icon/sprite.svg#cart"></use>
                             </svg>
                             <span class="sr-only">корзина товаров</span>
                         </button>
                     </li>
                 </ul>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="basket">
+                        <div class="basket__top">
+                            <h3 class="basket__title">Корзина</h3>
+                            <button class="basket__delete" type="button">очистить корзину</button>
+                        </div>
+                        <div class="basket__box">
+                            <ul class="basket__list">
+                                <li class="basket__item">
+                                    @@include('../global/basket-card.html', {
+                                    "imagFileName" : "1",
+                                    "title" : "Ананас, 1 кг",
+                                    "price" : "99",
+                                    "price2" : "198",
+                                    "imgAlt" : "ананас",
+                                    "name" : "a pineapple",
+                                    "id" : "a pineapple",
+                                    })
+                                </li>
+                                <li class="basket__item">
+                                    @@include('../global/basket-card.html', {
+                                    "imagFileName" : "2",
+                                    "title" : "Питахайя красная с белой мякотью, 1шт",
+                                    "price" : "101 ",
+                                    "price2" : "202",
+                                    "imgAlt" : "питахайя красная ",
+                                    "name" : "pitahaya",
+                                    "id" : "pitahaya",
+                                    })
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="basket__total">
+                            <span class="basket__total-text">Товаров на сумму</span>
+                            <span class="basket__total-price">
+                                400
+                                <span class="currency">
+                                    &#8372;
+                                </span>
+                            </span>
+                        </div>
+                        <a class="basket__btn" href="#">Оформить заказ</a>
+                    </div>
+                    <button class="close-button" type="button" data-modal-close>
+                        <span class="sr-only">кнопка закрытия</span>
+                    </button>
+                </div>
             </div>
         </nav>
-        <div class="backdrop is-hidden" data-modal>
-            <div class="basket">
-                <div class="basket__top">
-                    <h3 class="basket__title">Корзина</h3>
-                    <button class="basket__delete" type="button">очистить корзину</button>
-                </div>
-                <div class="basket__box">
-                    <ul class="basket__list">
-                        <li class="basket__item">
-                            @@include('../global/card.html', {
-                            "imageName1" : "1-1x",
-                            "imageName2" : "1-2x",
-                            "imageMob" : "1-1x-mob",
-                            "title" : "Ананас, 1 кг",
-                            "price" : "99",
-                            "price2" : "198",
-                            "imgAlt" : "ананас",
-                            "name" : "a pineapple",
-                            "id" : "a pineapple",
-                            })
-                        </li>
-                        <li class="basket__item">
-                            @@include('../global/card.html', {
-                            "imageName1" : "3-1x-card",
-                            "imageName2" : "3-2x-card",
-                            "imageMob" : "3-1x-card",
-                            "title" : "Питахайя красная с белой мякотью, 1шт",
-                            "price" : "101 ",
-                            "price2" : "202",
-                            "imgAlt" : "питахайя красная ",
-                            "name" : "pitahaya",
-                            "id" : "pitahaya",
-                            })
-                        </li>
-                    </ul>
-                </div>
-                <div class="basket__total">
-                    <span class="basket__total-text">Товаров на сумму</span>
-                    <span class="basket__total-price">
-                        400
-                        <span class="currency">
-                            &#8372;
-                        </span>
-                    </span>
-                </div>
-                <a class="basket__btn" href="#">Оформить заказ</a>
-            </div>
-            <button class="close-button" type="button" data-modal-close>
-                <span class="sr-only">кнопка закрытия</span>
-            </button>
-        </div>
     </div>
 </header>

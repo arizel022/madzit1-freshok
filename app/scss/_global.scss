@@ -5,6 +5,10 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: $bg;
     color: $default;
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -155,21 +159,25 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    color: #C1C1C1;
-    width: 44px;
-    height: 44px;
+    color: #fff;
     transition: color 0.5s, outline 0.5s, opacity 0.5s;
 
-    &:hover {
-        color: #FFB800;
-    }
+    &--grey {
+        width: 44px;
+        height: 44px;
+        color: #c1c1c1;
 
-    &:focus {
-        outline: 3px solid #E0EDCF;
-    }
+        &:hover {
+            color: #FFB800;
+        }
 
-    &:active {
-        opacity: .50;
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            opacity: .50;
+        }
     }
 }
 
@@ -177,31 +185,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    background-color: $green;
     color: #fff;
     border-radius: 3px;
     transition: background-color 0.5s, outline 0.5s, box-shadow 0.5s;
 
-    &:hover {
-        background-color: #4d800c
+    &--background {
+        background-color: $green;
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            background-color: #4d800c
+        }
+    
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+    
+        &:active {
+            box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
     }
 
-    &:focus {
-        outline: 3px solid #E0EDCF;
-    }
-
-    &:active {
-        box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    }
 }
 
 
 .product-price {
     display: flex;
     flex-direction: column;
-    
+
     &--old {
         color: #C1C1C1;
         margin-bottom: 3px;
@@ -226,13 +238,13 @@ body {
         color: #505050;
     }
 
-    &--font {
+    &--big {
         display: block;
         font-size: 20px;
         color: #505050;
     }
 
-    &--flex {
+    &--vertically {
         display: flex;
         flex-flow: row-reverse;
         align-items: baseline;

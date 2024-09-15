@@ -8,7 +8,7 @@
             </svg>
         </button>
         <div class="swiper-wrapper hero__swiper-wrapper">
-            <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide1 swiper-slide">
+            <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide1">
                 <div class="container hero__container">
                     <div class="hero__content">
                         <h3 class="hero__title">
@@ -63,41 +63,6 @@
         </button>
     </div>
     <div class="container">
-        <div class="hero__advantages">
-            <ul class="hero__advantages-list">
-                <li class="hero__advantages-item">
-                    <svg class="hero__advantages-icon" width="50" height="50">
-                        <use href="images/icon/sprite.svg#scooter"></use>
-                    </svg>
-                    <div class="hero__advantages-box">
-                        <span class="hero__advantages-title">Бесплатная доставка</span>
-                        <p class="hero__advantages-text">
-                            Для заказов на сумму от 500
-                            <span class="currency">
-                                &#8372;
-                            </span>
-                        </p>
-                    </div>
-                </li>
-                <li class="hero__advantages-item">
-                    <svg class="hero__advantages-icon" width="50" height="50">
-                        <use href="images/icon/sprite.svg#return-box"></use>
-                    </svg>
-                    <div class="hero__advantages-box">
-                        <span class="hero__advantages-title">Возврат товара</span>
-                        <p class="hero__advantages-text">Если товары были испорчены</p>
-                    </div>
-                </li>
-                <li class="hero__advantages-item">
-                    <svg class="hero__advantages-icon" width="50" height="50">
-                        <use href="images/icon/sprite.svg#24h"></use>
-                    </svg>
-                    <div class="hero__advantages-box">
-                        <span class="hero__advantages-title">Поддержка 24/7</span>
-                        <p class="hero__advantages-text">Лучшие операторы</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        @@include('../global/advantages.html')
     </div>
 </section>

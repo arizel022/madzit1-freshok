@@ -2,11 +2,11 @@
 "title" : "Интернет магазин продуктов FreShok"
 })
 
-<body>
+<body data-lock>
     <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
     @@include('../components/global/header.html')
     @@include('../components/index/hero.html')
-    <section class="product">
+    <section class="top-product">
         <div class="container">
             <h2 class="title">Топовые товары</h2>
             <div class="product__filter-wrraper" data-ref="container-1">
@@ -148,7 +148,7 @@
     <section class="advertising">
         <div class="container">
             <h2 class="sr-only">рекламные баннеры</h2>
-            <div class="advertising__list">
+            <ul class="advertising__list">
                 @@include('../components/global/advertising-card.html',{
                 'size' : 'advertising-card--big',
                 'bg' : 'advertising-card--first',
@@ -172,7 +172,7 @@
                 'title' : 'свежий <br> хлебчик',
                 'light' : ''
                 })
-            </div>
+            </ul>
         </div>
     </section>
     <section class="stock">
