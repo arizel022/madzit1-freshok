@@ -3,380 +3,381 @@
 })
 
 <body data-lock>
-    <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
-    @@include('../components/global/header.html')
-    @@include('../components/index/hero.html')
-    <section class="top-product">
-        <div class="container">
-            <h2 class="title">Топовые товары</h2>
-            <div class="product__filter-wrraper" data-ref="container-1">
-                <ul class="filter">
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter="all">
-                            Все товары
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".fruits">
-                            Фрукты
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".vegetables">
-                            овощи
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".drinks">
-                            Напитки
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".grocery">
-                            бакалея
-                        </button>
-                    </li>
-                </ul>
-                <ul class="grid">
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'fruits',
-                    'new' : '',
-                    'discount50' : '',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '1',
-                    'productName' : 'Ананас, 1кг',
-                    'oldPriceVaule' : '199',
-                    'currentPriceVaule' : '99',
-                    })
+    <main class="main">
+        <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
+        @@include('../components/global/header.html')
+        @@include('../components/index/hero.html')
+        <section class="top-product">
+            <div class="container">
+                <h2 class="title">Топовые товары</h2>
+                <div class="product__filter-wrraper" data-ref="container-1">
+                    <ul class="filter">
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter="all">
+                                Все товары
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".fruits">
+                                Фрукты
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".vegetables">
+                                овощи
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".drinks">
+                                Напитки
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".grocery">
+                                бакалея
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="grid">
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'fruits',
+                        'new' : '',
+                        'discount50' : '',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '1',
+                        'productName' : 'Ананас, 1кг',
+                        'oldPriceVaule' : '199',
+                        'currentPriceVaule' : '99',
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'vegetables',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '2',
-                    'productName' : 'Лимон, 1кг',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '49',
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'vegetables',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '2',
+                        'productName' : 'Лимон, 1кг',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '49',
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'vegetables',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : '',
-                    'imagFileName' : '3',
-                    'productName' : 'Питахайя красная с белой мякотью, 1шт',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '101'
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'vegetables',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '3',
+                        'productName' : 'Питахайя красная с белой мякотью, 1шт',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '101'
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'fruits',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '4',
-                    'productName' : 'Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '60'
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'fruits',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '4',
+                        'productName' : 'Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '60'
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'drinks',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : '',
-                    'imagFileName' : '5',
-                    'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '19'
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'drinks',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '5',
+                        'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '19'
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'drinks',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : '',
-                    'hit' : 'none',
-                    'imagFileName' : '6',
-                    'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
-                    'oldPriceVaule' : '49',
-                    'currentPriceVaule' : '19'
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'drinks',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : '',
+                        'hit' : 'none',
+                        'imagFileName' : '6',
+                        'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+                        'oldPriceVaule' : '49',
+                        'currentPriceVaule' : '19'
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'grocery',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '7',
-                    'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '219'
-                    })
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'grocery',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '7',
+                        'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '219'
+                        })
 
-                    @@include('../components/global/product-card.html', {
-                    'category' : 'grocery',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '8',
-                    'productName' : 'Перец оранжевый, 1кг',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '100',
-                    })
-                </ul>
-                <a class="product__link" href="#">Показать еще</a>
+                        @@include('../components/global/product-card.html', {
+                        'category' : 'grocery',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '8',
+                        'productName' : 'Перец оранжевый, 1кг',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '100',
+                        })
+                    </ul>
+                    <a class="product__link" href="#">Показать еще</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="advertising">
+            <div class="container">
+                <h2 class="sr-only">рекламные баннеры</h2>
+                <div class="advertising__list">
+                    @@include('../components/global/advertising-card.html',{
+                    'size' : 'advertising-card--big',
+                    'bg' : 'advertising-card--first',
+                    'uptitle' : 'свежайшие фрукты',
+                    'title' : 'начни фруктовое лето <br> всего От 19 &#8372;',
+                    'light' : 'advertising-card--light'
+                    })
 
-    <section class="advertising">
-        <div class="container">
-            <h2 class="sr-only">рекламные баннеры</h2>
-            <ul class="advertising__list">
-                @@include('../components/global/advertising-card.html',{
-                'size' : 'advertising-card--big',
-                'bg' : 'advertising-card--first',
-                'uptitle' : 'свежайшие фрукты',
-                'title' : 'начни фруктовое лето <br> всего От 19 &#8372;',
-                'light' : 'advertising-card--light'
-                })
+                    @@include('../components/global/advertising-card.html',{
+                    'size' : '',
+                    'bg' : 'advertising-card--second',
+                    'uptitle' : 'сезонная распродажа',
+                    'title' : 'овощепад <br> до -50%',
+                    'light' : ''
+                    })
 
-                @@include('../components/global/advertising-card.html',{
-                'size' : '',
-                'bg' : 'advertising-card--second',
-                'uptitle' : 'сезонная распродажа',
-                'title' : 'овощепад <br> до -50%',
-                'light' : ''
-                })
+                    @@include('../components/global/advertising-card.html',{
+                    'size' : '',
+                    'bg' : 'advertising-card--third',
+                    'uptitle' : 'ням-ням',
+                    'title' : 'свежий <br> хлебчик',
+                    'light' : ''
+                    })
+                </div>
+            </div>
+        </section>
+        <section class="stock">
+            <div class="container">
+                <h2 class="title">Акции</h2>
+                <div class="stock__filter-wrraper" data-ref="container-2">
+                    <ul class="filter">
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter="all">
+                                Все товары
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".new">
+                                Новинки
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".hits">
+                                хиты
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="grid">
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'new',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '1',
+                        'productName' : 'Клубника, 1 кг',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '199',
+                        'currentPriceVaule' : '99',
+                        'star' : '4.9',
+                        })
 
-                @@include('../components/global/advertising-card.html',{
-                'size' : '',
-                'bg' : 'advertising-card--third',
-                'uptitle' : 'ням-ням',
-                'title' : 'свежий <br> хлебчик',
-                'light' : ''
-                })
-            </ul>
-        </div>
-    </section>
-    <section class="stock">
-        <div class="container">
-            <h2 class="title">Акции</h2>
-            <div class="stock__filter-wrraper" data-ref="container-2">
-                <ul class="filter">
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter="all">
-                            Все товары
-                        </button>
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'new',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '2',
+                        'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+                        'stock' : 'none',
+                        'ends' : '',
+                        'not-available' : 'none',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '219',
+                        'star' : '4.9',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'hits',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '3',
+                        'productName' : 'Клубника, 1 кг',
+                        'stock' : 'none',
+                        'ends' : 'none',
+                        'not-available' : '',
+                        'oldPriceVaule' : '64',
+                        'currentPriceVaule' : '80',
+                        'star' : '5.0',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'new',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '4',
+                        'productName' : 'Манго, 1 шт',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '199',
+                        'currentPriceVaule' : '166',
+                        'star' : '5.0',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'hits',
+                        'new' : '',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '5',
+                        'productName' : 'Лосось, 1 кг',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '999',
+                        'currentPriceVaule' : '699',
+                        'star' : '4.5',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'new',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '6',
+                        'productName' : 'Сок Granini овощной 100%, 0.5л',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '118',
+                        'currentPriceVaule' : '88',
+                        'star' : '4.9',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'hits',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '7',
+                        'productName' : 'Фруктовая корзина, 1 шт',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '799',
+                        'currentPriceVaule' : '599',
+                        'star' : '4.8',
+                        })
+
+                        @@include('../components/global/stock-card.html', {
+                        'category' : 'hits',
+                        'new' : 'none',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '8',
+                        'productName' : 'Свинина мякоть, 1 кг',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'oldPriceVaule' : '159',
+                        'currentPriceVaule' : '119',
+                        'star' : '4.6',
+                        })
+                    </ul>
+                </div>
+                <a class="stock__link button" href="#">Показать еще</a>
+            </div>
+        </section>
+        @@include('../components/index/partners.html')
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="title news__title">
+                        наши новости
+                    </h2>
+                    <a class="news__link" href="#">
+                        все новости
+                    </a>
+                </div>
+                <ul class="news__list">
+                    <li class="news__item">
+                        @@include('../components/global/news-card.html', {
+                        'datetime' : '2024-07-15',
+                        'month' : 'июль',
+                        'day' : '15',
+                        'imagFileName' : '1',
+                        'alt' : 'Клубника',
+                        'title' : 'Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!'
+                        })
                     </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".new">
-                            Новинки
-                        </button>
+                    <li class="news__item">
+                        @@include('../components/global/news-card.html', {
+                        'datetime' : '2024-05-07',
+                        'month' : 'май',
+                        'day' : '07',
+                        'imagFileName' : '2',
+                        'alt' : 'Манго',
+                        'title' : 'Шикарнейший выбор манго в нашем онлайн-маркете'
+                        })
                     </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".hits">
-                            хиты
-                        </button>
+                    <li class="news__item">
+                        @@include('../components/global/news-card.html', {
+                        'datetime' : '2024-02-20',
+                        'month' : 'февраль',
+                        'day' : '20',
+                        'imagFileName' : '3',
+                        'alt' : 'папайя',
+                        'title' : 'Всё, что вы хотели знать о папайя'
+                        })
                     </li>
                 </ul>
-                <ul class="grid">
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'new',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '1',
-                    'productName' : 'Клубника, 1 кг',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '199',
-                    'currentPriceVaule' : '99',
-                    'star' : '4.9',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'new',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '2',
-                    'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
-                    'stock' : 'none',
-                    'ends' : '',
-                    'not-available' : 'none',
-                    'oldPrice' : 'none',
-                    'oldPriceVaule' : '',
-                    'currentPriceVaule' : '219',
-                    'star' : '4.9',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'hits',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '3',
-                    'productName' : 'Клубника, 1 кг',
-                    'stock' : 'none',
-                    'ends' : 'none',
-                    'not-available' : '',
-                    'oldPriceVaule' : '64',
-                    'currentPriceVaule' : '80',
-                    'star' : '5.0',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'new',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '4',
-                    'productName' : 'Манго, 1 шт',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '199',
-                    'currentPriceVaule' : '166',
-                    'star' : '5.0',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'hits',
-                    'new' : '',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : 'none',
-                    'imagFileName' : '5',
-                    'productName' : 'Лосось, 1 кг',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '999',
-                    'currentPriceVaule' : '699',
-                    'star' : '4.5',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'new',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : '',
-                    'imagFileName' : '6',
-                    'productName' : 'Сок Granini овощной 100%, 0.5л',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '118',
-                    'currentPriceVaule' : '88',
-                    'star' : '4.9',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'hits',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : '',
-                    'imagFileName' : '7',
-                    'productName' : 'Фруктовая корзина, 1 шт',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '799',
-                    'currentPriceVaule' : '599',
-                    'star' : '4.8',
-                    })
-
-                    @@include('../components/global/stock-card.html', {
-                    'category' : 'hits',
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : '',
-                    'imagFileName' : '8',
-                    'productName' : 'Свинина мякоть, 1 кг',
-                    'stock' : '',
-                    'ends' : 'none',
-                    'not-available' : 'none',
-                    'oldPriceVaule' : '159',
-                    'currentPriceVaule' : '119',
-                    'star' : '4.6',
-                    })
-                </ul>
             </div>
-            <a class="stock__link button" href="#">Показать еще</a>
-        </div>
-    </section>
-    @@include('../components/index/partners.html')
-    <section class="news">
-        <div class="container">
-            <div class="news__top">
-                <h2 class="title news__title">
-                    наши новости
-                </h2>
-                <a class="news__link" href="#">
-                    все новости
-                </a>
-            </div>
-            <ul class="news__list">
-                <li class="news__item">
-                    @@include('../components/global/news-card.html', {
-                    'datetime' : '2024-07-15',
-                    'month' : 'июль',
-                    'day' : '15',
-                    'imagFileName' : '1',
-                    'alt' : 'Клубника',
-                    'title' : 'Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!'
-                    })
-                </li>
-                <li class="news__item">
-                    @@include('../components/global/news-card.html', {
-                    'datetime' : '2024-05-07',
-                    'month' : 'май',
-                    'day' : '07',
-                    'imagFileName' : '2',
-                    'alt' : 'Манго',
-                    'title' : 'Шикарнейший выбор манго в нашем онлайн-маркете'
-                    })
-                </li>
-                <li class="news__item">
-                    @@include('../components/global/news-card.html', {
-                    'datetime' : '2024-02-20',
-                    'month' : 'февраль',
-                    'day' : '20',
-                    'imagFileName' : '3',
-                    'alt' : 'папайя',
-                    'title' : 'Всё, что вы хотели знать о папайя'
-                    })
-                </li>
-            </ul>
-        </div>
-    </section>
-    @@include('../components/global/footer.html')
-    @@include('../components/global/footer-scripts.html')
+        </section>
+        @@include('../components/global/footer.html')
+        @@include('../components/global/footer-scripts.html')
+    </main>
 </body>
 
 </html>

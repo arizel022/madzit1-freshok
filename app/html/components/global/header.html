@@ -95,27 +95,27 @@
                     </label>
                     <button class="form-search__btn" type="submit">поиск</button>
                 </form>
-                <ul class="menu__user">
-                    <li class="menu__user-item">
-                        <button class="menu__user-btn" type="button">
-                            <svg class="icon menu__user-icon" width="25" height="32">
+                <ul class="user-menu">
+                    <li class="user-menu__item">
+                        <button class="user-menu__btn" type="button">
+                            <svg class="icon user-menu__icon" width="25" height="32">
                                 <use href="images/icon/sprite.svg#user"></use>
                             </svg>
                             <span class="sr-only">пользователь</span>
                         </button>
                     </li>
-                    <li class="menu__user-item">
-                        <button class="button-favorites menu__user-btn" type="button">
-                            <span class="menu__user-num">12</span>
+                    <li class="user-menu__item">
+                        <button class="button-favorites user-menu__button-favorites" type="button">
+                            <span class="user-menu__num">12</span>
                             <svg class="icon button-favorites__icon" width="32" height="29">
                                 <use href="images/icon/sprite.svg#like"></use>
                             </svg>
                             <span class="sr-only">понравившиеся товары</span>
                         </button>
                     </li>
-                    <li class="menu__user-item">
-                        <button class="button-basket menu__user-btn" type="button" data-modal-open>
-                            <span class="menu__user-num">12</span>
+                    <li class="menu-user__item">
+                        <button class="button-basket user-menu__button-baskte" type="button" data-modal-open>
+                            <span class="user-menu__num">12</span>
                             <svg class="icon button-basket__icon" width="32" height="32">
                                 <use href="images/icon/sprite.svg#cart"></use>
                             </svg>
@@ -126,7 +126,7 @@
                 <div class="backdrop is-hidden" data-modal>
                     <div class="basket">
                         <div class="basket__top">
-                            <h3 class="basket__title">Корзина</h3>
+                            <h2 class="basket__title">Корзина</h2>
                             <button class="basket__delete" type="button">очистить корзину</button>
                         </div>
                         <div class="basket__box">
@@ -138,8 +138,9 @@
                                     "price" : "99",
                                     "price2" : "198",
                                     "imgAlt" : "ананас",
-                                    "name" : "a pineapple",
-                                    "id" : "a pineapple",
+                                    "for" : "pineapple",
+                                    "name" : "pineapple",
+                                    "id" : "pineapple",
                                     })
                                 </li>
                                 <li class="basket__item">
@@ -149,6 +150,7 @@
                                     "price" : "101 ",
                                     "price2" : "202",
                                     "imgAlt" : "питахайя красная ",
+                                    "for" : "pitahaya",           
                                     "name" : "pitahaya",
                                     "id" : "pitahaya",
                                     })

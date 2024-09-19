@@ -20,8 +20,9 @@
 
 
 <body data-lock>
-    <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
-    <header class="header">
+    <main class="main">
+        <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
+        <header class="header">
     <div class="container">
         <nav class="menu">
             <div class="menu__top">
@@ -118,27 +119,27 @@
                     </label>
                     <button class="form-search__btn" type="submit">поиск</button>
                 </form>
-                <ul class="menu__user">
-                    <li class="menu__user-item">
-                        <button class="menu__user-btn" type="button">
-                            <svg class="icon menu__user-icon" width="25" height="32">
+                <ul class="user-menu">
+                    <li class="user-menu__item">
+                        <button class="user-menu__btn" type="button">
+                            <svg class="icon user-menu__icon" width="25" height="32">
                                 <use href="images/icon/sprite.svg#user"></use>
                             </svg>
                             <span class="sr-only">пользователь</span>
                         </button>
                     </li>
-                    <li class="menu__user-item">
-                        <button class="button-favorites menu__user-btn" type="button">
-                            <span class="menu__user-num">12</span>
+                    <li class="user-menu__item">
+                        <button class="button-favorites user-menu__button-favorites" type="button">
+                            <span class="user-menu__num">12</span>
                             <svg class="icon button-favorites__icon" width="32" height="29">
                                 <use href="images/icon/sprite.svg#like"></use>
                             </svg>
                             <span class="sr-only">понравившиеся товары</span>
                         </button>
                     </li>
-                    <li class="menu__user-item">
-                        <button class="button-basket menu__user-btn" type="button" data-modal-open>
-                            <span class="menu__user-num">12</span>
+                    <li class="menu-user__item">
+                        <button class="button-basket user-menu__button-baskte" type="button" data-modal-open>
+                            <span class="user-menu__num">12</span>
                             <svg class="icon button-basket__icon" width="32" height="32">
                                 <use href="images/icon/sprite.svg#cart"></use>
                             </svg>
@@ -149,7 +150,7 @@
                 <div class="backdrop is-hidden" data-modal>
                     <div class="basket">
                         <div class="basket__top">
-                            <h3 class="basket__title">Корзина</h3>
+                            <h2 class="basket__title">Корзина</h2>
                             <button class="basket__delete" type="button">очистить корзину</button>
                         </div>
                         <div class="basket__box">
@@ -162,7 +163,7 @@
         <img class="basket-card__img" src="./images/basket-card/1-1x.jpg" alt="ананас" width="60" height="60">
     </picture>
     <div class="basket-card__content">
-        <h4 class="basket-card__title">Ананас, 1 кг</h4>
+        <h3 class="basket-card__title">Ананас, 1 кг</h3>
         <span class="basket-card__price">
             99
             <span class="currency">
@@ -172,14 +173,14 @@
     </div>
     <form class="counter">
         <button class="counter__btn counter__btn--minus" type="button">
-            <span class="sr-only">кнопка минус</span>
+            <span class="sr-only">уменьшить количество единиц товара</span>
         </button>
-        <label class="counter__form-label" for="number">
+        <label class="counter__form-label" for="pineapple">
             <span class="sr-only">введите количество товара</span>
-            <input class="counter__form-input" name="a pineapple" id="a pineapple" type="number" value="1" required>
+            <input class="counter__form-input" name="pineapple" id="pineapple" type="number" value="1" required>
         </label>
         <button class="counter__btn counter__btn--plus" type="button">
-            <span class="sr-only">кнопка плюс</span>
+            <span class="sr-only">добавить количество единиц товара</span>
         </button>
         <span class="counter__price">
             198
@@ -201,7 +202,7 @@
         <img class="basket-card__img" src="./images/basket-card/2-1x.jpg" alt="питахайя красная " width="60" height="60">
     </picture>
     <div class="basket-card__content">
-        <h4 class="basket-card__title">Питахайя красная с белой мякотью, 1шт</h4>
+        <h3 class="basket-card__title">Питахайя красная с белой мякотью, 1шт</h3>
         <span class="basket-card__price">
             101 
             <span class="currency">
@@ -211,14 +212,14 @@
     </div>
     <form class="counter">
         <button class="counter__btn counter__btn--minus" type="button">
-            <span class="sr-only">кнопка минус</span>
+            <span class="sr-only">уменьшить количество единиц товара</span>
         </button>
-        <label class="counter__form-label" for="number">
+        <label class="counter__form-label" for="pitahaya">
             <span class="sr-only">введите количество товара</span>
             <input class="counter__form-input" name="pitahaya" id="pitahaya" type="number" value="1" required>
         </label>
         <button class="counter__btn counter__btn--plus" type="button">
-            <span class="sr-only">кнопка плюс</span>
+            <span class="sr-only">добавить количество единиц товара</span>
         </button>
         <span class="counter__price">
             202
@@ -253,7 +254,7 @@
         </nav>
     </div>
 </header>
-    <section class="hero">
+        <section class="hero">
     <h2 class="sr-only">акционные товары</h2>
     <div class="swiper hero__swiper">
         <button class="hero__swiper-btn hero__swiper-btn--next" type="button">
@@ -264,7 +265,7 @@
         </button>
         <div class="swiper-wrapper hero__swiper-wrapper">
             <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide1">
-                <div class="container hero__container">
+                <div class="container">
                     <div class="hero__content">
                         <h3 class="hero__title">
                             свежачок вам в хату
@@ -280,7 +281,7 @@
                 </div>
             </div>
             <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide2">
-                <div class="container hero__container">
+                <div class="container">
                     <div class="hero__content">
                         <h3 class="hero__title">
                             накрути себе томатов
@@ -296,7 +297,7 @@
                 </div>
             </div>
             <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide3">
-                <div class="container hero__container">
+                <div class="container">
                     <div class="hero__content">
                         <h3 class="hero__title">
                             Пусть остальные
@@ -354,39 +355,39 @@
 </ul>
     </div>
 </section>
-    <section class="top-product">
-        <div class="container">
-            <h2 class="title">Топовые товары</h2>
-            <div class="product__filter-wrraper" data-ref="container-1">
-                <ul class="filter">
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter="all">
-                            Все товары
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".fruits">
-                            Фрукты
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".vegetables">
-                            овощи
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".drinks">
-                            Напитки
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".grocery">
-                            бакалея
-                        </button>
-                    </li>
-                </ul>
-                <ul class="grid">
-                    <li class="grid__item mix fruits"  >
+        <section class="top-product">
+            <div class="container">
+                <h2 class="title">Топовые товары</h2>
+                <div class="product__filter-wrraper" data-ref="container-1">
+                    <ul class="filter">
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter="all">
+                                Все товары
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".fruits">
+                                Фрукты
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".vegetables">
+                                овощи
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".drinks">
+                                Напитки
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".grocery">
+                                бакалея
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="grid">
+                        <li class="grid__item mix fruits"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -453,7 +454,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix vegetables"  >
+                        <li class="grid__item mix vegetables"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -520,7 +521,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix vegetables"  >
+                        <li class="grid__item mix vegetables"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -587,7 +588,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix fruits"  >
+                        <li class="grid__item mix fruits"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -654,7 +655,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix drinks"  >
+                        <li class="grid__item mix drinks"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -721,7 +722,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix drinks"  >
+                        <li class="grid__item mix drinks"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -788,7 +789,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix grocery"  >
+                        <li class="grid__item mix grocery"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -855,7 +856,7 @@
     </article>
 </li>
 
-                    <li class="grid__item mix grocery"  >
+                        <li class="grid__item mix grocery"  >
     <article class="product-card">
             <div class="product-card__top">
                 <div class="badges">
@@ -921,17 +922,16 @@
       
     </article>
 </li>
-                </ul>
-                <a class="product__link" href="#">Показать еще</a>
+                    </ul>
+                    <a class="product__link" href="#">Показать еще</a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="advertising">
-        <div class="container">
-            <h2 class="sr-only">рекламные баннеры</h2>
-            <ul class="advertising__list">
-                <li class="advertising-card advertising-card--first advertising-card--big advertising-card--light">
+        </section>
+        <section class="advertising">
+            <div class="container">
+                <h2 class="sr-only">рекламные баннеры</h2>
+                <div class="advertising__list">
+                    <div class="advertising-card advertising-card--first advertising-card--big advertising-card--light">
     <p class="advertising-card__text">
        свежайшие фрукты
     </p>
@@ -941,9 +941,9 @@
     <a class="advertising-card__link" href="#">
         перейти к покупкам
     </a>
-</li>
+</div>
 
-                <li class="advertising-card advertising-card--second  ">
+                    <div class="advertising-card advertising-card--second  ">
     <p class="advertising-card__text">
        сезонная распродажа
     </p>
@@ -953,9 +953,9 @@
     <a class="advertising-card__link" href="#">
         перейти к покупкам
     </a>
-</li>
+</div>
 
-                <li class="advertising-card advertising-card--third  ">
+                    <div class="advertising-card advertising-card--third  ">
     <p class="advertising-card__text">
        ням-ням
     </p>
@@ -965,33 +965,33 @@
     <a class="advertising-card__link" href="#">
         перейти к покупкам
     </a>
-</li>
-            </ul>
-        </div>
-    </section>
-    <section class="stock">
-        <div class="container">
-            <h2 class="title">Акции</h2>
-            <div class="stock__filter-wrraper" data-ref="container-2">
-                <ul class="filter">
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter="all">
-                            Все товары
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".new">
-                            Новинки
-                        </button>
-                    </li>
-                    <li class="filter__item">
-                        <button class="filter__btn" type="button" data-filter=".hits">
-                            хиты
-                        </button>
-                    </li>
-                </ul>
-                <ul class="grid">
-                    <li class="grid__item mix new">
+</div>
+                </div>
+            </div>
+        </section>
+        <section class="stock">
+            <div class="container">
+                <h2 class="title">Акции</h2>
+                <div class="stock__filter-wrraper" data-ref="container-2">
+                    <ul class="filter">
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter="all">
+                                Все товары
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".new">
+                                Новинки
+                            </button>
+                        </li>
+                        <li class="filter__item">
+                            <button class="filter__btn" type="button" data-filter=".hits">
+                                хиты
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="grid">
+                        <li class="grid__item mix new">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1054,7 +1054,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix new">
+                        <li class="grid__item mix new">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1117,7 +1117,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix hits">
+                        <li class="grid__item mix hits">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1180,7 +1180,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix new">
+                        <li class="grid__item mix new">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1243,7 +1243,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix hits">
+                        <li class="grid__item mix hits">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1306,7 +1306,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix new">
+                        <li class="grid__item mix new">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1369,7 +1369,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix hits">
+                        <li class="grid__item mix hits">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1432,7 +1432,7 @@
         </article>
 </li>
 
-                    <li class="grid__item mix hits">
+                        <li class="grid__item mix hits">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
@@ -1494,12 +1494,12 @@
         </a>
         </article>
 </li>
-                </ul>
+                    </ul>
+                </div>
+                <a class="stock__link button" href="#">Показать еще</a>
             </div>
-            <a class="stock__link button" href="#">Показать еще</a>
-        </div>
-    </section>
-    <section class="partners">
+        </section>
+        <section class="partners">
     <div class="container">
         <h2 class="sr-only">Партнеры</h2>
         <div class="partners__list swiper2 mySwiper2">
@@ -1605,19 +1605,19 @@
     </div>
 </section>
 
-    <section class="news">
-        <div class="container">
-            <div class="news__top">
-                <h2 class="title news__title">
-                    наши новости
-                </h2>
-                <a class="news__link" href="#">
-                    все новости
-                </a>
-            </div>
-            <ul class="news__list">
-                <li class="news__item">
-                    <article class="news-card">
+        <section class="news">
+            <div class="container">
+                <div class="news__top">
+                    <h2 class="title news__title">
+                        наши новости
+                    </h2>
+                    <a class="news__link" href="#">
+                        все новости
+                    </a>
+                </div>
+                <ul class="news__list">
+                    <li class="news__item">
+                        <article class="news-card">
     <time class="news-card__time" datetime='2024-07-15'>
         июль
         <span class="news-card__number">
@@ -1634,9 +1634,9 @@
         </h3>
     </a>
 </article>
-                </li>
-                <li class="news__item">
-                    <article class="news-card">
+                    </li>
+                    <li class="news__item">
+                        <article class="news-card">
     <time class="news-card__time" datetime='2024-05-07'>
         май
         <span class="news-card__number">
@@ -1653,9 +1653,9 @@
         </h3>
     </a>
 </article>
-                </li>
-                <li class="news__item">
-                    <article class="news-card">
+                    </li>
+                    <li class="news__item">
+                        <article class="news-card">
     <time class="news-card__time" datetime='2024-02-20'>
         февраль
         <span class="news-card__number">
@@ -1672,11 +1672,11 @@
         </h3>
     </a>
 </article>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <footer class="footer">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer">
     <div class="container">
         <h2 class="sr-only">Дополнительная информация</h2>
         <a class="logo footer__logo" href="index.html">
@@ -1799,9 +1799,10 @@
         </div>
     </div>
 </footer>
-    <script src="js/main.min.js"></script>
+        <script src="js/main.min.js"></script>
 
 
+    </main>
 </body>
 
 </html>
