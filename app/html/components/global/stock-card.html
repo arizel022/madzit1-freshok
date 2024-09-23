@@ -2,17 +2,17 @@
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
             <div class="stock-card__inner">
-                <div class="badges badges--stock">
-                    <span class="badges__item badges__item--stock badges__item--new @@new">
+                <div class="badges stock-card__badges">
+                    <span class="badges__item stock-card__item badges__item--new @@new">
                         Новинка
                     </span>
-                    <span class="badges__item badges__item--stock badges__item--discount @@discount50">
+                    <span class="badges__item stock-card__item badges__item--discount @@discount50">
                         -50%
                     </span>
-                    <span class="badges__item badges__item--stock badges__item--discount @@discount30">
+                    <span class="badges__item stock-card__item badges__item--discount @@discount30">
                         -30%
                     </span>
-                    <span class="badges__item badges__item--stock badges__item--hit @@hit">
+                    <span class="badges__item stock-card__item badges__item--hit @@hit">
                         хит
                     </span>
                 </div>
@@ -26,20 +26,20 @@
             <div class="stock-card__content">
                 <h3 class="stock-card__title">@@productName</h3>
                 <div class="stock-card__bottom">
-                    <div class="available available--stoct">
-                        <span class="available__item available__item--in-stock @@stock">в наличии</span>
-                        <span class="available__item available__item--ends @@ends">заканчивается</span>
-                        <span class="available__item available__item--not-available @@not-available">нет в наличии</span>
+                    <div class="available">
+                        <span class="available__item available__item--green @@stock">в наличии</span>
+                        <span class="available__item available__item--red @@ends">заканчивается</span>
+                        <span class="available__item available__item--grey @@not-available">нет в наличии</span>
                     </div>
                     <div class="stock-card__box">
-                        <div class="product-price product-price--flex">
+                        <div class="product-price product-price--vertically">
                             <span class="product-price__item product-price--old @@oldPrice">
                                 @@oldPriceVaule
                                 <span class="currency">
                                     &#8372;
                                 </span>
                             </span>
-                            <span class="product-price__item product-price--font">
+                            <span class="product-price__item product-price--big">
                                 @@currentPriceVaule
                                 <span class="currency">
                                     &#8372;
