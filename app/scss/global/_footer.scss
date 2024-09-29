@@ -2,26 +2,28 @@
     padding: 30px 0 0 0;
     background-color: #31352b;
 
-    &__inner {
-        padding-bottom: 64px;
-        position: relative;
-
-        &::before {
-            content: '';
-            display: block;
-            width: 100vw;
-            height: 1px;
-            border-bottom: 1px solid #fff;
-            position: absolute;
-            top: 170px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    @media(max-width:568px) {
+        padding: 24px 0 0 0;
     }
 
-    &__content{
+    &__inner {
+        padding-bottom: 64px;
+    }
+
+    &__content {
         display: flex;
+        flex-wrap: wrap;
         gap: 110px;
+
+        @media(max-width:992px) {
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media(max-width:768px) {
+            flex-direction: column-reverse;
+            gap: 50px;
+        }
     }
 
     &__box {
@@ -34,6 +36,10 @@
         margin-bottom: 30px;
         max-width: 200px;
         width: 100%;
+
+        @media(max-width:992px) {
+            margin: 0 auto 30px;
+        }
     }
 
     &__list {
@@ -41,6 +47,37 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 75px;
         grid-row-gap: 18px;
+
+        @media(max-width:992px) {
+            flex-direction: column-reverse;
+            position: relative;
+
+            &::before,
+            &:after {
+                content: '';
+                display: block;
+                width: 100vw;
+                height: 1px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            &::before{
+                border-top: 1px solid #fff;
+                top: -24px;
+            }
+
+            &::after{
+                border-bottom: 1px solid #fff;
+                bottom: -24px;
+            }
+        }
+
+        @media(max-width:568px) {
+            grid-row-gap: 0;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__link {
@@ -59,6 +96,12 @@
         &:active {
             color: #E0EDCF;
         }
+
+        @media(max-width:568px) {
+            display: inline-block;
+            width: 100%;
+            padding: 18px 0;
+        }
     }
 
     &__bottom {
@@ -66,6 +109,23 @@
         justify-content: space-between;
         align-items: center;
         padding: 29px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 1px;
+            border-top: 1px solid #fff;
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media(max-width:568px) {
+            padding: 24px 0;
+        }
     }
 
     &__text {
@@ -166,11 +226,36 @@
     &__link {
         color: #fff;
         font-style: normal;
+
+        @media(max-width:568px) {
+            display: inline-block;
+            width: 100%;
+            padding: 18px;
+        }
+
+        &--black{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #31352B;
+            padding-bottom: 14px;   
+        }
+
+        &--location{
+            max-width: 230px;
+            width: 100%;
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-bottom: 18px;
+        }
+
+        @media(max-width:568px) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -179,10 +264,20 @@
     display: flex;
     gap: 12px;
 
+    @media(max-width:568px) {
+        justify-content: center;
+    }
+
+    &--left{
+        justify-content: unset;
+    }
+
     &__link {
-        display: block;
-        width: 32px;
-        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
         color: #fff;
         border-radius: 3px;
         transition: opacity 0.5s, outline 0.5s, color 0.5s;
@@ -198,5 +293,10 @@
         &:active {
             color: #E0EDCF;
         }
+
+        &--black{
+            color: #31352B;
+        }
+
     }
 }

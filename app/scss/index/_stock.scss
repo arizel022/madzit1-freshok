@@ -2,6 +2,10 @@
     padding: 72px 0;
     background-color: #F5F5F5;
 
+    @media(max-width:768px) {
+        padding: 48px 0;
+    }
+
     &__filter-wrraper{
         margin-bottom: 48px;
     }

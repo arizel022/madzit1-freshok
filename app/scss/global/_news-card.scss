@@ -9,6 +9,14 @@
     height: 100%;
     position: relative;
 
+    @media(max-width:576px) {
+        max-width: 345px;
+    }
+
+    @media(max-width:320px) {
+        max-width: 250px;
+    }
+
     &__time {
         position: absolute;
         top: 0;
@@ -49,5 +57,22 @@
         &:active {
             opacity: .80;
         }
+
+        @media(max-width:576px) {
+           padding: 15px;
+        }
+    }
+
+    &__img{
+        @media(max-width:576px) {
+            max-width: 345px;
+            height: 200px;
+         }
+
+         
+    @media(max-width:320px) {
+        max-width: 250px;
+        height: 150px;
+    }
     }
 }

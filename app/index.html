@@ -20,9 +20,7 @@
 
 
 <body data-lock>
-    <main class="main">
-        <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
-        <header class="header">
+    <header class="header">
     <div class="container">
         <nav class="menu">
             <div class="menu__top">
@@ -138,7 +136,7 @@
                         </button>
                     </li>
                     <li class="menu-user__item">
-                        <button class="button-basket user-menu__button-baskte" type="button" data-modal-open>
+                        <button class="button-basket user-menu__button-basket" type="button" data-basket-open>
                             <span class="user-menu__num">12</span>
                             <svg class="icon button-basket__icon" width="32" height="32">
                                 <use href="images/icon/sprite.svg#cart"></use>
@@ -147,7 +145,184 @@
                         </button>
                     </li>
                 </ul>
-                <div class="backdrop is-hidden" data-modal>
+                <div class="backdrop is-hidden" data-basket>
+                   <div class="basket">
+                       <div class="basket__top">
+                           <h2 class="basket__title">Корзина</h2>
+                           <button class="basket__delete" type="button">очистить корзину</button>
+                       </div>
+                       <div class="basket__box">
+                           <ul class="basket__list">
+                               <li class="basket__item">
+                                   <div class="basket-card">
+    <picture>
+        <source srcset="./images/basket-card/1-1x.jpg 1x, ./images/basket-card/1-2x.jpg 2x"
+            media="(min-width: 320px)">
+        <img class="basket-card__img" src="./images/basket-card/1-1x.jpg" alt="ананас" width="60" height="60">
+    </picture>
+    <div class="basket-card__content">
+        <h3 class="basket-card__title">Ананас, 1 кг</h3>
+        <span class="basket-card__price">
+            99
+            <span class="currency">
+                &#8372;
+            </span>
+        </span>
+    </div>
+    <form class="counter">
+        <div class="counter__box">
+        <button class="counter__btn counter__btn--minus" type="button">
+            <span class="sr-only">уменьшить количество единиц товара</span>
+        </button>
+        <label class="counter__form-label" for="pineapple">
+            <span class="sr-only">введите количество товара</span>
+            <input class="counter__form-input" name="pineapple" id="pineapple" type="number" value="1" required>
+        </label>
+        <button class="counter__btn counter__btn--plus" type="button">
+            <span class="sr-only">добавить количество единиц товара</span>
+        </button>
+    </div>
+        <span class="counter__price">
+            198
+            <span class="currency">
+                &#8372;
+            </span>
+        </span>
+    </form>
+    <button class="basket-card__close-btn" type="button">
+        <span class="sr-only">удалить этот товар</span>
+    </button>
+</div>
+                               </li>
+                               <li class="basket__item">
+                                   <div class="basket-card">
+    <picture>
+        <source srcset="./images/basket-card/2-1x.jpg 1x, ./images/basket-card/2-2x.jpg 2x"
+            media="(min-width: 320px)">
+        <img class="basket-card__img" src="./images/basket-card/2-1x.jpg" alt="питахайя красная " width="60" height="60">
+    </picture>
+    <div class="basket-card__content">
+        <h3 class="basket-card__title">Питахайя красная с белой мякотью, 1шт</h3>
+        <span class="basket-card__price">
+            101 
+            <span class="currency">
+                &#8372;
+            </span>
+        </span>
+    </div>
+    <form class="counter">
+        <div class="counter__box">
+        <button class="counter__btn counter__btn--minus" type="button">
+            <span class="sr-only">уменьшить количество единиц товара</span>
+        </button>
+        <label class="counter__form-label" for="pitahaya">
+            <span class="sr-only">введите количество товара</span>
+            <input class="counter__form-input" name="pitahaya" id="pitahaya" type="number" value="1" required>
+        </label>
+        <button class="counter__btn counter__btn--plus" type="button">
+            <span class="sr-only">добавить количество единиц товара</span>
+        </button>
+    </div>
+        <span class="counter__price">
+            202
+            <span class="currency">
+                &#8372;
+            </span>
+        </span>
+    </form>
+    <button class="basket-card__close-btn" type="button">
+        <span class="sr-only">удалить этот товар</span>
+    </button>
+</div>
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="basket__total">
+                           <span class="basket__total-text">Товаров на сумму</span>
+                           <span class="basket__total-price">
+                               400
+                               <span class="currency">
+                                   &#8372;
+                               </span>
+                           </span>
+                       </div>
+                       <a class="basket__btn" href="#">Оформить заказ</a>
+                       <button class="close-button" type="button" data-basket-close>
+                           <span class="sr-only">кнопка закрытия</span>
+                       </button>
+                   </div>
+               </div> 
+            </div>
+            <div class="menu-header">
+                <div class="menu-header__top">
+                    <button class="burger-button" type="button">
+                        <span class="burger-button__line"></span>
+                    </button>
+                    <ul class="menu-header__list">
+                        <li class="menu-header__item">
+                            <a class="menu-header__link" href="#">
+                                <svg class="icon menu-header__icon" width="32" height="22">
+                                    <use href="images/icon/sprite.svg#truck"></use>
+                                </svg>
+                                <span class="sr-only"> адрес и время доставки</span>
+                            </a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a class="menu-header__link" href="#">
+                                <svg class="icon menu-header__icon" width="23" height="22">
+                                    <use href="images/icon/sprite.svg#tel"></use>
+                                </svg>
+                                <span class="sr-only">горячая линия 24/7</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-header__bottom">
+                    <a class="logo menu-header__logo-icon" href="index.html">
+                        <img class="logo__img" src="./images/logo/logo-icon.svg" alt="логотип FreShok" width="36"
+                            height="40">
+                    </a>
+                    <ul class="user-menu">
+                        <li class="user-menu__item">
+                            <button class="user-menu__btn searchBtn" type="button">
+                                <svg class="icon user-menu__icon" width="25" height="32">
+                                    <use href="images/icon/sprite.svg#search"></use>
+                                </svg>
+                                <span class="sr-only">пользователь</span>
+                            </button>
+                        </li>
+                        <li class="user-menu__item">
+                            <button class="button-favorites user-menu__button-favorites" type="button">
+                                <span class="user-menu__num">12</span>
+                                <svg class="icon button-favorites__icon" width="32" height="29">
+                                    <use href="images/icon/sprite.svg#like"></use>
+                                </svg>
+                                <span class="sr-only">понравившиеся товары</span>
+                            </button>
+                        </li>
+                        <li class="menu-user__item">
+                            <button class="button-basket user-menu__button-basket" type="button" data-basket-mobile-open>
+                                <span class="user-menu__num">12</span>
+                                <svg class="icon button-basket__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#cart"></use>
+                                </svg>
+                                <span class="sr-only">корзина товаров</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <form class="form-search menu-header__form">
+                        <label class="form-search__label" for="search">
+                            <span class="sr-only">напишите название товара, который вы ищете</span>
+                            <input class="form-search__input menu-header__input" id="search" name="search" type="search"
+                                placeholder="Я ищу...">
+                            <svg class="form-search__icon" width="24" height="24">
+                                <use href="images/icon/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <button class="form-search__btn menu-header__form-btn" type="submit">поиск</button>
+                    </form>
+                </div>
+                <div class="backdrop is-hidden" data-basket-mobile>
                     <div class="basket">
                         <div class="basket__top">
                             <h2 class="basket__title">Корзина</h2>
@@ -172,6 +347,7 @@
         </span>
     </div>
     <form class="counter">
+        <div class="counter__box">
         <button class="counter__btn counter__btn--minus" type="button">
             <span class="sr-only">уменьшить количество единиц товара</span>
         </button>
@@ -182,6 +358,7 @@
         <button class="counter__btn counter__btn--plus" type="button">
             <span class="sr-only">добавить количество единиц товара</span>
         </button>
+    </div>
         <span class="counter__price">
             198
             <span class="currency">
@@ -211,6 +388,7 @@
         </span>
     </div>
     <form class="counter">
+        <div class="counter__box">
         <button class="counter__btn counter__btn--minus" type="button">
             <span class="sr-only">уменьшить количество единиц товара</span>
         </button>
@@ -221,6 +399,7 @@
         <button class="counter__btn counter__btn--plus" type="button">
             <span class="sr-only">добавить количество единиц товара</span>
         </button>
+    </div>
         <span class="counter__price">
             202
             <span class="currency">
@@ -245,15 +424,185 @@
                             </span>
                         </div>
                         <a class="basket__btn" href="#">Оформить заказ</a>
-                        <button class="close-button" type="button" data-modal-close>
+                        <button class="close-button" type="button" data-basket-mobile-close>
                             <span class="sr-only">кнопка закрытия</span>
                         </button>
                     </div>
                 </div>
             </div>
+            <div class="backdrop-mobile">
+                <div class="mobile-menu">
+                    <a class="logo mobile-menu__logo" href="index.html">
+                        <img class="logo__img" src="./images/logo/logo-green.svg" alt="логотип FreShok" width="200" 4
+                            height="60">
+                    </a>
+                    <div class="mobile-menu__top">
+                        <div class="mobile-menu__registration">
+                            <a class="mobile-menu__registration-link mobile-menu__registration-link--icon" href="#">
+                                <svg class="icon user-menu__icon" width="25" height="32">
+                                    <use href="images/icon/sprite.svg#user"></use>
+                                </svg>
+                                Вход
+                            </a>
+                            <a class="mobile-menu__registration-link" href="#">
+                                Регистрация
+                            </a>
+                        </div>
+                        <div class="main-menu mobile-menu__main-menu">
+                            <button class="main-menu__button selectBtn main-menu__button--black" type="button">
+                                <svg class="main-menu__icon main-menu__icon--line" width="26" height="17">
+                                    <use href="images/icon/sprite.svg#line"></use>
+                                </svg>
+                                <span class="main-menu__name">Каталог продуктов</span>
+                                <svg class="main-menu__icon main-menu__icon--arrow" width="8" height="4">
+                                    <use href="images/icon/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="main-menu__list">
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Овощи и фрукты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Бакалея</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Молочные продукты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Хлеб</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Мясо</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Колбаса</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Рыба</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Алкоголь</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Напитки</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Торты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Мясо</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Чай, кофе</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__content">
+                        <address class="address mobile-menu__address">
+                            <ul class="address__list">
+                                <li class="address__item">
+                                    <a class="address__link address__link--black" href="tel:+380501112233">
+                                        <svg class="icon social__icon" width="22" height="23">
+                                            <use href="images/icon/sprite.svg#tel"></use>
+                                        </svg>
+                                        +38 050 111 22 33
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="address__link address__link--black address__link--location"
+                                        href="mailto:Запорожье,ул.Т.Г.Шевченко,1">
+                                        <svg class="icon social__icon" width="24" height="33">
+                                            <use href="images/icon/sprite.svg#location"></use>
+                                        </svg>
+                                        Запорожье, ул. Т.Г. Шевченко, 1
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="social social--left">
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#youtubi"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <ul class="mobile-menu__list">
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Оплата и доставка
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Вакансии
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Публичная оферта
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Акции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="close-button mobile-menu__close-button" type="button">
+                        <span class="sr-only">кнопка закрытия</span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </div>
 </header>
+    <main class="main">
+        <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
         <section class="hero">
     <h2 class="sr-only">акционные товары</h2>
     <div class="swiper hero__swiper">
@@ -265,7 +614,7 @@
         </button>
         <div class="swiper-wrapper hero__swiper-wrapper">
             <div class="swiper-slide hero__swiper-slide hero__swiper-slide--slide1">
-                <div class="container">
+                <div class="container hero__container">
                     <div class="hero__content">
                         <h3 class="hero__title">
                             свежачок вам в хату
@@ -317,6 +666,7 @@
                 <use href="images/icon/sprite.svg#arrow-big"></use>
             </svg>
         </button>
+        <div class="swiper-pagination"></div>
     </div>
     <div class="container">
         <ul class="advantages">
@@ -358,7 +708,7 @@
         <section class="top-product">
             <div class="container">
                 <h2 class="title">Топовые товары</h2>
-                <div class="product__filter-wrraper" data-ref="container-1">
+                <div class="top-product__filter-wrraper" data-ref="container-1">
                     <ul class="filter">
                         <li class="filter__item">
                             <button class="filter__btn" type="button" data-filter="all">
@@ -419,7 +769,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/1-1x.jpg 1x, ./images/product-card/1-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/1-1x-mob.jpg 1x, ./images/product-card/1-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -486,7 +836,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/2-1x.jpg 1x, ./images/product-card/2-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/2-1x-mob.jpg 1x, ./images/product-card/2-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -553,7 +903,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/3-1x.jpg 1x, ./images/product-card/3-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/3-1x-mob.jpg 1x, ./images/product-card/3-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -620,7 +970,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/4-1x.jpg 1x, ./images/product-card/4-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/4-1x-mob.jpg 1x, ./images/product-card/4-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -687,7 +1037,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/5-1x.jpg 1x, ./images/product-card/5-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/5-1x-mob.jpg 1x, ./images/product-card/5-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -754,7 +1104,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/6-1x.jpg 1x, ./images/product-card/6-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/6-1x-mob.jpg 1x, ./images/product-card/6-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -821,7 +1171,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/7-1x.jpg 1x, ./images/product-card/7-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/7-1x-mob.jpg 1x, ./images/product-card/7-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -888,7 +1238,7 @@
                 </span>
                 <picture>
                     <source srcset="./images/product-card/8-1x.jpg 1x, ./images/product-card/8-2x.jpg 2x"
-                        media="(min-width: 1200px)">
+                        media="(min-width: 320px)">
                     <source
                         srcset="./images/product-card/8-1x-mob.jpg 1x, ./images/product-card/8-2x-mob.jpg 2x"
                         media="(min-width: 320px)">
@@ -923,8 +1273,8 @@
     </article>
 </li>
                     </ul>
-                    <a class="product__link" href="#">Показать еще</a>
                 </div>
+                <a class="top-product__link" href="#">Показать еще</a>
             </div>
         </section>
         <section class="advertising">
@@ -990,7 +1340,7 @@
                             </button>
                         </li>
                     </ul>
-                    <ul class="grid">
+                    <ul class="grid grid--2fr">
                         <li class="grid__item mix new">
     <article class="stock-card">
             <a class="stock-card__link" href="product-page.html">
@@ -1026,7 +1376,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 199
                                 <span class="currency">
                                     &#8372;
@@ -1039,14 +1389,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.9
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1089,7 +1437,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old none">
+                            <span class="product-price__item product-price--old product-price--small none">
                                 
                                 <span class="currency">
                                     &#8372;
@@ -1102,14 +1450,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.9
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1152,7 +1498,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 64
                                 <span class="currency">
                                     &#8372;
@@ -1165,14 +1511,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             5.0
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1215,7 +1559,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 199
                                 <span class="currency">
                                     &#8372;
@@ -1228,14 +1572,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             5.0
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1278,7 +1620,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 999
                                 <span class="currency">
                                     &#8372;
@@ -1291,14 +1633,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.5
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1341,7 +1681,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 118
                                 <span class="currency">
                                     &#8372;
@@ -1354,14 +1694,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.9
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1404,7 +1742,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 799
                                 <span class="currency">
                                     &#8372;
@@ -1417,14 +1755,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.8
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1467,7 +1803,7 @@
                     </div>
                     <div class="stock-card__box">
                         <div class="product-price product-price--vertically">
-                            <span class="product-price__item product-price--old @@oldPrice">
+                            <span class="product-price__item product-price--old product-price--small @@oldPrice">
                                 159
                                 <span class="currency">
                                     &#8372;
@@ -1480,14 +1816,12 @@
                                 </span>
                             </span>
                         </div>
-
                         <div class="star">
                             4.6
                             <svg class="star__icon" width="16" height="16">
                                 <use href="images/icon/sprite.svg#star"></use>
                             </svg>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1625,7 +1959,7 @@
         </span>
     </time>
     <picture>
-        <source srcset="./images/news-card/1-1x.jpg 1x, ./images/news-card/1-2x.jpg 2x" media="(min-width: 1200px)">
+        <source srcset="./images/news-card/1-1x.jpg 1x, ./images/news-card/1-2x.jpg 2x" media="(min-width: 320px)">
         <img class="news-card__img" src="./images/card/1-1x.jpg" alt="Клубника" width="410" height="240">
     </picture>
     <a class="news-card__link" href="#">
@@ -1644,7 +1978,7 @@
         </span>
     </time>
     <picture>
-        <source srcset="./images/news-card/2-1x.jpg 1x, ./images/news-card/2-2x.jpg 2x" media="(min-width: 1200px)">
+        <source srcset="./images/news-card/2-1x.jpg 1x, ./images/news-card/2-2x.jpg 2x" media="(min-width: 320px)">
         <img class="news-card__img" src="./images/card/2-1x.jpg" alt="Манго" width="410" height="240">
     </picture>
     <a class="news-card__link" href="#">
@@ -1663,7 +1997,7 @@
         </span>
     </time>
     <picture>
-        <source srcset="./images/news-card/3-1x.jpg 1x, ./images/news-card/3-2x.jpg 2x" media="(min-width: 1200px)">
+        <source srcset="./images/news-card/3-1x.jpg 1x, ./images/news-card/3-2x.jpg 2x" media="(min-width: 320px)">
         <img class="news-card__img" src="./images/card/3-1x.jpg" alt="папайя" width="410" height="240">
     </picture>
     <a class="news-card__link" href="#">
@@ -1676,7 +2010,8 @@
                 </ul>
             </div>
         </section>
-        <footer class="footer">
+    </main>
+    <footer class="footer">
     <div class="container">
         <h2 class="sr-only">Дополнительная информация</h2>
         <a class="logo footer__logo" href="index.html">
@@ -1799,10 +2134,9 @@
         </div>
     </div>
 </footer>
-        <script src="js/main.min.js"></script>
+    <script src="js/main.min.js"></script>
 
 
-    </main>
 </body>
 
 </html>

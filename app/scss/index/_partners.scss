@@ -1,6 +1,10 @@
 .partners {
     padding: 72px 0;
 
+    @media(max-width:768px) {
+        padding: 48px 0;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
@@ -8,6 +12,16 @@
         gap: 140px;
         overflow: hidden;
         padding: 5px 0;
+
+        @media(max-width:768px) {
+          gap: 0;
+        }
+    }
+
+    &__item{
+        @media(max-width:768px) {
+           margin-right: 93px;
+          } 
     }
 
     &__link {

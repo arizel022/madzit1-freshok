@@ -14,17 +14,23 @@
         display: flex;
         justify-content: space-between;
         padding: 12px 12px 7px 12px;
-     
     }
 
     &__img {
         margin-bottom: 18px;
+
+        @media(max-width:768px) {
+            width: 170px;
+            height: 120px;
+            margin: 0 auto 10px;
+        }
     }
 
     &__link {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        margin-bottom: 10px;
         transition: opacity 0.5s;
         position: relative;
         overflow: hidden;
@@ -77,6 +83,8 @@
     }
 
     &__title {
+        max-width: 264px;
+        width: 100%;
         font-weight: 600;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -84,6 +92,10 @@
         overflow: hidden;
         text-align: left;
         padding: 0 18px;
+
+        @media(max-width:576px) {
+            padding: 0 5px;
+        }
     }
 
     &__bottom {
@@ -92,6 +104,9 @@
         align-items: center;
         margin-top: auto;
         padding: 18px;
+
+        @media(max-width:576px) {
+            padding: 12px;
+        }
     }
 }
-

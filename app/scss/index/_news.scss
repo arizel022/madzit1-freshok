@@ -1,6 +1,10 @@
 .news {
     padding: 72px 0;
 
+    @media(max-width:768px) {
+      padding: 48px 0;
+    }
+
     &__title {
         text-align: left;
         margin-bottom: 0;
@@ -11,11 +15,23 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+
+        @media(max-width:576px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
     }
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
+
+        @media(max-width:576px) {
+            gap: 15px;
+        }
     }
 
     &__link {
@@ -39,11 +55,9 @@
             outline: 3px solid $green;
         }
 
-
         &:active {
             &::before {
                 background-color: #E0EDCF;
-
             }
         }
 

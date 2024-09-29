@@ -114,7 +114,7 @@
                         </button>
                     </li>
                     <li class="menu-user__item">
-                        <button class="button-basket user-menu__button-baskte" type="button" data-modal-open>
+                        <button class="button-basket user-menu__button-basket" type="button" data-basket-open>
                             <span class="user-menu__num">12</span>
                             <svg class="icon button-basket__icon" width="32" height="32">
                                 <use href="images/icon/sprite.svg#cart"></use>
@@ -123,7 +123,126 @@
                         </button>
                     </li>
                 </ul>
-                <div class="backdrop is-hidden" data-modal>
+                <div class="backdrop is-hidden" data-basket>
+                   <div class="basket">
+                       <div class="basket__top">
+                           <h2 class="basket__title">Корзина</h2>
+                           <button class="basket__delete" type="button">очистить корзину</button>
+                       </div>
+                       <div class="basket__box">
+                           <ul class="basket__list">
+                               <li class="basket__item">
+                                   @@include('../global/basket-card.html', {
+                                   "imagFileName" : "1",
+                                   "title" : "Ананас, 1 кг",
+                                   "price" : "99",
+                                   "price2" : "198",
+                                   "imgAlt" : "ананас",
+                                   "for" : "pineapple",
+                                   "name" : "pineapple",
+                                   "id" : "pineapple",
+                                   })
+                               </li>
+                               <li class="basket__item">
+                                   @@include('../global/basket-card.html', {
+                                   "imagFileName" : "2",
+                                   "title" : "Питахайя красная с белой мякотью, 1шт",
+                                   "price" : "101 ",
+                                   "price2" : "202",
+                                   "imgAlt" : "питахайя красная ",
+                                   "for" : "pitahaya",
+                                   "name" : "pitahaya",
+                                   "id" : "pitahaya",
+                                   })
+                               </li>
+                           </ul>
+                       </div>
+                       <div class="basket__total">
+                           <span class="basket__total-text">Товаров на сумму</span>
+                           <span class="basket__total-price">
+                               400
+                               <span class="currency">
+                                   &#8372;
+                               </span>
+                           </span>
+                       </div>
+                       <a class="basket__btn" href="#">Оформить заказ</a>
+                       <button class="close-button" type="button" data-basket-close>
+                           <span class="sr-only">кнопка закрытия</span>
+                       </button>
+                   </div>
+               </div> 
+            </div>
+            <div class="menu-header">
+                <div class="menu-header__top">
+                    <button class="burger-button" type="button">
+                        <span class="burger-button__line"></span>
+                    </button>
+                    <ul class="menu-header__list">
+                        <li class="menu-header__item">
+                            <a class="menu-header__link" href="#">
+                                <svg class="icon menu-header__icon" width="32" height="22">
+                                    <use href="images/icon/sprite.svg#truck"></use>
+                                </svg>
+                                <span class="sr-only"> адрес и время доставки</span>
+                            </a>
+                        </li>
+                        <li class="menu-header__item">
+                            <a class="menu-header__link" href="#">
+                                <svg class="icon menu-header__icon" width="23" height="22">
+                                    <use href="images/icon/sprite.svg#tel"></use>
+                                </svg>
+                                <span class="sr-only">горячая линия 24/7</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-header__bottom">
+                    <a class="logo menu-header__logo-icon" href="index.html">
+                        <img class="logo__img" src="./images/logo/logo-icon.svg" alt="логотип FreShok" width="36"
+                            height="40">
+                    </a>
+                    <ul class="user-menu">
+                        <li class="user-menu__item">
+                            <button class="user-menu__btn searchBtn" type="button">
+                                <svg class="icon user-menu__icon" width="25" height="32">
+                                    <use href="images/icon/sprite.svg#search"></use>
+                                </svg>
+                                <span class="sr-only">пользователь</span>
+                            </button>
+                        </li>
+                        <li class="user-menu__item">
+                            <button class="button-favorites user-menu__button-favorites" type="button">
+                                <span class="user-menu__num">12</span>
+                                <svg class="icon button-favorites__icon" width="32" height="29">
+                                    <use href="images/icon/sprite.svg#like"></use>
+                                </svg>
+                                <span class="sr-only">понравившиеся товары</span>
+                            </button>
+                        </li>
+                        <li class="menu-user__item">
+                            <button class="button-basket user-menu__button-basket" type="button" data-basket-mobile-open>
+                                <span class="user-menu__num">12</span>
+                                <svg class="icon button-basket__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#cart"></use>
+                                </svg>
+                                <span class="sr-only">корзина товаров</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <form class="form-search menu-header__form">
+                        <label class="form-search__label" for="search">
+                            <span class="sr-only">напишите название товара, который вы ищете</span>
+                            <input class="form-search__input menu-header__input" id="search" name="search" type="search"
+                                placeholder="Я ищу...">
+                            <svg class="form-search__icon" width="24" height="24">
+                                <use href="images/icon/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <button class="form-search__btn menu-header__form-btn" type="submit">поиск</button>
+                    </form>
+                </div>
+                <div class="backdrop is-hidden" data-basket-mobile>
                     <div class="basket">
                         <div class="basket__top">
                             <h2 class="basket__title">Корзина</h2>
@@ -150,7 +269,7 @@
                                     "price" : "101 ",
                                     "price2" : "202",
                                     "imgAlt" : "питахайя красная ",
-                                    "for" : "pitahaya",           
+                                    "for" : "pitahaya",
                                     "name" : "pitahaya",
                                     "id" : "pitahaya",
                                     })
@@ -167,10 +286,178 @@
                             </span>
                         </div>
                         <a class="basket__btn" href="#">Оформить заказ</a>
-                        <button class="close-button" type="button" data-modal-close>
+                        <button class="close-button" type="button" data-basket-mobile-close>
                             <span class="sr-only">кнопка закрытия</span>
                         </button>
                     </div>
+                </div>
+            </div>
+            <div class="backdrop-mobile">
+                <div class="mobile-menu">
+                    <a class="logo mobile-menu__logo" href="index.html">
+                        <img class="logo__img" src="./images/logo/logo-green.svg" alt="логотип FreShok" width="200" 4
+                            height="60">
+                    </a>
+                    <div class="mobile-menu__top">
+                        <div class="mobile-menu__registration">
+                            <a class="mobile-menu__registration-link mobile-menu__registration-link--icon" href="#">
+                                <svg class="icon user-menu__icon" width="25" height="32">
+                                    <use href="images/icon/sprite.svg#user"></use>
+                                </svg>
+                                Вход
+                            </a>
+                            <a class="mobile-menu__registration-link" href="#">
+                                Регистрация
+                            </a>
+                        </div>
+                        <div class="main-menu mobile-menu__main-menu">
+                            <button class="main-menu__button selectBtn main-menu__button--black" type="button">
+                                <svg class="main-menu__icon main-menu__icon--line" width="26" height="17">
+                                    <use href="images/icon/sprite.svg#line"></use>
+                                </svg>
+                                <span class="main-menu__name">Каталог продуктов</span>
+                                <svg class="main-menu__icon main-menu__icon--arrow" width="8" height="4">
+                                    <use href="images/icon/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <ul class="main-menu__list">
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Овощи и фрукты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Бакалея</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Молочные продукты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Хлеб</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Мясо</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Колбаса</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Рыба</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Алкоголь</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Напитки</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Торты</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Мясо</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a class="main-menu__link" href="#">Чай, кофе</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__content">
+                        <address class="address mobile-menu__address">
+                            <ul class="address__list">
+                                <li class="address__item">
+                                    <a class="address__link address__link--black" href="tel:+380501112233">
+                                        <svg class="icon social__icon" width="22" height="23">
+                                            <use href="images/icon/sprite.svg#tel"></use>
+                                        </svg>
+                                        +38 050 111 22 33
+                                    </a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="address__link address__link--black address__link--location"
+                                        href="mailto:Запорожье,ул.Т.Г.Шевченко,1">
+                                        <svg class="icon social__icon" width="24" height="33">
+                                            <use href="images/icon/sprite.svg#location"></use>
+                                        </svg>
+                                        Запорожье, ул. Т.Г. Шевченко, 1
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="social social--left">
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#youtubi"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link--black" href="#">
+                                        <svg class="icon social__icon" width="32" height="32">
+                                            <use href="images/icon/sprite.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <ul class="mobile-menu__list">
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Оплата и доставка
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Вакансии
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Публичная оферта
+                                </a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a class="mobile-menu__link" href="#">
+                                    Акции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="close-button mobile-menu__close-button" type="button">
+                        <span class="sr-only">кнопка закрытия</span>
+                    </button>
                 </div>
             </div>
         </nav>

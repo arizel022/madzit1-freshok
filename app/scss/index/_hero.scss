@@ -4,7 +4,6 @@
     margin: 0 auto;
 
     &__content {
-        width: 100%;
         padding: 24px 24px;
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.8);
@@ -19,6 +18,11 @@
         text-transform: uppercase;
         color: #505050;
         margin-bottom: 12px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
 
     &__subtitle {
@@ -31,6 +35,10 @@
         line-height: 140%;
         color: #505050;
         margin-bottom: 32px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 24px;
+        }
     }
 
     &__link {
@@ -45,9 +53,14 @@
         background-position: top center;
         padding: 142px 0;
 
+        @media (max-width: 992px) {
+            padding: 60px 0 50px;
+        }
+
         &--slide1 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/1-1x.jpg');
+            background-image: url('../images/hero/1-1x.jpg');
+
+            @media (max-width: 992px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
@@ -56,11 +69,23 @@
                     background-image: url('../images/hero/1-2x.jpg');
                 }
             }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/1-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/1-2x-mob.jpg');
+                }
+            }
         }
 
         &--slide2 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/2-1x.jpg');
+            background-image: url('../images/hero/2-1x.jpg');
+
+            @media (min-width: 768px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
@@ -69,17 +94,40 @@
                     background-image: url('../images/hero/2-2x.jpg');
                 }
             }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/2-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/2-2x-mob.jpg');
+                }
+            }
         }
 
         &--slide3 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/3-1x.jpg');
+            background-image: url('../images/hero/3-1x.jpg');
+
+            @media (min-width: 768px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
                     background-image: url('../images/hero/3-2x.jpg');
+                }
+            }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/3-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/3-2x-mob.jpg');
                 }
             }
         }
@@ -99,6 +147,10 @@
         transform: translateY(-50%);
         z-index: 5;
         transition: color 0.5s, background-color 0.5s, outline 0.5s;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
 
         &:hover {
             color: $green;

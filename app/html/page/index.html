@@ -3,14 +3,14 @@
 })
 
 <body data-lock>
+    @@include('../components/global/header.html')
     <main class="main">
         <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
-        @@include('../components/global/header.html')
         @@include('../components/index/hero.html')
         <section class="top-product">
             <div class="container">
                 <h2 class="title">Топовые товары</h2>
-                <div class="product__filter-wrraper" data-ref="container-1">
+                <div class="top-product__filter-wrraper" data-ref="container-1">
                     <ul class="filter">
                         <li class="filter__item">
                             <button class="filter__btn" type="button" data-filter="all">
@@ -141,8 +141,8 @@
                         'currentPriceVaule' : '100',
                         })
                     </ul>
-                    <a class="product__link" href="#">Показать еще</a>
                 </div>
+                <a class="top-product__link" href="#">Показать еще</a>
             </div>
         </section>
         <section class="advertising">
@@ -196,7 +196,7 @@
                             </button>
                         </li>
                     </ul>
-                    <ul class="grid">
+                    <ul class="grid grid--2fr">
                         @@include('../components/global/stock-card.html', {
                         'category' : 'new',
                         'new' : '',
@@ -375,9 +375,9 @@
                 </ul>
             </div>
         </section>
-        @@include('../components/global/footer.html')
-        @@include('../components/global/footer-scripts.html')
     </main>
+    @@include('../components/global/footer.html')
+    @@include('../components/global/footer-scripts.html')
 </body>
 
 </html>
