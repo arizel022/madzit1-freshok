@@ -8,38 +8,10 @@ $(function () {
 
     $(document).ready(function () {
         $('.searchBtn').click(function (evenet) {
-            $('.menu-header__form').toggleClass('active')
+            $('.form-search').toggleClass('active')
         });
     });
-
-    $(document).ready(function () {
-        $('.burger-button').click(function (evenet) {
-            $('.backdrop-mobile').addClass('active')
-            $('.body').addClass('lock')
-        });
-    });
-
-    $(document).ready(function () {
-        $('.close-button').click(function (evenet) {
-            $('.backdrop-mobile').removeClass('active')
-            $('.body').removeClass('lock')
-        });
-    });
-
-
- });
-
-var containerEl1 = document.querySelector('[data-ref="container-1"]');
-var containerEl2 = document.querySelector('[data-ref="container-2"]');
-
-var config = {
-  controls: {
-    scope: 'local'
-  }
-};
-
-var mixer1 = mixitup(containerEl1, config);
-var mixer2 = mixitup(containerEl2, config);
+});
 
 (() => {
     const refs = {
@@ -61,10 +33,10 @@ var mixer2 = mixitup(containerEl2, config);
 
 (() => {
     const refs = {
-        openModalBtn: document.querySelector("[data-basket-mobile-open]"),
-        closeModalBtn: document.querySelector("[data-basket-mobile-close]"),
+        openModalBtn: document.querySelector("[data-mobile-menu-open]"),
+        closeModalBtn: document.querySelector("[data-mobile-menu-close]"),
         modalBodyBtn: document.querySelector("[data-lock]"),
-        modal: document.querySelector("[data-basket-mobile]"),
+        modal: document.querySelector("[data-mobile-menu]"),
     };
 
     refs.openModalBtn.addEventListener("click", toggleModal);
@@ -75,8 +47,7 @@ var mixer2 = mixitup(containerEl2, config);
         refs.modal.classList.toggle("is-hidden");
         refs.modalBodyBtn.classList.toggle("lock");
     }
-})();
-
+ })();
 
 $('.counter__btn--minus').click(function () {
     var $input = $(this).parent().parent().find('.counter__form-input');
@@ -93,6 +64,27 @@ $('.counter__btn--plus').click(function () {
     $input.change();
     return false;
 });
+
+var containerEl1 = document.querySelector('[data-ref="container-1"]');
+var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+var config = {
+    controls: {
+        scope: 'local'
+    }
+};
+
+if ($('.mixerContainer').length){
+    var mixer1 = mixitup(containerEl1, config);
+    var mixer2 = mixitup(containerEl2, config);
+}
+
+
+
+
+
+
+
 
 
 
