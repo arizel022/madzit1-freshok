@@ -1,5 +1,6 @@
 .stock {
     padding: 72px 0;
+    text-align: center;
     background-color: #F5F5F5;
 
     @media(max-width:768px) {
@@ -11,9 +12,6 @@
     }
 
     &__link{
-        display: block;
-        max-width: 177px;
-        width: 100%;
-        margin: 0 auto;
+        display: inline-block;
     }
 }

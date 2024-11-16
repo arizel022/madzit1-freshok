@@ -65,7 +65,8 @@
         text-transform: uppercase;
         color: #fff;
         border-radius: 3px;
-        transition: opacity 0.5s, outline 0.5s, color 0.5s;
+
+
 
         &--icon {
             display: flex;
@@ -134,11 +135,12 @@
         }
     }
 
-    &__logo-icon {
+    &__logo-mobile {
         display: none;
 
         @media (max-width: 992px) {
             display: block;
+            margin-right: 50px;
         }
     }
 }
@@ -217,6 +219,7 @@
         display: none;
     }
 
+
     &.active {
         .main-menu__button {
             background-color: #E0EDCF;
@@ -267,11 +270,6 @@
 
         &:active {
             opacity: .80;
-        }
-
-        &--black {
-            color: #31352B;
-            justify-content: space-between;
         }
     }
 
@@ -368,26 +366,18 @@
     width: 100%;
     margin-right: 58px;
 
-    @media (max-width: 1200px) {
-        position: absolute;
-        top: 120px;
-        z-index: 5;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    @media (max-width: 992px) {
-        position: absolute;
-        z-index: 5;
-        top: 110px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transform: scale(0);
-        transition: transform 0.5s;
-
-        &.active {
-            transform: scale(1);
+    &__header{
+        @media (max-width: 768px) {
+            position: absolute;
+            z-index: 5;
+            top: 110px;
+            max-width: none;
+            transform: scale(0);
+            transition: transform 0.5s;
+    
+            &.active {
+                transform: scale(1);
+            }
         }
     }
 
@@ -481,7 +471,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    overflow-y: scroll;
+    padding: 50px 0;
     top: 0;
     left: 0;
     z-index: 10;
@@ -505,22 +495,24 @@
     .basket {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        top: 0;
         max-width: 472px;
         width: 100%;
+        height: 100%;
         background-color: #f6f6f6;
-        position: relative;
         transform: translateX(0);
         transition: transform 0.5s;
 
         @media (max-width: 576px) {
             top: 182px;
+            height: -webkit-fill-available;
         }
 
-
-        @media (max-width: 320px), (max-width: 1200px) and (orientation: landscape) {
+        @media (max-width: 320px),
+        (max-width: 1200px) and (orientation: landscape) {
             top: 182px;
         }
-
 
         &__top {
             border: 1px solid #ebebeb;
@@ -530,6 +522,7 @@
 
         &__box {
             padding: 12px 11px 12px 11px;
+            flex-grow: 1;
         }
 
         &__title {
@@ -570,7 +563,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: auto;
             padding: 23px 24px;
         }
 
@@ -661,6 +653,7 @@
         transform: translateX(0);
         transition: transform 0.5s;
 
+
         &__logo {
             padding: 26px 15px;
         }
@@ -686,7 +679,7 @@
             }
         }
 
-        &__registration-link {
+       &__registration-link {
             display: block;
             color: #fff;
             padding: 5px;
@@ -709,7 +702,7 @@
                 opacity: .50;
             }
         }
-
+    
         &__content {
             padding: 0 15px;
         }
@@ -717,6 +710,14 @@
         &__main-menu {
             display: block;
             margin-right: 0;
+            max-width: 300px;
+        }
+
+        &__button {
+            color: #31352B;
+            padding: 15px 30px;
+            gap: 15px;
+            justify-content: unset;
         }
 
         &__address {
@@ -733,6 +734,16 @@
             display: inline-block;
             width: 100%;
             padding: 15px 0;
+            border-radius: 3px;
+            transition: opacity 0.5s, outline 0.5s, color 0.5s;
+
+            &:focus {
+                outline: 3px solid #E0EDCF;
+            }
+
+            &:active {
+                color: #E0EDCF;
+            }
         }
 
         &__close-button {

@@ -75,7 +75,7 @@
                     <img class="logo__img" src="./images/logo/logo-white.svg" alt="логотип FreShok" width="200"
                         height="60">
                 </a>
-                <a class="logo menu__logo-icon" href="index.html">
+                <a class="logo menu__logo-mobile" href="index.html">
                     <img class="logo__img" src="./images/logo/logo-icon.svg" alt="логотип FreShok" width="36"
                         height="40">
                 </a>
@@ -128,7 +128,7 @@
                         </li>
                     </ul>
                 </div>
-                <form class="form-search">
+                <form class="form-search form-search__header">
                     <label class="form-search__label" for="search">
                         <span class="sr-only">напишите название товара, который вы ищете</span>
                         <input class="form-search__input" id="search" name="search" type="search"
@@ -188,7 +188,8 @@
     <picture>
         <source srcset="./images/basket-card/1-1x.jpg 1x, ./images/basket-card/1-2x.jpg 2x"
             media="(min-width: 320px)">
-        <img class="basket-card__img" src="./images/basket-card/1-1x.jpg" alt="ананас" width="60" height="60">
+        <img class="basket-card__img" src="./images/basket-card/1-1x.jpg" alt="ананас" width="60"
+            height="60">
     </picture>
     <div class="basket-card__content">
         <h3 class="basket-card__title">Ананас, 1 кг</h3>
@@ -201,17 +202,17 @@
     </div>
     <form class="counter">
         <div class="counter__box">
-        <button class="counter__btn counter__btn--minus" type="button">
-            <span class="sr-only">уменьшить количество единиц товара</span>
-        </button>
-        <label class="counter__form-label" for="pineapple">
-            <span class="sr-only">введите количество товара</span>
-            <input class="counter__form-input" name="pineapple" id="pineapple" type="number" value="1" required>
-        </label>
-        <button class="counter__btn counter__btn--plus" type="button">
-            <span class="sr-only">добавить количество единиц товара</span>
-        </button>
-    </div>
+            <button class="counter__btn counter__btn--minus" type="button">
+                <span class="sr-only">уменьшить количество единиц товара</span>
+            </button>
+            <label class="counter__form-label" for="pineapple">
+                <span class="sr-only">введите количество товара</span>
+                <input class="counter__form-input" name="pineapple" id="pineapple" type="number" value="1" required>
+            </label>
+            <button class="counter__btn counter__btn--plus" type="button">
+                <span class="sr-only">добавить количество единиц товара</span>
+            </button>
+        </div>
         <span class="counter__price">
             198
             <span class="currency">
@@ -229,7 +230,8 @@
     <picture>
         <source srcset="./images/basket-card/2-1x.jpg 1x, ./images/basket-card/2-2x.jpg 2x"
             media="(min-width: 320px)">
-        <img class="basket-card__img" src="./images/basket-card/2-1x.jpg" alt="питахайя красная " width="60" height="60">
+        <img class="basket-card__img" src="./images/basket-card/2-1x.jpg" alt="питахайя красная " width="60"
+            height="60">
     </picture>
     <div class="basket-card__content">
         <h3 class="basket-card__title">Питахайя красная с белой мякотью, 1шт</h3>
@@ -242,17 +244,17 @@
     </div>
     <form class="counter">
         <div class="counter__box">
-        <button class="counter__btn counter__btn--minus" type="button">
-            <span class="sr-only">уменьшить количество единиц товара</span>
-        </button>
-        <label class="counter__form-label" for="pitahaya">
-            <span class="sr-only">введите количество товара</span>
-            <input class="counter__form-input" name="pitahaya" id="pitahaya" type="number" value="1" required>
-        </label>
-        <button class="counter__btn counter__btn--plus" type="button">
-            <span class="sr-only">добавить количество единиц товара</span>
-        </button>
-    </div>
+            <button class="counter__btn counter__btn--minus" type="button">
+                <span class="sr-only">уменьшить количество единиц товара</span>
+            </button>
+            <label class="counter__form-label" for="pitahaya">
+                <span class="sr-only">введите количество товара</span>
+                <input class="counter__form-input" name="pitahaya" id="pitahaya" type="number" value="1" required>
+            </label>
+            <button class="counter__btn counter__btn--plus" type="button">
+                <span class="sr-only">добавить количество единиц товара</span>
+            </button>
+        </div>
         <span class="counter__price">
             202
             <span class="currency">
@@ -302,7 +304,7 @@
                             </a>
                         </div>
                         <div class="main-menu mobile-menu__main-menu">
-                            <button class="main-menu__button selectBtn main-menu__button--black" type="button">
+                            <button class="main-menu__button selectBtn mobile-menu__button" type="button">
                                 <svg class="main-menu__icon main-menu__icon--line" width="26" height="17">
                                     <use href="images/icon/sprite.svg#line"></use>
                                 </svg>
@@ -558,7 +560,7 @@
 </ul>
     </div>
 </section>
-         <!-- 
+     
         <section class="top-product">
             <div class="container">
                 <h2 class="title">Топовые товары</h2>
@@ -1863,9 +1865,131 @@
                     </li>
                 </ul>
             </div>
-        </section>  -->
+        </section>  
     </main>
-    
+     <footer class="footer">
+    <div class="container">
+        <h2 class="sr-only">Дополнительная информация</h2>
+        <a class="logo footer__logo" href="index.html">
+            <img class="logo__img" src="./images/logo/logo-white.svg" alt="логотип FreShok" width="200" height="60">
+        </a>
+        <div class="footer__inner">
+            <div class="footer__content">
+                <div class="footer__box">
+                    <span class="subscribe-form__title">Следите за нашими акциями</span>
+                    <form class="subscribe-form">
+                        <label class="subscribe-form__label" for="subscribeEmai">
+                            <input class="subscribe-form__input" placeholder="email@email.com" type="text"
+                                name="subscribeEmail" id="subscribeEmai">
+                        </label>
+                        <button class="subscribe-form__btn" type="submit">подписаться</button>
+                    </form>
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Оплата и доставка
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Вакансии
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Публичная оферта
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Акции
+                        </a>
+                    </li>
+                </ul>
+                <address class="address">
+                    <ul class="address__list">
+                        <li class="address__item">
+                            <a class="address__link" href="tel:+380501112233">
+                                Горячая линия:+38 050 111 22 33
+                            </a>
+                        </li>
+                        <li class="address__item">
+                            <a class="address__link" href="mailto:Запорожье,ул.Т.Г.Шевченко,1">
+                                Запорожье, ул. Т.Г. Шевченко, 1
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="icon social__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="icon social__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#youtubi"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="icon social__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="icon social__icon" width="32" height="32">
+                                    <use href="images/icon/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__text">© 2022 фрешок</span>
+            <div class="footer__aside">
+                <button class="footer__btn" type="button">
+                    <svg class="icon footer__icon" width="93" height="29">
+                        <use href="images/icon/sprite.svg#visa"></use>
+                    </svg>
+                </button>
+                <button class="footer__btn" type="button">
+                    <svg class="icon footer__icon" width="49" height="29">
+                        <use href="images/icon/sprite.svg#mastercard"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="js/main.min.js"></script>
 
  
