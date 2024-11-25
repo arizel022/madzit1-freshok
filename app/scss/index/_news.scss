@@ -35,13 +35,17 @@
     }
 
     &__link {
-        display: block;
+        display: inline-block;
         font-weight: 700;
         line-height: 130%;
         position: relative;
         border-radius: 3px;
         color: $green;
         transition: color 0.5s, outline 0.5s;
+
+        @media (max-width: 576px) {
+          padding: 14px 0;
+        }
 
         &:hover {
             color: #4D800C;

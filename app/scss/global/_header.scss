@@ -261,11 +261,6 @@
 
         &:focus {
             outline: 3px solid #E0EDCF;
-
-            @media (max-width: 992px) {
-                outline: none;
-                color: $green;
-            }
         }
 
         &:active {
@@ -365,19 +360,17 @@
     max-width: 576px;
     width: 100%;
     margin-right: 58px;
-
-    &__header{
-        @media (max-width: 768px) {
-            position: absolute;
-            z-index: 5;
-            top: 110px;
-            max-width: none;
-            transform: scale(0);
-            transition: transform 0.5s;
     
-            &.active {
-                transform: scale(1);
-            }
+    @media (max-width: 768px) {
+        position: absolute;
+        z-index: 5;
+        top: 110px;
+        max-width: 100%;
+        transform: scale(0);
+        transition: transform 0.5s;
+
+        &.active {
+            transform: scale(1);
         }
     }
 
@@ -523,6 +516,7 @@
         &__box {
             padding: 12px 11px 12px 11px;
             flex-grow: 1;
+            background-color: #f6f6f6;
         }
 
         &__title {
@@ -664,7 +658,6 @@
             background-color: $green;
             width: 100%;
             padding: 9px 15px 7px 15px;
-            gap: 40px;
             position: relative;
 
             &::before {
@@ -675,14 +668,14 @@
                 width: 2px;
                 height: 20px;
                 position: absolute;
-                left: 108px;
+                left: 118px;
             }
         }
 
        &__registration-link {
             display: block;
             color: #fff;
-            padding: 5px;
+            padding: 15px;
             font-size: 18px;
             line-height: 1.0;
             border-radius: 3px;

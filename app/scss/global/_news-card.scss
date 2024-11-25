@@ -58,9 +58,13 @@
             opacity: .80;
         }
 
-        @media(max-width:576px) {
+        @media (max-width: 768px) {
            padding: 15px;
         }
+    }
+
+    &__title{
+        font-weight: 600;
     }
 
     &__img{

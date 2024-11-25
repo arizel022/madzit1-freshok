@@ -14,6 +14,14 @@
         position: relative;
         transition: color 0.5s, outline 0.5s;
 
+        @media(max-width:768px) {
+            padding: 12px 0;
+
+            // &::before{
+            //     bottom: 10px;
+            // }
+        }
+
         &::before {
             content: '';
             display: block;
@@ -48,7 +56,13 @@
                 position: absolute;
                 bottom: -2px;
                 transition: border-color 0.5s;
+
+                @media(max-width:768px) {
+                    bottom: 10px;
+                }
             }
+
+           
         }
     }
 }
