@@ -1,7 +1,7 @@
 .menu {
     display: flex;
     flex-direction: column;
-
+    
     &__top {
         display: flex;
         justify-content: space-between;
@@ -65,9 +65,8 @@
         text-transform: uppercase;
         color: #fff;
         border-radius: 3px;
-
-
-
+        transition: opacity 0.5s, outline 0.5s, color 0.5s;
+        
         &--icon {
             display: flex;
             align-items: center;
@@ -141,6 +140,23 @@
         @media (max-width: 992px) {
             display: block;
             margin-right: 50px;
+        }
+    }
+
+    &__form-search{
+        margin-right: 58px;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            z-index: 5;
+            top: 110px;
+            max-width: 100%;
+            transform: scale(0);
+            transition: transform 0.5s;
+    
+            &.active {
+                transform: scale(1);
+            }
         }
     }
 }
@@ -252,15 +268,15 @@
         transition: background-color 0.5s, border-radius 0.5s, outline 0.5s, opacity 0.5s;
 
         &:hover {
-            background-color: #E0EDCF;
-
-            @media (max-width: 992px) {
-                background-color: transparent;
-            }
+            background-color: #E0EDCF; 
         }
 
         &:focus {
             outline: 3px solid #E0EDCF;
+            @media (max-width: 992px) {
+            outline: 0;
+            background-color: #E0EDCF;
+            }
         }
 
         &:active {
@@ -359,20 +375,7 @@
     display: flex;
     max-width: 576px;
     width: 100%;
-    margin-right: 58px;
-    
-    @media (max-width: 768px) {
-        position: absolute;
-        z-index: 5;
-        top: 110px;
-        max-width: 100%;
-        transform: scale(0);
-        transition: transform 0.5s;
-
-        &.active {
-            transform: scale(1);
-        }
-    }
+  
 
     &__label {
         position: relative;
@@ -672,7 +675,7 @@
             }
         }
 
-       &__registration-link {
+        &__registration-link {
             display: block;
             color: #fff;
             padding: 15px;
@@ -695,7 +698,7 @@
                 opacity: .50;
             }
         }
-    
+
         &__content {
             padding: 0 15px;
         }

@@ -1,0 +1,229 @@
+.filters {
+    max-width: 300px;
+    width: 100%;
+    padding: 18px 19px;
+    border-radius: 6px;
+    border: 1px solid #c1c1c1;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        border-top: 1px solid #c1c1c1;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 120%;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #c1c1c1;
+
+        transition: opacity 0.5s, outline 0.5s, color 0.5s;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            color: #E0EDCF;
+        }
+    }
+
+    &__list {
+        max-height: 285px;
+        overflow-y: scroll;
+        position: relative;
+        &::-webkit-scrollbar { width: 0; }
+
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: #c1c1c1;
+            height: 130px;
+            width: 4px;
+            border-radius: 3px;
+            top: 0;
+            right: 0;
+            
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        color: #505050;
+        border-radius: 3px;
+        transition: color 0.5s, outline 0.5s;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            color: #E0EDCF;
+        }
+    }
+
+    &__form-label {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__form-input {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+
+        &:checked+.filters__form-fake {
+            outline-color: #505050;
+
+            .filters__form-icon {
+                fill: #505050;
+            }
+        }
+    }
+
+    &__form-fake {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        outline: 1px solid #c1c1c1;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+        margin-right: 12px;
+        cursor: pointer;
+        transition: outline 0.5s;
+
+        &:hover {
+            outline-color: #505050;
+        }
+
+        &:focus {
+            outline-color: #E0EDCF;
+        }
+
+    }
+
+    &__form-icon {
+        fill: transparent;
+        transition: fill 0.5s;
+    }
+
+    &__rangeslide-form {
+        text-align: center;
+    }
+
+    &__rangeslider-label {
+
+        &:nth-of-type(3n + 1) {
+            margin-right: 25px;
+        }
+    }
+
+    &__rangeslider-input {
+        max-width: 80px;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        border: 1px solid #c1c1c1;
+        border-radius: 3px;
+        color: #505050;
+        background-color: #f6f6f6;
+        transition: outline 0.5s;
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+    }
+
+    &__rangeslider-text {
+        color: #c1c1c1;
+    }
+
+    .irs--round .irs-handle {
+        top: 25px;
+        width: 18px;
+        height: 18px;
+        border: transparent;
+        background-color: $green;
+    }
+
+    .irs--round .irs-bar {
+        top: 32px;
+        background-color: $green;
+    }
+
+    .irs--round .irs-line {
+        background-color: #C4C4C4;
+        top: 32px;
+        border-radius: 0;
+    }
+
+    .irs--round .irs-to {
+        display: none;
+    }
+
+    .irs-from {
+        display: none;
+    }
+
+    .irs-min,
+    .irs-max {
+        display: none;
+    }
+
+    .irs-single {
+        display: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

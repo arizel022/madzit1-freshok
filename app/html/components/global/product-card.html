@@ -1,66 +1,79 @@
-<li class="grid__item mix @@category"  >
+<li class="grid__item mix @@category">
     <article class="product-card">
-            <div class="product-card__top">
-                <div class="badges">
-                    <span class="badges__item badges__item--new @@new">
-                        Новинка
-                    </span>
-                    <span class="badges__item badges__item--discount @@discount50">
-                        -50%
-                    </span>
-                    <span class="badges__item badges__item--discount @@discount30">
-                        -30%
-                    </span>
-                    <span class="badges__item badges__item--hit @@hit">
-                        хит
-                    </span>
-                </div>
-                <button class="button-favorites button-favorites--grey" type="button">
-                    <span class="sr-only">добавить в избранное</span>
-                    <svg class="icon button-favorites__icon" width="32" height="29">
-                        <use href="images/icon/sprite.svg#like"></use>
-                    </svg>
-                </button>
-            </div>
-            <a class="product-card__link" href="product-page.html">
-                <span class="product-card__hidden">
-                    <svg class="icon product-card__hidden-icon" width="20" height="20">
-                        <use href="images/icon/sprite.svg#search"></use>
-                    </svg>
+        <div class="product-card__top">
+            <div class="badges">
+                <span class="badges__item badges__item--new @@new">
+                    Новинка
                 </span>
-                <picture>
-                    <source srcset="./images/product-card/@@imagFileName-1x.jpg 1x, ./images/product-card/@@imagFileName-2x.jpg 2x"
-                        media="(min-width: 320px)">
-                    <source
-                        srcset="./images/product-card/@@imagFileName-1x-mob.jpg 1x, ./images/product-card/@@imagFileName-2x-mob.jpg 2x"
-                        media="(min-width: 320px)">
-                    <img class="product-card__img" src="./images/product-card/@@imagFileName-1x.jpg" alt="@@productName"
-                        width="298" height="215">
-                </picture>
-                <h3 class="product-card__title">@@productName</h3>
-            </a>
-            <div class="product-card__bottom">
-                <div class="product-price">
-                    <span class="product-price__item product-price--old @@oldPrice">
-                        @@oldPriceVaule
-                        <span class="currency">
-                            &#8372;
-                        </span>
-                    </span>
-                    <span class="product-price__item product-price--current">
-                        @@currentPriceVaule
-                        <span class="currency">
-                            &#8372;
-                        </span>
-                    </span>
-                </div>
-                <button class="button-basket button-basket--background" type="button">
-                    <span class="sr-only">добавить товар в корзину </span>
-                    <svg class="icon button-basket__icon" width="16" height="16">
-                        <use href="images/icon/sprite.svg#cart"></use>
-                    </svg>
-                </button>
+                <span class="badges__item badges__item--discount @@discount50">
+                    -50%
+                </span>
+                <span class="badges__item badges__item--discount @@discount30">
+                    -30%
+                </span>
+                <span class="badges__item badges__item--hit @@hit">
+                    хит
+                </span>
             </div>
-      
+            <button class="button-favorites button-favorites--grey" type="button">
+                <span class="sr-only">добавить в избранное</span>
+                <svg class="icon button-favorites__icon" width="32" height="29">
+                    <use href="images/icon/sprite.svg#like"></use>
+                </svg>
+            </button>
+        </div>
+        <a class="product-card__link" href="product-page.html">
+            <span class="product-card__hidden">
+                <svg class="icon product-card__hidden-icon" width="20" height="20">
+                    <use href="images/icon/sprite.svg#search"></use>
+                </svg>
+            </span>
+            <picture>
+                <source
+                    srcset="./images/product-card/@@imagFileName-1x.jpg 1x, ./images/product-card/@@imagFileName-2x.jpg 2x"
+                    media="(min-width: 320px)">
+                <source
+                    srcset="./images/product-card/@@imagFileName-1x-mob.jpg 1x, ./images/product-card/@@imagFileName-2x-mob.jpg 2x"
+                    media="(min-width: 320px)">
+                <img class="product-card__img" src="./images/product-card/@@imagFileName-1x.jpg" alt="@@productName"
+                    width="298" height="215">
+            </picture>
+                <div class="product-card__box @@boxNone">
+                    <div class="available">
+                        <span class="available__item available__item--green @@stock">в наличии</span>
+                        <span class="available__item available__item--red @@ends">заканчивается</span>
+                        <span class="available__item available__item--grey @@not-available">нет в наличии</span>
+                    </div>
+                    <div class="star">
+                        @@star
+                        <svg class="star__icon" width="16" height="16">
+                            <use href="images/icon/sprite.svg#star"></use>
+                        </svg>
+                    </div>
+            </div>
+            <h3 class="product-card__title">@@productName</h3>
+        </a>
+        <div class="product-card__bottom">
+            <div class="product-price">
+                <span class="product-price__item product-price--old @@oldPrice">
+                    @@oldPriceVaule
+                    <span class="currency">
+                        &#8372;
+                    </span>
+                </span>
+                <span class="product-price__item product-price--current">
+                    @@currentPriceVaule
+                    <span class="currency">
+                        &#8372;
+                    </span>
+                </span>
+            </div>
+            <button class="button-basket button-basket--background" type="button">
+                <span class="sr-only">добавить товар в корзину </span>
+                <svg class="icon button-basket__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#cart"></use>
+                </svg>
+            </button>
+        </div>
     </article>
 </li>

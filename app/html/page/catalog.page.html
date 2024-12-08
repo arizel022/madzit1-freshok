@@ -1,0 +1,435 @@
+@@include('../components/global/head.html', {
+"title" : "Интернет магазин продуктов FreShok | Каталог продуктов интернет магазина FreShok"
+})
+@@include('../components/global/header.html')
+@@include('../components/global/breadcrumbs.html')
+<section class="catalog">
+   <div class="container">
+      <h1 class="title catalog__title">
+         kаталог товаров
+      </h1>
+      <div class="catalog__inner">
+         <div class="catalog__aside">
+            <div class="filters">
+               <h2 class="filters__title">Категории</h2>
+               <button class="filters__arrow" type="button">
+                  <span class="sr-only">кнопка закрытия и открытия</span>
+                  <svg class="icon filter__icon" width="18" height="11">
+                     <use href="images/icon/sprite.svg#arrow-filters"></use>
+                  </svg>
+               </button>
+               <ul class="filters__list">
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Овощи и фрукты</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Бакалея</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Молочные продукты</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Хлеб</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Мясо</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Колбаса</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Рыба</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Алкоголь</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Молочные продукты</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Хлеб</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Мясо</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Колбаса</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Рыба</a>
+                  </li>
+                  <li class="filters__item">
+                     <a class="filters__link" href="#">Алкоголь</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="filters">
+               <h2 class="filters__title">Предложения</h2>
+               <button class="filters__arrow" type="button">
+                  <span class="sr-only">кнопка закрытия и открытия</span>
+                  <svg class="icon filter__icon" width="18" height="11">
+                     <use href="images/icon/sprite.svg#arrow-filters"></use>
+                  </svg>
+               </button>
+               <form class="filters__form" action="#">
+                  <label class="filters__form-label" for="radioDiscount">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="radio" name="radioDiscount" id="radioDiscount">
+                     <span class="filters__form-fake">
+                        <svg class="icon filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Со скидкой</span>
+                  </label>
+                  <label class="filters__form-label" for="radioNew">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="radio" name="radioNew" id="radioNew">
+                     <span class="filters__form-fake">
+                        <svg class="icon filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Новинка</span>
+                  </label>
+                  <label class="filters__form-label" for="radioHit">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="radio" name="radioHit" id="radioHit">
+                     <span class="filters__form-fake">
+                        <svg class="filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Хит</span>
+                  </label>
+               </form>
+            </div>
+            <div class="filters">
+               <h2 class="filters__title">Предложения</h2>
+               <button class="filters__arrow" type="button">
+                  <span class="sr-only">кнопка закрытия и открытия</span>
+                  <svg class="icon filter__form-icon" width="18" height="11">
+                     <use href="images/icon/sprite.svg#arrow-filters"></use>
+                  </svg>
+               </button>
+               <form class="filters__form" action="#">
+                  <label class="filters__form-label" for="radioCocaCola">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioCocaCola" id="radioCocaCola">
+                     <span class="filters__form-fake">
+                        <svg class="icon filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">CocaCola</span>
+                  </label>
+                  <label class="filters__form-label" for="radioPepsi">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioPepsi" id="radioPepsi">
+                     <span class="filters__form-fake">
+                        <svg class="icon filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Pepsi</span>
+                  </label>
+                  <label class="filters__form-label" for="radioSprite">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioSprite" id="radioSprite">
+                     <span class="filters__form-fake">
+                        <svg class="filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Sprite</span>
+                  </label>
+                  <label class="filters__form-label" for="radioFanta">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioFanta" id="radioFanta">
+                     <span class="filters__form-fake">
+                        <svg class="filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Fanta</span>
+                  </label>
+                  <label class="filters__form-label" for="radioRedBull">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioRedBull" id="radioRedBull">
+                     <span class="filters__form-fake">
+                        <svg class="filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">RedBull</span>
+                  </label>
+                  <label class="filters__form-label" for="radioPepper">
+                     <span class="sr-only">выберите предложение</span>
+                     <input class="filters__form-input" type="checkbox" name="radioSprite" id="radioPepper">
+                     <span class="filters__form-fake">
+                        <svg class="filters__form-icon" width="12" height="9">
+                           <use href="images/icon/sprite.svg#checkbox"></use>
+                        </svg>
+                     </span>
+                     <span class="filters__form-text">Dr Pepper</span>
+                  </label>
+               </form>
+            </div>
+            <div class="filters">
+               <h2 class="filters__title">Цена</h2>
+               <button class="filters__arrow" type="button">
+                  <span class="sr-only">кнопка закрытия и открытия</span>
+                  <svg class="icon filter__icon" width="18" height="11">
+                     <use href="images/icon/sprite.svg#arrow-filters"></use>
+                  </svg>
+               </button>
+               <form class="filters__rangeslider-form" action="#">
+                  <label class="filters__rangeslider-label" for="numberFrom">
+                     <span class="sr-only">напишите значения </span>
+                     <span class="filters__rangeslider-text">от</span>
+                     <input class="filters__rangeslider-input filters__rangeslider-input--from" type="number"
+                        value="100" name="numberFrom" id="numberFrom">
+                     <span class="filters__rangeslider-text">&#8372;</span>
+                  </label>
+                  <label class="filters__rangeslider-label" for="numberTo">
+                     <span class="sr-only">напишите значения </span>
+                     <span class="filters__rangeslider-text">до</span>
+                     <input class="filters__rangeslider-input filters__rangeslider-input--to" type="number" value="100"
+                        name="numberTo" id="numberTo">
+                     <span class="filters__rangeslider-text">&#8372;</span>
+                  </label>
+                  <label class="filters__rangeslider-label" for="dataFrom">
+                     <span class="sr-only">потяните ползунок</span>
+                     <input class="filters__rangeslider-input filters__rangeslider-input--slide" type="date"
+                        name="dataFrom" id="dataFrom">
+                  </label>
+               </form>
+            </div>
+         </div>
+         <div class="catalog__content">
+            <div class="catalog__box">
+               @@include('../components/global/dropdown.html')
+               <button class="catalog__btn button-row" type="button">
+                  <svg class="catalog__icon" width="35" height="35">
+                     <use href="images/icon/sprite.svg#btn-grid"></use>
+                  </svg>
+               </button>
+               <button class="catalog__btn catalog__btn--active button-grid" type="button">
+                  <svg class="catalog__icon" width="36" height="34">
+                     <use href="images/icon/sprite.svg#btn-flex"></use>
+                  </svg>
+               </button>
+            </div>
+            <ul class="grid grid--3fr catalog__list">
+               @@include('../components/global/product-card.html', {
+               'category' : 'fruits',
+               'new' : '',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '3.5',
+               'new' : '',
+               'discount50' : '',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '9',
+               'productName' : 'Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л',
+               'oldPriceVaule' : '199',
+               'currentPriceVaule' : '99',
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'vegetables',
+               'new' : 'none',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '2',
+               'productName' : 'Лимон, 1кг',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '49',
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'vegetables',
+               'new' : 'none',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : '',
+               'imagFileName' : '3',
+               'productName' : 'Питахайя красная с белой мякотью, 1шт',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '101'
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'fruits',
+               'new' : 'none',
+               'stock' : 'none',
+               'ends' : 'none',
+               'not-available' : '',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '5',
+               'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '60'
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'drinks',
+               'new' : 'none',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : '',
+               'imagFileName' : '6',
+               'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '19'
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'drinks',
+               'new' : 'none',
+               'stock' : 'none',
+               'ends' : '',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : '',
+               'hit' : 'none',
+               'imagFileName' : '7',
+               'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+               'oldPriceVaule' : '49',
+               'currentPriceVaule' : '19'
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : 'none',
+               'ends' : '',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '8',
+               'productName' : 'Перец оранжевый, 1кг',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '219'
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '4',
+               'productName' : 'Кетчуп томатный детский органический Bio-Zentrale 500мл,1 шт',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '100',
+               })
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '1',
+               'productName' : 'Ананас, 1кг',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '100',
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : 'none',
+               'ends' : '',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '5',
+               'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '100',
+               })
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : '',
+               'ends' : 'none',
+               'not-available' : 'none',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '6',
+               'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '100',
+               })
+
+               @@include('../components/global/product-card.html', {
+               'category' : 'grocery',
+               'new' : '',
+               'stock' : 'none',
+               'ends' : 'none',
+               'not-available' : '',
+               'star' : '4.5',
+               'discount50' : 'none',
+               'discount30' : 'none',
+               'hit' : 'none',
+               'imagFileName' : '7',
+               'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+               'oldPrice' : 'none',
+               'oldPriceVaule' : '',
+               'currentPriceVaule' : '100',
+               })
+            </ul>
+            <div class="catalog__bottom">
+               <a class="catalog__link button" href="#">Показать еще</a>
+               @@include('../components/global/pagination.html')
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+@@include('../components/global/advantages.html')
+@@include('../components/global/footer.html')
+@@include('../components/global/footer-scripts.html')

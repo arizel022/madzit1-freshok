@@ -8,12 +8,74 @@
     height: 100%;
     transition: outline 0.5s;
 
-    @media (max-width: 992px) { 
-        margin: 0 auto;
+    &--row {
+        max-width: 466px;
+        padding: 6px 18px 6px 6px;
+        position: relative;
+      
+
+        .product-card__img {
+            width: 200px;
+            height: 150px;
+            margin: 0;
+            margin-right: 18px;
+
+        }
+
+        .product-card__top {
+            padding: 0;
+        }
+
+        .product-card__link {
+            margin-right: 17px;
+            margin-bottom: 0;
+            flex-direction: row;
+        }
+
+        .product-card__hidden {
+            top: 55px;
+            left: 210px;
+        }
+
+        .product-card__box {
+            position: absolute;
+            right: 18px;
+            gap: 147px;
+            // не получаеться с позиционировать звездный рэйтинг поверх релетива 
+            // ну и вообщем с карточкой не получилось до конца правильно разобраться  
+        }
+
+        .product-card__title {
+            max-width: 178px;
+            padding: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 15px;
+        }
+
+        .product-card__bottom {
+            padding: 0;
+            justify-content: end;
+            gap: 147px;
+        }
+
+        .button-favorites {
+
+            &--grey {
+                position: absolute;
+                top: 65px;
+                right: 12px;
+            }
+        }
+
+        .badges {
+            position: absolute;
+            z-index: 1;
+        }
     }
 
-    @media (max-width: 576px) {
-        max-width: 170px;
+    @media (max-width: 992px) {
+        margin: 0 auto;
     }
 
     &:hover {
@@ -31,9 +93,20 @@
         object-fit: cover;
 
         @media (max-width: 768px) {
-            width: 170px;
-            height: 120px;
+            width: 100%;
+            height: auto;
             margin: 0 auto 10px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px;
+        margin-bottom: 9px;
+
+        @media (max-width: 768px) {
+            padding: 0 12px;
         }
     }
 
@@ -106,7 +179,7 @@
         padding: 0 18px;
 
         @media(max-width:576px) {
-            padding: 0 5px;
+            padding: 0 12px;
         }
     }
 

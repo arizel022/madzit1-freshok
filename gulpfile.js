@@ -68,6 +68,7 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/swiper-bundle.js',
         'node_modules/mixitup/dist/mixitup.min.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])
