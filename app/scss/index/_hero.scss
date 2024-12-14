@@ -4,7 +4,6 @@
     margin: 0 auto;
 
     &__content {
-        width: 100%;
         padding: 24px 24px;
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.8);
@@ -19,6 +18,11 @@
         text-transform: uppercase;
         color: #505050;
         margin-bottom: 12px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
     }
 
     &__subtitle {
@@ -31,23 +35,31 @@
         line-height: 140%;
         color: #505050;
         margin-bottom: 32px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 24px;
+        }
     }
 
     &__link {
-        display: block;
-        max-width: 131px;
-        width: 100%;
+        display: inline-block;
     }
 
     &__swiper-slide {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
+        box-sizing: border-box;
         padding: 142px 0;
 
+        @media (max-width: 992px) {
+            padding: 60px 0 50px;
+        }
+
         &--slide1 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/1-1x.jpg');
+            background-image: url('../images/hero/1-1x.jpg');
+
+            @media (max-width: 992px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
@@ -56,11 +68,23 @@
                     background-image: url('../images/hero/1-2x.jpg');
                 }
             }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/1-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/1-2x-mob.jpg');
+                }
+            }
         }
 
         &--slide2 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/2-1x.jpg');
+            background-image: url('../images/hero/2-1x.jpg');
+
+            @media (min-width: 768px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
@@ -69,17 +93,40 @@
                     background-image: url('../images/hero/2-2x.jpg');
                 }
             }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/2-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/2-2x-mob.jpg');
+                }
+            }
         }
 
         &--slide3 {
-            @media (min-width: 1200px) {
-                background-image: url('../images/hero/3-1x.jpg');
+            background-image: url('../images/hero/3-1x.jpg');
+
+            @media (min-width: 768px) {
 
                 @media (min-device-pixel-ratio: 2),
                 (-wibkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
                 (min-resolution: 2dppx) {
                     background-image: url('../images/hero/3-2x.jpg');
+                }
+            }
+
+            @media (max-width: 576px) {
+                background-image: url('../images/hero/3-1x-mob.jpg');
+
+                @media (min-device-pixel-ratio: 2),
+                (-wibkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url('../images/hero/3-2x-mob.jpg');
                 }
             }
         }
@@ -100,6 +147,21 @@
         z-index: 5;
         transition: color 0.5s, background-color 0.5s, outline 0.5s;
 
+        &:disabled {
+            pointer-events: none;
+            color: #c1c1c1;
+        }
+
+        @media (max-width: 1600px) {
+            top: initial;
+            bottom: 35px;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+
         &:hover {
             color: $green;
             background-color: #e0edcf;
@@ -117,11 +179,11 @@
         &--prev {
             left: 60px;
 
-            &:disabled {
-                pointer-events: none;
-                color: #c1c1c1;
+            @media (max-width: 1600px) {
+                left: 36px;
             }
         }
+
 
         &--next {
             right: 60px;
@@ -129,10 +191,49 @@
             .hero__swiper-icon {
                 transform: rotate(180deg);
             }
+
+            @media (max-width: 1600px) {
+                right: 36px;
+            }
         }
+
     }
 
     &__swiper-icon {
         fill: currentColor;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    @media (max-width: 1200px) {
+        display: block;
+
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 16px;
+            z-index: 5;
+            gap: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #C1C1C1;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $green;
+        border: transparent;
     }
 }

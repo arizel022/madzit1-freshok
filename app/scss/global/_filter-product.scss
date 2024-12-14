@@ -1,6 +1,7 @@
-.filter {
+.filter-product {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
     margin-bottom: 51px;
 
@@ -12,6 +13,12 @@
         border-radius: 3px;
         position: relative;
         transition: color 0.5s, outline 0.5s;
+
+        @media(max-width:768px) {
+            padding: 12px 0;
+
+           
+        }
 
         &::before {
             content: '';
@@ -47,7 +54,13 @@
                 position: absolute;
                 bottom: -2px;
                 transition: border-color 0.5s;
+
+                @media(max-width:768px) {
+                    bottom: 10px;
+                }
             }
+
+           
         }
     }
 }

@@ -1,15 +1,24 @@
 .stock {
     padding: 72px 0;
+    text-align: center;
     background-color: #F5F5F5;
 
-    &__filter-wrraper{
+    @media(max-width:768px) {
+        padding: 48px 0;
+    }
+
+    &__filter-wrraper {
         margin-bottom: 48px;
     }
 
-    &__link{
-        display: block;
-        max-width: 177px;
-        width: 100%;
-        margin: 0 auto;
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__link {
+        display: inline-block;
     }
 }

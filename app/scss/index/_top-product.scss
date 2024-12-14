@@ -2,7 +2,22 @@
     padding: 72px 0;
     text-align: center;
 
+    @media(max-width:768px) {
+        padding: 48px 0;
+    }
+
+    &__filter-wrraper{
+        margin-bottom: 48px;
+
+        @media(max-width:768px) {
+            margin-bottom: 36px;
+        }
+    }
+
     &__link {
+        display: block;
+        max-width: 177px;
+        width: 100%;
         font-size: 18px;
         line-height: 130%;
         text-align: center;
@@ -10,6 +25,7 @@
         border-radius: 6px;
         color: $green;
         padding: 12px 24px;
+        margin: 0 auto;
         transition: background-color 0.5s, outline 0.5s, box-shadow 0.5s;
 
         &:hover {

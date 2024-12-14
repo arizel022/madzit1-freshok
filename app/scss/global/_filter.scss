@@ -1,0 +1,216 @@
+.filter {
+    max-width: 300px;
+    width: 100%;
+    padding: 18px 19px;
+    border-radius: 6px;
+    border: 1px solid #c1c1c1;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        border-top: 1px solid #c1c1c1;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 120%;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+    }
+
+    &__list {
+        max-height: 285px;
+        overflow-y: scroll;
+        position: relative;
+        padding: 3px;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 129px;
+            transition: background-color 0.5s;
+
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #c4c4c4;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #E0EDCF;
+        }
+
+        &::-webkit-scroll-behavior {
+            transition: background-color 0.5s;
+        }
+
+
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 8px 0 8px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        color: #505050;
+        border-radius: 3px;
+        transition: color 0.5s, outline 0.5s;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            color: #E0EDCF;
+        }
+    }
+}
+
+.checkbox-form {
+    &__label {
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.5s, outline 0.5s;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+
+        &:hover {
+            background-color: #E0EDCF;
+        }
+
+        &:focus-within,
+        .checkbox-form__input:focus+& {
+            outline: 3px solid #E0EDCF;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+
+        &:checked+.checkbox-form__fake {
+            outline-color: #505050;
+
+            .checkbox-form__icon {
+                fill: #505050;
+            }
+        }
+    }
+
+    &__fake {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        outline: 1px solid #c1c1c1;
+        border-radius: 3px;
+        background-color: #f6f6f6;
+        margin-right: 12px;
+        cursor: pointer;
+        transition: outline 0.5s;
+    }
+
+    &__icon {
+        fill: transparent;
+        transition: fill 0.5s;
+    }
+}
+
+.rangeslider-form {
+    text-align: center;
+
+    &__label {
+
+        &:nth-of-type(3n + 1) {
+            margin-right: 25px;
+        }
+    }
+
+    &__input {
+        max-width: 80px;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        border: 1px solid #c1c1c1;
+        border-radius: 3px;
+        color: #505050;
+        background-color: #f6f6f6;
+        transition: outline 0.5s;
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+    }
+
+    &__text {
+        color: #c1c1c1;
+    }
+
+    .irs--round .irs-handle {
+        top: 25px;
+        width: 18px;
+        height: 18px;
+        border: transparent;
+        background-color: $green;
+    }
+
+    .irs--round .irs-bar {
+        top: 32px;
+        background-color: $green;
+    }
+
+    .irs--round .irs-line {
+        background-color: #C4C4C4;
+        top: 32px;
+        border-radius: 0;
+    }
+
+    .irs--round .irs-to {
+        display: none;
+    }
+
+    .irs-from {
+        display: none;
+    }
+
+    .irs-min,
+    .irs-max {
+        display: none;
+    }
+
+    .irs-single {
+        display: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+}

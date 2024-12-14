@@ -3,37 +3,37 @@
 })
 
 <body data-lock>
-    <main class="main">
+    @@include('../components/global/header.html')
+  <main class="main">
         <h1 class="sr-only">онлайн магазин самых свежих продуктов FreShok</h1>
-        @@include('../components/global/header.html')
-        @@include('../components/index/hero.html')
+        @@include('../components/index/hero.html') 
         <section class="top-product">
             <div class="container">
                 <h2 class="title">Топовые товары</h2>
-                <div class="product__filter-wrraper" data-ref="container-1">
-                    <ul class="filter">
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter="all">
+                <div class="top-product__filter-wrraper mixerContainer" data-ref="container-1">
+                    <ul class="filter-product">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter="all">
                                 Все товары
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".fruits">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".fruits">
                                 Фрукты
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".vegetables">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".vegetables">
                                 овощи
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".drinks">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".drinks">
                                 Напитки
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".grocery">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".grocery">
                                 бакалея
                             </button>
                         </li>
@@ -41,6 +41,7 @@
                     <ul class="grid">
                         @@include('../components/global/product-card.html', {
                         'category' : 'fruits',
+                        'boxNone' : 'none',
                         'new' : '',
                         'discount50' : '',
                         'discount30' : 'none',
@@ -54,6 +55,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'vegetables',
                         'new' : 'none',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : 'none',
@@ -67,6 +69,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'vegetables',
                         'new' : 'none',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : '',
@@ -80,6 +83,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'fruits',
                         'new' : 'none',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : 'none',
@@ -93,6 +97,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'drinks',
                         'new' : 'none',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : '',
@@ -106,6 +111,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'drinks',
                         'new' : 'none',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : '',
                         'hit' : 'none',
@@ -118,6 +124,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'grocery',
                         'new' : '',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : 'none',
@@ -131,6 +138,7 @@
                         @@include('../components/global/product-card.html', {
                         'category' : 'grocery',
                         'new' : '',
+                         'boxNone' : 'none',
                         'discount50' : 'none',
                         'discount30' : 'none',
                         'hit' : 'none',
@@ -141,8 +149,8 @@
                         'currentPriceVaule' : '100',
                         })
                     </ul>
-                    <a class="product__link" href="#">Показать еще</a>
                 </div>
+                <a class="top-product__link" href="catalog-page.html">Показать еще</a>
             </div>
         </section>
         <section class="advertising">
@@ -178,25 +186,25 @@
         <section class="stock">
             <div class="container">
                 <h2 class="title">Акции</h2>
-                <div class="stock__filter-wrraper" data-ref="container-2">
-                    <ul class="filter">
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter="all">
+                <div class="stock__filter-wrraper  mixerContainer" data-ref="container-2">
+                    <ul class="filter-product">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter="all">
                                 Все товары
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".new">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".new">
                                 Новинки
                             </button>
                         </li>
-                        <li class="filter__item">
-                            <button class="filter__btn" type="button" data-filter=".hits">
+                        <li class="filter-product__item">
+                            <button class="filter-product__btn" type="button" data-filter=".hits">
                                 хиты
                             </button>
                         </li>
                     </ul>
-                    <ul class="grid">
+                    <ul class="stock__list">
                         @@include('../components/global/stock-card.html', {
                         'category' : 'new',
                         'new' : '',
@@ -204,7 +212,7 @@
                         'discount30' : 'none',
                         'hit' : 'none',
                         'imagFileName' : '1',
-                        'productName' : 'Клубника, 1 кг',
+                        'productName' : 'Ананас, 1кг',
                         'stock' : '',
                         'ends' : 'none',
                         'not-available' : 'none',
@@ -327,7 +335,7 @@
                         })
                     </ul>
                 </div>
-                <a class="stock__link button" href="#">Показать еще</a>
+                <a class="stock__link button" href="catalog-page.html">Показать еще</a>
             </div>
         </section>
         @@include('../components/index/partners.html')
@@ -374,10 +382,10 @@
                     </li>
                 </ul>
             </div>
-        </section>
-        @@include('../components/global/footer.html')
-        @@include('../components/global/footer-scripts.html')
+        </section>  
     </main>
+     @@include('../components/global/footer.html')
+    @@include('../components/global/footer-scripts.html') 
 </body>
 
 </html>

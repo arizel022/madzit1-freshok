@@ -5,26 +5,49 @@ $(function () {
             $('.main-menu').toggleClass('active')
         });
     });
+
+    $(document).ready(function () {
+        $('.searchBtn').click(function (evenet) {
+            $('.form-search').toggleClass('active')
+        });
+    });
+
+    $(document).ready(function () {
+        $('.selectBtnName').click(function (evenet) {
+            $('.dropdownName').toggleClass('active')
+        });
+    });
+
+    $(document).ready(function () {
+        $('.selectBtnNumbers').click(function (evenet) {
+            $('.dropdownNumbers').toggleClass('active')
+        });
+    });
+
+    $('.catalog__btn').on('click', function () {
+        $('.catalog__btn').removeClass('catalog__btn--active');
+        $(this).addClass('catalog__btn--active');
+    });
+
+    $('.switchAppearanceCatalogRow').on('click', function () {
+        $('.product-card').addClass('product-card--row');
+        $('.grid').addClass('grid--2fr');
+        $('.grid').removeClass('grid--3fr');
+    });
+
+    $('.switchAppearanceCatalogGrid').on('click', function () {
+        $('.product-card').removeClass('product-card--row');
+        $('.grid').addClass('grid--3fr');
+        $('.grid').removeClass('grid--2fr');
+    });
 });
-
-var containerEl1 = document.querySelector('[data-ref="container-1"]');
-var containerEl2 = document.querySelector('[data-ref="container-2"]');
-
-var config = {
-  controls: {
-    scope: 'local'
-  }
-};
-
-var mixer1 = mixitup(containerEl1, config);
-var mixer2 = mixitup(containerEl2, config);
 
 (() => {
     const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
+        openModalBtn: document.querySelector("[data-basket-open]"),
+        closeModalBtn: document.querySelector("[data-basket-close]"),
         modalBodyBtn: document.querySelector("[data-lock]"),
-        modal: document.querySelector("[data-modal]"),
+        modal: document.querySelector("[data-basket]"),
     };
 
     refs.openModalBtn.addEventListener("click", toggleModal);
@@ -37,6 +60,23 @@ var mixer2 = mixitup(containerEl2, config);
     }
 })();
 
+(() => {
+    const refs = {
+        openModalBtn: document.querySelector("[data-mobile-menu-open]"),
+        closeModalBtn: document.querySelector("[data-mobile-menu-close]"),
+        modalBodyBtn: document.querySelector("[data-lock]"),
+        modal: document.querySelector("[data-mobile-menu]"),
+    };
+
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+
+    function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+        refs.modalBodyBtn.classList.toggle("lock");
+    }
+})();
 
 $('.counter__btn--minus').click(function () {
     var $input = $(this).parent().parent().find('.counter__form-input');
@@ -46,11 +86,99 @@ $('.counter__btn--minus').click(function () {
     $input.change();
     return false;
 });
+
 $('.counter__btn--plus').click(function () {
     var $input = $(this).parent().parent().find('.counter__form-input');
     $input.val(parseInt($input.val()) + 1);
     $input.change();
     return false;
 });
+
+var containerEl1 = document.querySelector('[data-ref="container-1"]');
+var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+var config = {
+    controls: {
+        scope: 'local'
+    }
+};
+
+if ($('.mixerContainer').length) {
+    var mixer1 = mixitup(containerEl1, config);
+    var mixer2 = mixitup(containerEl2, config);
+}
+
+var $range = $(".rangeslider-form__input--slide");
+var $inputFrom = $(".rangeslider-form__input--from");
+var $inputTo = $(".rangeslider-form__input--to");
+var instance;
+var min = 0;
+var max = 1000;
+var from = 0;
+var to = 0;
+
+$range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: min,
+    max: max,
+    from: 100,
+    to: 2000,
+    onStart: updateInputs,
+    onChange: updateInputs,
+    onFinish: updateInputs
+});
+instance = $range.data("ionRangeSlider");
+
+function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+}
+
+$inputFrom.on("change", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+        val = min;
+    } else if (val > to) {
+        val = to;
+    }
+
+    instance.update({
+        from: val
+    });
+
+    $(this).prop("value", val);
+
+});
+
+$inputTo.on("change", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+        val = from;
+    } else if (val > max) {
+        val = max;
+    }
+
+    instance.update({
+        to: val
+    });
+
+    $(this).prop("value", val);
+});
+
+
+
+
+
+
+
+
 
 
