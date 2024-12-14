@@ -1,14 +1,15 @@
 <div class="pagination">
-    <a class="pagination__arrow pagination__arrow--prev disabled" href="#">
+    <a class="pagination__link-arrow pagination__link-arrow--prev  disabled" href="#">
+      <span class="sr-only">предыдущий слайд</span>
         <svg class="icon pagination__icon" width="11" height="18">
          <use href="images/icon/sprite.svg#pagination-arrow"></use>
      </svg>
      </a>
     <ul class="pagination__list">
        <li class="pagination__item">
-          <a class="pagination__link active" href="#">
+          <span class="pagination__link current" href="#">
              1
-          </a>
+          </span>
        </li>
        <li class="pagination__item">
           <a class="pagination__link" href="#">
@@ -16,9 +17,9 @@
           </a>
        </li>
        <li class="pagination__item">
-          <a class="pagination__link" href="#">
+          <sapn class="pagination__link" href="#">
              ...
-          </a>
+          </sapn>
        </li>
        <li class="pagination__item">
           <a class="pagination__link" href="#">
@@ -31,9 +32,10 @@
           </a>
        </li>
     </ul>
-    <a class="pagination__arrow pagination__arrow--next " href="#">
+    <a class="pagination__link-arrow pagination__link-arrow--next" href="#">
+      <span class="sr-only">следующий слайд</span>
         <svg class="icon pagination__icon" width="11" height="18">
             <use href="images/icon/sprite.svg#pagination-arrow"></use>
         </svg>
     </a>
- </div>
+</div>

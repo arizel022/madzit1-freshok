@@ -1,226 +1,244 @@
 @@include('../components/global/head.html', {
-"title" : "Интернет магазин продуктов FreShok | Каталог продуктов интернет магазина FreShok"
+"title" : "Каталог продуктов интернет магазина FreShok"
 })
 @@include('../components/global/header.html')
-@@include('../components/global/breadcrumbs.html')
+<div class="catalog__breadcrumbs-wrraper">
+   <div class="breadcrumbs">
+      <div class="container">
+         <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+               <a class="breadcrumbs__link" href="index.html">
+                  Главная
+               </a>
+            </li>
+            <li class="breadcrumbs__item">
+               <span class="breadcrumbs__link current" href="catalog.page.html">
+                  Каталог товаров
+               </span>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
 <section class="catalog">
    <div class="container">
       <h1 class="title catalog__title">
          kаталог товаров
       </h1>
       <div class="catalog__inner">
-         <div class="catalog__aside">
-            <div class="filters">
-               <h2 class="filters__title">Категории</h2>
-               <button class="filters__arrow" type="button">
-                  <span class="sr-only">кнопка закрытия и открытия</span>
-                  <svg class="icon filter__icon" width="18" height="11">
+         <article class="catalog__aside">
+            <h2 class="sr-only">Фильтрация товара</h2>
+            <div class="filter">
+               <h3 class="filter__title">Категории</h3>
+               <button class="button-arrow" type="button">
+                  <span class="sr-only">развернуть/свернуть</span>
+                  <svg class="icon button-arrow__icon" width="18" height="11">
                      <use href="images/icon/sprite.svg#arrow-filters"></use>
                   </svg>
                </button>
-               <ul class="filters__list">
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Овощи и фрукты</a>
+               <ul class="filter__list">
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Овощи и фрукты</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Бакалея</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Бакалея</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Молочные продукты</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Молочные продукты</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Хлеб</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Хлеб</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Мясо</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Мясо</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Колбаса</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Колбаса</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Рыба</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Рыба</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Алкоголь</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Алкоголь</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Молочные продукты</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Молочные продукты</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Хлеб</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Хлеб</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Мясо</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Мясо</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Колбаса</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Колбаса</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Рыба</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Рыба</a>
                   </li>
-                  <li class="filters__item">
-                     <a class="filters__link" href="#">Алкоголь</a>
+                  <li class="filter__item">
+                     <a class="filter__link" href="#">Алкоголь</a>
                   </li>
                </ul>
             </div>
-            <div class="filters">
-               <h2 class="filters__title">Предложения</h2>
-               <button class="filters__arrow" type="button">
-                  <span class="sr-only">кнопка закрытия и открытия</span>
-                  <svg class="icon filter__icon" width="18" height="11">
+            <div class="filter">
+               <h3 class="filter__title">Предложения</h3>
+               <button class="button-arrow" type="button">
+                  <span class="sr-only">развернуть/свернуть</span>
+                  <svg class="icon button-arrow__icon" width="18" height="11">
                      <use href="images/icon/sprite.svg#arrow-filters"></use>
                   </svg>
                </button>
-               <form class="filters__form" action="#">
-                  <label class="filters__form-label" for="radioDiscount">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="radio" name="radioDiscount" id="radioDiscount">
-                     <span class="filters__form-fake">
-                        <svg class="icon filters__form-icon" width="12" height="9">
+               <form class="checkbox-form" action="#">
+                  <label class="checkbox-form__label" for="checkboxDiscount">
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxDiscount" id="checkboxDiscount">
+                     <span class="checkbox-form__fake">
+                        <svg class="icon checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Со скидкой</span>
+                     <span class="checkbox-form__text">Со скидкой</span>
                   </label>
-                  <label class="filters__form-label" for="radioNew">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="radio" name="radioNew" id="radioNew">
-                     <span class="filters__form-fake">
-                        <svg class="icon filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxNew">
+
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxNew" id="checkboxNew">
+                     <span class="checkbox-form__fake">
+                        <svg class="icon checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Новинка</span>
+                     <span class="checkbox-form__text">Новинка</span>
                   </label>
-                  <label class="filters__form-label" for="radioHit">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="radio" name="radioHit" id="radioHit">
-                     <span class="filters__form-fake">
-                        <svg class="filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxHit">
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxHit" id="checkboxHit">
+                     <span class="checkbox-form__fake">
+                        <svg class="checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Хит</span>
+                     <span class="checkbox-form__text">Хит</span>
                   </label>
                </form>
             </div>
-            <div class="filters">
-               <h2 class="filters__title">Предложения</h2>
-               <button class="filters__arrow" type="button">
-                  <span class="sr-only">кнопка закрытия и открытия</span>
-                  <svg class="icon filter__form-icon" width="18" height="11">
+            <div class="filter">
+               <h3 class="filter__title">Бренд</h3>
+               <button class="button-arrow" type="button">
+                  <span class="sr-only">развернуть/свернуть</span>
+                  <svg class="icon button-arrow__icon" width="18" height="11">
                      <use href="images/icon/sprite.svg#arrow-filters"></use>
                   </svg>
                </button>
-               <form class="filters__form" action="#">
-                  <label class="filters__form-label" for="radioCocaCola">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioCocaCola" id="radioCocaCola">
-                     <span class="filters__form-fake">
-                        <svg class="icon filters__form-icon" width="12" height="9">
+               <form class="checkbox-form" action="#">
+                  <label class="checkbox-form__label" for="checkboxCocaCola">
+                   
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxCocaCola" id="checkboxCocaCola">
+                     <span class="checkbox-form__fake">
+                        <svg class="icon checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">CocaCola</span>
+                     <span class="checkbox-form__text">CocaCola</span>
                   </label>
-                  <label class="filters__form-label" for="radioPepsi">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioPepsi" id="radioPepsi">
-                     <span class="filters__form-fake">
-                        <svg class="icon filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxPepsi">
+            
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxPepsi" id="checkboxPepsi">
+                     <span class="checkbox-form__fake">
+                        <svg class="icon checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Pepsi</span>
+                     <span class="checkbox-form__text">Pepsi</span>
                   </label>
-                  <label class="filters__form-label" for="radioSprite">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioSprite" id="radioSprite">
-                     <span class="filters__form-fake">
-                        <svg class="filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxSprite">
+                   
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxSprite" id="checkboxSprite">
+                     <span class="checkbox-form__fake">
+                        <svg class="checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Sprite</span>
+                     <span class="checkboxform__text">Sprite</span>
                   </label>
-                  <label class="filters__form-label" for="radioFanta">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioFanta" id="radioFanta">
-                     <span class="filters__form-fake">
-                        <svg class="filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxFanta">
+                  
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxFanta" id="checkboxFanta">
+                     <span class="checkbox-form__fake">
+                        <svg class="checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Fanta</span>
+                     <span class="checkbox-form__text">Fanta</span>
                   </label>
-                  <label class="filters__form-label" for="radioRedBull">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioRedBull" id="radioRedBull">
-                     <span class="filters__form-fake">
-                        <svg class="filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxRedBull">
+                  
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxRedBull" id="checkboxRedBull">
+                     <span class="checkbox-form__fake">
+                        <svg class="checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">RedBull</span>
+                     <span class="checkbox-form__text">RedBull</span>
                   </label>
-                  <label class="filters__form-label" for="radioPepper">
-                     <span class="sr-only">выберите предложение</span>
-                     <input class="filters__form-input" type="checkbox" name="radioSprite" id="radioPepper">
-                     <span class="filters__form-fake">
-                        <svg class="filters__form-icon" width="12" height="9">
+                  <label class="checkbox-form__label" for="checkboxPepper">
+                 
+                     <input class="checkbox-form__input" type="checkbox" name="checkboxSprite" id="checkboxPepper">
+                     <span class="checkbox-form__fake">
+                        <svg class="checkbox-form__icon" width="12" height="9">
                            <use href="images/icon/sprite.svg#checkbox"></use>
                         </svg>
                      </span>
-                     <span class="filters__form-text">Dr Pepper</span>
+                     <span class="checkbox-form__text">Dr Pepper</span>
                   </label>
                </form>
             </div>
-            <div class="filters">
-               <h2 class="filters__title">Цена</h2>
-               <button class="filters__arrow" type="button">
-                  <span class="sr-only">кнопка закрытия и открытия</span>
-                  <svg class="icon filter__icon" width="18" height="11">
+            <div class="filter">
+               <h3 class="filter__title">Цена</h3>
+               <button class="button-arrow" type="button">
+                  <span class="sr-only">развернуть/свернуть</span>
+                  <svg class="icon button-arrow__icon" width="18" height="11">
                      <use href="images/icon/sprite.svg#arrow-filters"></use>
                   </svg>
                </button>
-               <form class="filters__rangeslider-form" action="#">
-                  <label class="filters__rangeslider-label" for="numberFrom">
-                     <span class="sr-only">напишите значения </span>
-                     <span class="filters__rangeslider-text">от</span>
-                     <input class="filters__rangeslider-input filters__rangeslider-input--from" type="number"
-                        value="100" name="numberFrom" id="numberFrom">
-                     <span class="filters__rangeslider-text">&#8372;</span>
+               <form class="rangeslider-form" action="#">
+                  <label class="rangeslider-form__label" for="numberFrom">
+                     <span class="sr-only">цена</span>
+                     <span class="rangeslider-form__text">от</span>
+                     <input class="rangeslider-form__input rangeslider-form__input--from" type="number" value="100"
+                        name="numberFrom" id="numberFrom">
+                     <span class="rangeslider-form__text">&#8372;</span>
                   </label>
-                  <label class="filters__rangeslider-label" for="numberTo">
-                     <span class="sr-only">напишите значения </span>
-                     <span class="filters__rangeslider-text">до</span>
-                     <input class="filters__rangeslider-input filters__rangeslider-input--to" type="number" value="100"
+                  <label class="rangeslider-form__label" for="numberTo">
+                     <span class="sr-only">цена</span>
+                     <span class="rangeslider-form__text">до</span>
+                     <input class="rangeslider-form__input rangeslider-form__input--to" type="number" value="100"
                         name="numberTo" id="numberTo">
-                     <span class="filters__rangeslider-text">&#8372;</span>
+                     <span class="rangeslider-form__text">&#8372;</span>
                   </label>
-                  <label class="filters__rangeslider-label" for="dataFrom">
-                     <span class="sr-only">потяните ползунок</span>
-                     <input class="filters__rangeslider-input filters__rangeslider-input--slide" type="date"
-                        name="dataFrom" id="dataFrom">
+                  <label class="rangeslider-form__label" for="dataFrom">
+                     <span class="sr-only">цена от и до</span>
+                     <input class="rangeslider-form__input rangeslider-form__input--slide" type="date" name="dataFrom"
+                        id="dataFrom">
                   </label>
                </form>
             </div>
-         </div>
+         </article>
          <div class="catalog__content">
             <div class="catalog__box">
-               @@include('../components/global/dropdown.html')
-               <button class="catalog__btn button-row" type="button">
+               @@include('../components/global/dropdown-filter.html')
+               <button class="catalog__btn switchAppearanceCatalogRow" type="button">
+                  <span class="sr-only">переключатель внешнего вида каталог</span>
                   <svg class="catalog__icon" width="35" height="35">
                      <use href="images/icon/sprite.svg#btn-grid"></use>
                   </svg>
                </button>
-               <button class="catalog__btn catalog__btn--active button-grid" type="button">
+               <button class="catalog__btn catalog__btn--active switchAppearanceCatalogGrid" type="button">
+                  <span class="sr-only">переключатель внешнего вид каталог</span>
                   <svg class="catalog__icon" width="36" height="34">
                      <use href="images/icon/sprite.svg#btn-flex"></use>
                   </svg>
                </button>
             </div>
-            <ul class="grid grid--3fr catalog__list">
+            <ul class="grid grid--3fr">
                @@include('../components/global/product-card.html', {
                'category' : 'fruits',
                'new' : '',

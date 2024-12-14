@@ -21,7 +21,7 @@
         border-radius: 3px;
         transition:border 0.5s, outline 0.5s, box-shadow 0.5s;
 
-        &.active {
+        &.current {
             border: 1px solid #505050;
         }
 
@@ -38,7 +38,7 @@
         }
     }
 
-    &__arrow {
+    &__link-arrow {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -71,7 +71,5 @@
         &:active {
             box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         }
-
-
     }
 }

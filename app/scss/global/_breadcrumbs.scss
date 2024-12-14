@@ -35,6 +35,10 @@
         border-radius: 3px;
         transition: opacity 0.5s, outline 0.5s, color 0.5s;
 
+        &.current{
+            pointer-events: none;   
+        }
+
         &:hover {
             opacity: .70;
         }
@@ -46,7 +50,5 @@
         &:active {
             color: #E0EDCF;
         }
-    }
-
-   
+    } 
 }

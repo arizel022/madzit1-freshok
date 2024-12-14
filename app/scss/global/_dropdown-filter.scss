@@ -1,18 +1,17 @@
-.dropdown {
+.dropdown-filter {
     position: relative;
     z-index: 5;
 
     &.active {
-        .dropdown__list {
+        .dropdown-filter__list {
             max-height: 800px;
             border-color:#c1c1c1;
         }
 
-        .dropdown__icon {
+        .dropdown-filter__icon {
             transform: rotate(-180deg);
         }
     }
-
 
     &__select {
         display: flex;
@@ -43,7 +42,6 @@
     &__icon {
         fill: #c1c1c1;
         transition: transform 0.5s;
-
     }
 
     &__list {
@@ -69,7 +67,7 @@
         padding: 8px 0;
         width: 100%;
         background-color: #fff;
-        transition: color 0.5s, outline 0.5s;
+        transition: color 0.5s, background-color 0.5s;
 
         &:hover {
             color: $green;
@@ -84,7 +82,7 @@
         }
 
         &:focus {
-            outline: 3px solid #E0EDCF;
+          background-color:  #E0EDCF;
         }
     }
 }

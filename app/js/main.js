@@ -14,13 +14,13 @@ $(function () {
 
     $(document).ready(function () {
         $('.selectBtnName').click(function (evenet) {
-            $('.dropdown--name').toggleClass('active')
+            $('.dropdownName').toggleClass('active')
         });
     });
 
     $(document).ready(function () {
         $('.selectBtnNumbers').click(function (evenet) {
-            $('.dropdown--numbers').toggleClass('active')
+            $('.dropdownNumbers').toggleClass('active')
         });
     });
 
@@ -29,14 +29,16 @@ $(function () {
         $(this).addClass('catalog__btn--active');
     });
 
-    $('.button-row').on('click', function () {
+    $('.switchAppearanceCatalogRow').on('click', function () {
         $('.product-card').addClass('product-card--row');
-         $('.grid').addClass('grid--2fr');
+        $('.grid').addClass('grid--2fr');
+        $('.grid').removeClass('grid--3fr');
     });
 
-    $('.button-grid').on('click', function () {
+    $('.switchAppearanceCatalogGrid').on('click', function () {
         $('.product-card').removeClass('product-card--row');
-         $('.grid').removeClass('grid--2fr');
+        $('.grid').addClass('grid--3fr');
+        $('.grid').removeClass('grid--2fr');
     });
 });
 
@@ -106,9 +108,9 @@ if ($('.mixerContainer').length) {
     var mixer2 = mixitup(containerEl2, config);
 }
 
-var $range = $(".filters__rangeslider-input--slide");
-var $inputFrom = $(".filters__rangeslider-input--from");
-var $inputTo = $(".filters__rangeslider-input--to");
+var $range = $(".rangeslider-form__input--slide");
+var $inputFrom = $(".rangeslider-form__input--from");
+var $inputTo = $(".rangeslider-form__input--to");
 var instance;
 var min = 0;
 var max = 1000;
