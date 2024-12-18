@@ -17,6 +17,10 @@
         .product-card__link {
             flex-direction: row;
             margin-bottom: 0;
+
+            &:before{
+                height: 162px;
+            }
         }
 
         .product-card__hidden {
@@ -32,6 +36,12 @@
 
         .product-card__top {
             padding: 0;
+        }
+
+        .product-card__bottom {
+            position: absolute;
+            bottom: 6px;
+            right: 18px;
         }
 
         .badges {
@@ -51,7 +61,7 @@
         .product-card__title {
             max-width: 168px;
             width: 100%;
-            padding: 12px 0 17px;
+            padding:0;
 
         }
 
