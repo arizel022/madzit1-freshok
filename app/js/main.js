@@ -40,6 +40,22 @@ $(function () {
         $('.grid').addClass('grid--3fr');
         $('.grid').removeClass('grid--2fr');
     });
+
+    $(document).ready(function () {
+        $('.btnCatalog').click(function (evenet) {
+            $('.catalog').addClass('active')
+            $('.catalog__aside').addClass('active')
+            $('.body').addClass('lock')
+        });
+    });
+
+    $(document).ready(function () {
+        $('.closeBtnFilter').click(function (evenet) {
+            $('.catalog').removeClass('active')
+            $('.catalog__aside').removeClass('active')
+            $('.body').removeClass('lock')
+        });
+    });
 });
 
 (() => {

@@ -220,9 +220,18 @@
                   </label>
                </form>
             </div>
+            <button class="close-button catalog__close closeBtnFilter" type="button" data-mobile-menu-close>
+               <span class="sr-only">кнопка закрытия</span>
+           </button>
          </article>
          <div class="catalog__content">
             <div class="catalog__box">
+               <button class="catalog__btn-filter btnCatalog" type="button">
+                  <span class="sr-only">открыть фильтрацию</span>
+                  <svg class="icon catalog__icon" width="32" height="36">
+                     <use href="images/icon/sprite.svg#filter"></use>
+                  </svg>
+               </button>
                @@include('../catalog/dropdown-filter.html')
                <button class="catalog__btn switchAppearanceCatalogRow" type="button">
                   <span class="sr-only">показать товары по двое</span>
