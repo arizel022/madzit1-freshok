@@ -12,7 +12,7 @@
                </a>
             </li>
             <li class="breadcrumbs__item">
-               <span class="breadcrumbs__link current" href="catalog.page.html">
+               <span class="breadcrumbs__link current">
                   Каталог товаров
                </span>
             </li>
@@ -140,7 +140,6 @@
                      <span class="checkbox-form__text">CocaCola</span>
                   </label>
                   <label class="checkbox-form__label" for="checkboxPepsi">
-            
                      <input class="checkbox-form__input" type="checkbox" name="checkboxPepsi" id="checkboxPepsi">
                      <span class="checkbox-form__fake">
                         <svg class="icon checkbox-form__icon" width="12" height="9">
@@ -224,21 +223,22 @@
          </article>
          <div class="catalog__content">
             <div class="catalog__box">
-               @@include('../components/global/dropdown-filter.html')
+               @@include('../catalog/dropdown-filter.html')
                <button class="catalog__btn switchAppearanceCatalogRow" type="button">
-                  <span class="sr-only">переключатель внешнего вида каталог</span>
+                  <span class="sr-only">показать товары по двое</span>
                   <svg class="catalog__icon" width="35" height="35">
                      <use href="images/icon/sprite.svg#btn-grid"></use>
                   </svg>
                </button>
                <button class="catalog__btn catalog__btn--active switchAppearanceCatalogGrid" type="button">
-                  <span class="sr-only">переключатель внешнего вид каталог</span>
+                  <span class="sr-only">показать товары сеткой</span>
                   <svg class="catalog__icon" width="36" height="34">
                      <use href="images/icon/sprite.svg#btn-flex"></use>
                   </svg>
                </button>
             </div>
             <ul class="grid grid--3fr">
+
                @@include('../components/global/product-card.html', {
                'category' : 'fruits',
                'new' : '',
@@ -451,3 +451,4 @@
 @@include('../components/global/advantages.html')
 @@include('../components/global/footer.html')
 @@include('../components/global/footer-scripts.html')
+
