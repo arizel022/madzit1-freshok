@@ -45,7 +45,7 @@ $(function () {
         $('.btnCatalog').click(function (evenet) {
             $('.catalog').addClass('active')
             $('.catalog__aside').addClass('active')
-            $('.body').addClass('lock')
+            $('body').addClass('lock')
         });
     });
 
@@ -53,9 +53,17 @@ $(function () {
         $('.closeBtnFilter').click(function (evenet) {
             $('.catalog').removeClass('active')
             $('.catalog__aside').removeClass('active')
-            $('.body').removeClass('lock')
+            $('body').removeClass('lock')
         });
     });
+
+
+
+
+
+    // $('before').not('.catalog__aside').click(function() { 
+    //     $('.catalog__aside').removeClass('catalog__aside'); 
+    // });
 });
 
 (() => {
@@ -191,10 +199,57 @@ $inputTo.on("change", function () {
 
 
 
+// let btnCatalog = $('.btnCatalog');
+// let catalogAside = $('.catalog__aside');
 
+// $(document).mouseup(function (e) {
+//     if (! btnCatalog.is(e.target) && btnCatalog.has(e.target).length === 0 &&
 
+//         ! catalogAside.is(e.target) && catalogAside.has(e.target).length === 0
 
+//     ) {
+//         catalogAside.fadeOut();
+//     }
+// });
 
+$(document).ready(function () {
+    let btnCatalog = $('.btnCatalog'); // Кнопка для открытия меню
+    let catalogAside = $('.catalog__aside'); // Боковое меню
+    let section = $('.catalog'); // Секция с псевдоэлементом затемнения
+    let body = $('body'); // Тело страницы
 
+    function handleMenuLogic() {
+        // Проверка ширины экрана
+        if ($(window).width() < 1200) {
+            // Обработчик клика на кнопку для открытия меню
+            btnCatalog.on('click', function () {
+                catalogAside.fadeIn(); // Показываем меню
+                section.addClass('active'); // Добавляем класс active для затемнения
+                body.addClass('lock'); // Добавляем класс lock к body
+            });
 
+            // Обработчик клика вне меню или кнопки
+            $(document).mouseup(function (e) {
+                if (!catalogAside.is(e.target) && catalogAside.has(e.target).length === 0 &&
+                    !btnCatalog.is(e.target) && btnCatalog.has(e.target).length === 0) {
+                    catalogAside.fadeOut(); // Скрываем меню
+                    section.removeClass('active'); // Убираем затемнение
+                    body.removeClass('lock'); // Убираем класс lock у body
+                }
+            });
+        } else {
+            // Убираем все классы и показываем меню на больших экранах
+            catalogAside.show(); // Меню всегда видно
+            section.removeClass('active'); // Убираем затемнение
+            body.removeClass('lock'); // Убираем класс у body
+        }
+    }
 
+    // Вызываем функцию при загрузке
+    handleMenuLogic();
+
+    // Перепроверяем при изменении размера окна
+    $(window).resize(function () {
+        handleMenuLogic();
+    });
+});
