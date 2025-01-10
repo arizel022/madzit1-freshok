@@ -1,13 +1,32 @@
 .catalog {
     padding: 48px 0 72px;
-    
-    &__breadcrumbs-wrraper{
+
+    &.active {
+        &::before {
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.15);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+    }
+
+    &__breadcrumbs-wrraper {
         margin-bottom: 48px;
     }
 
     &__title {
         text-align: left;
         margin-bottom: 48px;
+
+        @media (max-width:992px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__inner {
@@ -17,10 +36,35 @@
     &__aside {
         max-width: 300px;
         width: 100%;
-        margin-right: 32px;   
+        margin-right: 32px;
+
+        @media (max-width: 1200px) {
+            transform: translateX(-105%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 76px 21px 20px 0;
+            overflow-y: scroll;
+            background-color: #fff;
+            max-width: 320px;
+            width: 100%;
+            height: 100%;
+            margin-right: 0;
+            transition: transform 0.5s;
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        &__close {
+            top: 29px;
+            right: 32px;
+        }
     }
 
-    &__content{
+    &__content {
         flex-grow: 1;
     }
 
@@ -29,10 +73,48 @@
         justify-content: end;
         gap: 15px;
         margin-bottom: 48px;
+
+        @media (max-width: 992px) {
+            justify-content: left;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
     }
 
     &__list {
         margin-bottom: 48px;
+    }
+
+    &__btn-filter {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 47px;
+        background-color: #F6F6F6;
+        color: $green;
+        border-radius: 3px;
+        transition: background-color 0.5s, outline 0.5s, opacity 0.5s;
+
+        @media (max-width: 1200px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            background-color: #E0EDCF;
+        }
+
+        &:focus {
+            outline: 3px solid #E0EDCF;
+        }
+
+        &:active {
+            opacity: .70;
+        }
+
+
     }
 
     &__btn {
@@ -44,7 +126,11 @@
         background-color: #F6F6F6;
         border-radius: 3px;
         transition: background-color 0.5s, outline 0.5s, opacity 0.5s;
-        
+
+        @media (max-width: 992px) {
+            display: none;
+        }
+
         &--active {
             .catalog__icon {
                 fill: $green;
@@ -52,7 +138,7 @@
         }
 
         &:hover {
-          background-color: #E0EDCF;
+            background-color: #E0EDCF;
         }
 
         &:focus {
@@ -61,6 +147,14 @@
 
         &:active {
             opacity: .70;
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @media (max-width: 1200px) {
+            display: flex;
         }
     }
 
@@ -73,5 +167,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 24px;
+        }
     }
 }
