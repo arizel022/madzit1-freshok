@@ -1,0 +1,26 @@
+.available {
+    text-align: left;
+
+    &__item {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 100%;
+        text-transform: uppercase;
+
+        &--green {
+            color: $green;
+        }
+
+        &--red {
+            color: #cf3e3b;
+        }
+
+        &--grey {
+            color: #c1c1c1;
+        }
+
+        &--size {
+            font-size: 16px;
+        }
+    }
+}

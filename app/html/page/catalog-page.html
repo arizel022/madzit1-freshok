@@ -2,7 +2,7 @@
 "title" : "Каталог продуктов интернет магазина FreShok"
 })
 @@include('../components/global/header.html')
-<div class="catalog__breadcrumbs-wrraper">
+<div class="breadcrumbs-wrraper">
    <div class="breadcrumbs">
       <div class="container">
          <ul class="breadcrumbs__list">
@@ -130,7 +130,6 @@
                </button>
                <form class="checkbox-form" action="#">
                   <label class="checkbox-form__label" for="checkboxCocaCola">
-                   
                      <input class="checkbox-form__input" type="checkbox" name="checkboxCocaCola" id="checkboxCocaCola">
                      <span class="checkbox-form__fake">
                         <svg class="icon checkbox-form__icon" width="12" height="9">
@@ -249,9 +248,8 @@
                </button>
             </div>
             <ul class="grid grid--3fr">
-
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'fruits',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -266,9 +264,9 @@
                'oldPriceVaule' : '199',
                'currentPriceVaule' : '99',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'vegetables',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -283,9 +281,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '49',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'vegetables',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -300,9 +298,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '101'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'fruits',
                'new' : 'none',
                'stock' : 'none',
                'ends' : 'none',
@@ -317,9 +315,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '60'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'drinks',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -334,9 +332,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '19'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'drinks',
                'new' : 'none',
                'stock' : 'none',
                'ends' : '',
@@ -350,9 +348,9 @@
                'oldPriceVaule' : '49',
                'currentPriceVaule' : '19'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : '',
@@ -367,9 +365,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '219'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -384,8 +382,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+               </li>
+               <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -400,9 +399,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : '',
@@ -417,8 +416,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -433,9 +433,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : 'none',
@@ -450,6 +450,7 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+          </li>
             </ul>
             <div class="catalog__bottom">
                <a class="catalog__link button" href="#">Показать еще</a>

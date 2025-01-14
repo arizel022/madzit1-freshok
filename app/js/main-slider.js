@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
 
   });
 
-  var swiper2 = new Swiper(".mySwiper2",{
+var swiper2 = new Swiper(".mySwiper2",{
     slidesPerView: 6,
     
     autoplay: {
@@ -22,4 +22,33 @@ const swiper = new Swiper('.swiper', {
       disableOnInteraction: false,
     },
   });
+
+const swiper3 = new Swiper('.mySwiper3', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.product__review-btn--next',
+      prevEl: '.product__review-btn--prev',
+    },
+
+    pagination: {
+      el: ".product__review-pagination",
+      clickable: true,
+    },
+ 
+
+});
+
+const swiper4 = new Swiper('.mySwiper4', {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.interest__btn--next',
+    prevEl: '.interest__btn--prev',
+  },
+
+
+});
  

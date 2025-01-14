@@ -1,0 +1,38 @@
+.comments {
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    &__img {
+        margin-right: 24px;
+    }
+
+    &__quote {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &--left {
+            margin-right: auto;
+        }
+    }
+
+    &__author {
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    &__data {
+        font-style: normal;
+        line-height: 171%;
+        color: #4f4f4f;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}

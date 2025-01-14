@@ -58,12 +58,101 @@ $(function () {
     });
 
 
+    $(document).ready(function () {
+        $('.zoomBtn').click(function (evenet) {
+            $('.product').addClass('active')
+            $('.product__review').addClass('active')
+            $('body').addClass('lock')
+        });
+    });
 
+    $(document).ready(function () {
+        $('.closeBtnZoom').click(function (evenet) {
+            $('.product').removeClass('active')
+            $('.product__review').removeClass('active')
+            $('body').removeClass('lock')
+        });
+    });
 
+    $('.product__tabs-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.product__tabs-btn--active').removeClass('product__tabs-btn--active');
+        $(this).addClass('product__tabs-btn--active');
 
-    // $('before').not('.catalog__aside').click(function() { 
-    //     $('.catalog__aside').removeClass('catalog__aside'); 
-    // });
+        $('.product__items').removeClass('product__items--active');
+        $($(this).attr('id')).addClass('product__items--active');
+    });
+
+    // $(document).ready(function () {
+    //     $('.zoom-gallery').magnificPopup({
+    //       delegate: 'a',
+    //       type: 'image',
+    //       closeOnContentClick: false,
+    //       closeBtnInside: false,
+    //       mainClass: 'mfp-with-zoom mfp-img-mobile',
+    
+    //       image: {
+    //         verticalFit: true,
+    //         titleSrc: function (item) {
+    //           return (
+    //             item.el.attr('title') +
+    //             ' &middot; <a class="image-source-link" href="' +
+    //             item.el.attr('data-source') +
+    //             '" target="_blank">image source</a>'
+    //           );
+    //         },
+    //       },
+    //       zoom: {
+    //         enabled: true,
+    //         duration: 300, // don't forget to change the duration also in CSS
+    //         opener: function (element) {
+    //           return element.find('img');
+    //         },
+    //       },
+    
+    //       // Добавляем кнопки через callbacks
+    //       callbacks: {
+    //         open: function () {
+    //           // HTML для кнопок (вставляем вне области изображения)
+    //           const customButtons = `
+    //             <div class="custom-buttons">
+    //               <button class="product__review-btn product__review-btn--zoomPrev" type="button">
+    //                 <span class="sr-only">предыдущий слайд</span>
+    //                 <svg class="icon product__review-icon" width="19" height="32">
+    //                   <use href="images/icon/sprite.svg#arrow-big"></use>
+    //                 </svg>
+    //               </button>
+    //               <button class="product__review-btn product__review-btn--zoomNext" type="button">
+    //                 <span class="sr-only">следующий слайд</span>
+    //                 <svg class="icon product__review-icon" width="19" height="32">
+    //                   <use href="images/icon/sprite.svg#arrow-big"></use>
+    //                 </svg>
+    //               </button>
+    //             </div>
+    //           `;
+    
+    //           // Вставляем кнопки ВНЕ контейнера изображения
+    //           $('.mfp-figure').append(customButtons);
+    
+    //           // Привязываем события к кнопкам
+    //           $('.product__review-btn--zoomPrev').on('click', function (event) {
+    //             event.stopPropagation(); // Останавливаем всплытие события
+    //             $.magnificPopup.instance.prev(); // Предыдущее изображение
+    //           });
+    
+    //           $('.product__review-btn--zoomNext').on('click', function (event) {
+    //             event.stopPropagation(); // Останавливаем всплытие события
+    //             $.magnificPopup.instance.next(); // Следующее изображение
+    //           });
+    //         },
+    //         close: function () {
+    //           // Удаляем кнопки при закрытии окна
+    //           $('.custom-buttons').remove();
+    //         },
+    //       },
+    //     });
+    //   });
+
 });
 
 (() => {
@@ -101,6 +190,9 @@ $(function () {
         refs.modalBodyBtn.classList.toggle("lock");
     }
 })();
+
+
+
 
 $('.counter__btn--minus').click(function () {
     var $input = $(this).parent().parent().find('.counter__form-input');
@@ -196,21 +288,6 @@ $inputTo.on("change", function () {
 
     $(this).prop("value", val);
 });
-
-
-
-// let btnCatalog = $('.btnCatalog');
-// let catalogAside = $('.catalog__aside');
-
-// $(document).mouseup(function (e) {
-//     if (! btnCatalog.is(e.target) && btnCatalog.has(e.target).length === 0 &&
-
-//         ! catalogAside.is(e.target) && catalogAside.has(e.target).length === 0
-
-//     ) {
-//         catalogAside.fadeOut();
-//     }
-// });
 
 $(document).ready(function () {
     let btnCatalog = $('.btnCatalog'); // Кнопка для открытия меню

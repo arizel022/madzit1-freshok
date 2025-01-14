@@ -1,0 +1,63 @@
+<form class="feedback">
+    <div class="feedback__top">
+        <span class="feedback__title">Ваша оценка *</span>
+        <div class="product-star">
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="feedback__inner">
+        <label class="feedback__label  feedback__label--area" for="text">
+            Ваш отзыв *
+            <textarea class="feedback__input feedback__input--area" name="text" id="text" placeholder="Введите ваше имя"
+                required></textarea>
+        </label>
+        <div class="feedback__box">
+            <label class="feedback__label" for="name">
+                Имя
+                <input class="feedback__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+               
+            </label>
+            <label class="feedback__label" for="email">
+                Email *
+                <input class="feedback__input" type="email" name="email" id="email" placeholder="youremail@mail.com" required>
+            </label>
+        </div>
+    </div>
+    <label class="feedback__label-checkbox" for="checkbox">
+        <input class="feedback__input-checkbox" name="checkbox" id="checkbox" type="checkbox">
+        <span class="feedback__checkbox-fake">
+            <svg class="icon feedback__checkbox-icon" width="12" height="9">
+                <use href="images/icon/sprite.svg#checkbox"></use>
+            </svg>
+        </span>
+        <span class="feedback__text">
+            Сохранить моё имя, email и адрес сайта в этом браузере
+            для последующих моих комментариев.
+        </span>
+    </label>
+    <button class="button feedback__btn" type="submit">Оставить отзыв</button>
+</form>

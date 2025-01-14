@@ -255,8 +255,6 @@ body {
         margin-bottom: 3px;
         position: relative;
 
-
-
         &::before {
             content: '';
             border-top: 1px solid #C1C1C1;
@@ -303,6 +301,44 @@ body {
     font-weight: 700;
     line-height: 100%;
     color: #505050;
+
+    &__icon {
+        fill: #FFB800;
+    }
+}
+
+.product-star {
+    display: flex;
+    gap: 6px;
+
+    &--left {
+        margin-right: auto;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        color: #FFB800;
+        transition: color 0.5s, outline 0.5s, opacity 0.5s;
+
+        &--grey {
+            color: #C1C1C1;
+        }
+
+        &:hover {
+            color: #FFB800;
+        }
+
+        &:focus {
+            outline: 1px solid #E0EDCF;
+        }
+
+        &:active {
+            opacity: 0.50;
+        }
+    }
 }
 
 .burger-button {
