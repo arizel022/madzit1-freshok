@@ -1,28 +1,34 @@
 <form class="feedback">
+    <h2 class="feedback__title">оставить отзыв</h2>
     <div class="feedback__top">
-        <span class="feedback__title">Ваша оценка *</span>
+        <span class="feedback__title-small">Ваша оценка *</span>
         <div class="product-star">
             <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">звезда 1</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">звезда 2</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">звезда 3</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">звезда 4</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">звезда 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
@@ -38,12 +44,13 @@
         <div class="feedback__box">
             <label class="feedback__label" for="name">
                 Имя
-                <input class="feedback__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
-               
+                <input class="feedback__input" type="text" name="name" id="name" placeholder="Введите ваше имя"
+                    required>
             </label>
             <label class="feedback__label" for="email">
                 Email *
-                <input class="feedback__input" type="email" name="email" id="email" placeholder="youremail@mail.com" required>
+                <input class="feedback__input" type="email" name="email" id="email" placeholder="youremail@mail.com"
+                    required>
             </label>
         </div>
     </div>
@@ -59,5 +66,5 @@
             для последующих моих комментариев.
         </span>
     </label>
-    <button class="button feedback__btn" type="submit">Оставить отзыв</button>
+    <button class="button feedback__button" type="submit">Оставить отзыв</button>
 </form>

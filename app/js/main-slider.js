@@ -28,12 +28,12 @@ const swiper3 = new Swiper('.mySwiper3', {
     spaceBetween: 30,
     autoHeight: true,
     navigation: {
-      nextEl: '.product__review-btn--next',
-      prevEl: '.product__review-btn--prev',
+      nextEl: '.product__gallery-btn--next',
+      prevEl: '.product__gallery-btn--prev',
     },
 
     pagination: {
-      el: ".product__review-pagination",
+      el: ".product__gallery-pagination",
       clickable: true,
     },
  
@@ -45,8 +45,8 @@ const swiper4 = new Swiper('.mySwiper4', {
   spaceBetween: 0,
   autoHeight: true,
   navigation: {
-    nextEl: '.interest__btn--next',
-    prevEl: '.interest__btn--prev',
+    nextEl: '.offers__btn--next',
+    prevEl: '.offers__btn--prev',
   },
 
 

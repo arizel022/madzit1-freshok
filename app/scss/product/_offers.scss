@@ -1,4 +1,4 @@
-.interest {
+.offers {
     padding: 84px 0 45px;
 
     &__container{
@@ -15,7 +15,7 @@
         text-align: left;
     }
 
-    &__arrows {
+    &__buttons {
         display: flex;
         gap: 30px;
     }
@@ -59,17 +59,17 @@
 
     }
 
-    &__review {
+    &__wrapper {
         overflow: hidden;
     }
 
-    &__list {
+    &__swiper-wrapper {
         display: flex;
         gap: 30px;
         padding: 10px;
     }
 
-    &__item {
+    &__swiper-slide{
         max-width: 300px;
         width: 100%;
     }

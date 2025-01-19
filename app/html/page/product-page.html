@@ -1,5 +1,5 @@
 @@include('../components/global/head.html', {
-"title" : "Страница товара интернет магазина FreShok"
+"title" : "Питахайя красная с белой мякотью | Интернет магазина еды FreShok"
 })
 @@include('../components/global/header.html')
 <main class="main">
@@ -29,119 +29,140 @@
     <section class="product">
         <div class="container">
             <div class="product__inner">
-                <div class="product__review swiper3 mySwiper3 ">
-                    <button class="product__review-btn product__review-btn--next" type="button">
+                <div class="product__gallery swiper3 mySwiper3 ">
+                    <button class="product__gallery-btn product__gallery-btn--next" type="button">
                         <span class="sr-only">следующий слайд</span>
                         <svg class="icon product__review-icon" width="19" height="32">
                             <use href="images/icon/sprite.svg#arrow-big"></use>
                         </svg>
                     </button>
-                    <div class="swiper-wrapper product__wrapper" >
-                        <div class="product__item  swiper-slide">
-                         <button class="product__review-zoom zoomBtn" type="button">
-                            <picture>
-                                <source srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
-                                    media="(min-width: 768px)">
-                                <source
-                                    srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
-                                    media="(min-width: 320px)">
-                                <img class="product__img" src="./images/product-page/1-1x.jpg"
-                                    alt="Питахайя красная с белой мякотью" width="420" height="420">
-                            </picture>
-                        </button>
+                    <div class="swiper-wrapper product__wrapper">
+                        <div class="product__gallery-item  swiper-slide">
+                            <button class="product__gallery-zoom zoomBtn" type="button">
+                                <picture>
+                                    <source
+                                        srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="product__gallery-img" src="./images/product-page/1-1x.jpg"
+                                        alt="Питахайя красная с белой мякотью" width="420" height="420">
+                                </picture>
+                            </button>
                         </div>
-                        <div class="product__item  swiper-slide">
-                            <button class="product__review-zoom zoomBtn" type="button" >
-                            <picture>
-                                <source srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
-                                    media="(min-width: 768px)">
-                                <source
-                                    srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
-                                    media="(min-width: 320px)">
-                                <img class="product__img" src="./images/product-page/1-1x.jpg"
-                                    alt="Питахайя красная с белой мякотью" width="420" height="420">
-                            </picture>
-                        </button>
+                        <div class="product__gallery-item  swiper-slide">
+                            <button class="product__gallery-zoom zoomBtn" type="button">
+                                <picture>
+                                    <source
+                                        srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="product__gallery-img" src="./images/product-page/1-1x.jpg"
+                                        alt="Питахайя красная с белой мякотью" width="420" height="420">
+                                </picture>
+                            </button>
                         </div>
-                        <div class="product__item  swiper-slide">
-                            <button class="product__review-zoom zoomBtn" type="button">
-                            <picture>
-                                <source srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
-                                    media="(min-width: 768px)">
-                                <source
-                                    srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
-                                    media="(min-width: 320px)">
-                                <img class="product__img" src="./images/product-page/1-1x.jpg"
-                                    alt="Питахайя красная с белой мякотью" width="420" height="420">
-                            </picture>
-                        </button>
+                        <div class="product__gallery-item  swiper-slide">
+                            <button class="product__gallery-zoom zoomBtn" type="button">
+                                <picture>
+                                    <source
+                                        srcset="./images/product-page/1-1x.jpg 1x, ./images/product-page/1-2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/product-page/1-1x-mob.jpg 1x, ./images/product-page/1-2x-mob.jpg 2x"
+                                        media="(min-width: 320px)">
+                                    <img class="product__gallery-img" src="./images/product-page/1-1x.jpg"
+                                        alt="Питахайя красная с белой мякотью" width="420" height="420">
+                                </picture>
+                            </button>
                         </div>
                     </div>
-                    <button class="product__review-btn product__review-btn--prev" disabled  type="button">
+                    <button class="product__gallery-btn product__gallery-btn--prev" disabled type="button">
                         <span class="sr-only">предыдущий слайд</span>
                         <svg class="icon product__review-icon" width="19" height="32">
                             <use href="images/icon/sprite.svg#arrow-big"></use>
                         </svg>
-                    </button>                   
-                    <div class="swiper-pagination product__review-pagination">
-                        <span class="sr-only">нумерация страниц</span>
-                    </div>
+                    </button>
+                    <div class="swiper-pagination product__gallery-pagination"></div>
                     <button class="close-button product__close-btn closeBtnZoom" type="button">
-                        <span class="sr-only">кнопка закрытия</span>
+                        <span class="sr-only">закрыть галерею</span>
                     </button>
                 </div>
-                <div class="product__content">
-                    <h1 class="title product__title">Питахайя красная с белой мякотью</h1>
-                    @@include('../components/global/bages.html', {
-                    'new' : 'none',
-                    'discount50' : 'none',
-                    'discount30' : 'none',
-                    'hit' : ''
-                    })
-                    <div class="product__content-top">
-                        <div class="product__box">
-                            <span class="product__number">Код: 0111111</span>
+                <div class="product__info">
+                    <h1 class="title product__info-title">Питахайя красная с белой мякотью</h1>
+                    <div class="product__badges-wrap">
+                        <div class="badges">
+                            <span class="badges__item badges__item--new none">
+                                Новинка
+                            </span>
+                            <span class="badges__item badges__item--discount none">
+                                -50%
+                            </span>
+                            <span class="badges__item badges__item--discount none">
+                                -30%
+                            </span>
+                            <span class="badges__item badges__item--hit badges__item--big">
+                                хит
+                            </span>
+                        </div> 
+                    </div>
+                    <div class="product__info-top">
+                        <div class="product__info-box">
+                            <span class="product__info-number">
+                                Код: 
+                                <span class="article-number">
+                                    0111111
+                                </span>
+                            </span>
                             <div class="product-star product-star--left">
                                 <button class="product-star__btn" type="button">
+                                    <span class="sr-only">звезда 1</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
+                                    <span class="sr-only">звезда 2</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
+                                    <span class="sr-only">звезда 3</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
+                                    <span class="sr-only">звезда 4</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
-                                <button class="product-star__btn product-star__btn--grey" type="button">
+                                <button class="product-star__btn" type="button">
+                                    <span class="sr-only">звезда 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                             </div>
-                            @@include('../components/global/available.html', {
-                            'stock' : '',
-                            'ends' : 'none',
-                            'not-available' : 'none'
-                            })
+                            <div class="available">
+                                <span class="available__item available__item--green available__item--big">в наличии</span>
+                                <span class="available__item available__item--red none">заканчивается</span>
+                                <span class="available__item available__item--grey none">нет в наличии</span>
+                            </div>
                         </div>
                         <div class="product__price">
-                            <span class="product__item product__item--old">
+                            <span class="product__price-item product__price-item--old">
                                 101
                                 <span class="currency">
                                     &#8372;
                                 </span>
                             </span>
-                            <span class="product__item product-price--current">
+                            <span class="product__price-item">
                                 199
                                 <span class="currency">
                                     &#8372;
@@ -149,7 +170,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="product__content-bottom">
+                    <div class="product__info-bottom">
                         <div class="product__counter">
                             <form class="counter product__counter-form">
                                 <div class="counter__box">
@@ -165,7 +186,7 @@
                                         <span class="sr-only">добавить количество единиц товара</span>
                                     </button>
                                 </div>
-                                <button class="counter__btn-card">
+                                <button class="counter__btn-card" type="button">
                                     <svg class="icon button-basket__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>
@@ -179,30 +200,22 @@
                                 </svg>
                             </button>
                         </div>
-                        <h2 class="product__content-title">Доставка и оплата</h2>
-                        <ul class="product__list">
-                            <li class="priduct__item">
-                                <p class="priduct__text">
+                        <h2 class="product__info-title">Доставка и оплата</h2>
+                        <ul class="product__info-list">
+                            <li class="priduct__info-item">
                                     Минимальная сумма заказа - 100 грн.
-                                </p>
                             </li>
-                            <li class="priduct__item">
-                                <p class="priduct__text">
-                                    Время доставки заказа - 60-120 мин.
-                                </p>
+                            <li class="priduct__info-item">                             
+                                    Время доставки заказа - 60-120 мин.                               
                             </li>
-                            <li class="priduct__item">
-                                <p class="priduct__text">
+                            <li class="priduct__info-item">     
                                     Оплата осуществляется только банковской картой.
-                                </p>
                             </li>
-                            <li class="priduct__item">
-                                <p class="priduct__text">
+                            <li class="priduct__info-item">
                                     Окончательная сумма заказа формируется после сбора товаров.
-                                </p>
                             </li>
                         </ul>
-                        <a class="product__link" href="#">
+                        <a class="product__info-link" href="#">
                             Подробнее
                         </a>
                     </div>
@@ -211,18 +224,17 @@
             <div class="product__tabs">
                 <ul class="product__tabs-list">
                     <li class="product__tabs-item">
-                        <button class="product__tabs-btn product__tabs-btn--active" type="button"
-                            id="#tab-1">описание</button>
+                        <button class="product__tabs-btn active" type="button" id="#tab-1">описание</button>
                     </li>
                     <li class="product__tabs-item">
-                        <button class="product__tabs-btn" type="button" id="#tab-2">харктеристики</button>
+                        <button class="product__tabs-btn" type="button" id="#tab-2">характеристики</button>
                     </li>
                     <li class="product__tabs-item">
-                        <button class="product__tabs-btn" type="button" id="#tab-3">отзывы(2)</button>
+                        <button class="product__tabs-btn" type="button" id="#tab-3">отзывы (2)</button>
                     </li>
                 </ul>
                 <div class="product__tabs-content">
-                    <div class="product__items product__items--active" id="tab-1">
+                    <div class="product__content-item active" id="tab-1">
                         <div class="product__description">
                             <p>
                                 Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который
@@ -246,81 +258,80 @@
                             </p>
                         </div>
                     </div>
-                    <div class="product__items" id="tab-2">
-                        <ul class="product__characteristics-list">
-                            <li class="product__characteristics-item">
-                                <h3 class="product__characteristics-title">Вес:</h3>
-                                <span class="product__characteristics-text">250-350 г;</span>
+                    <div class="product__content-item" id="tab-2">
+                        <ul class="product__props-list">
+                            <li class="product__props-item">
+                                <span class="product__props-title">Вес:</span>
+                                <span class="product__props-text">250-350 г;</span>
                             </li>
-                            <li class="product__characteristics-item">
-                                <h3 class="product__characteristics-title">Калорийность (на 100г):</h3>
-                                <span class="product__characteristics-text">50 ккал;</span>
+                            <li class="product__props-item">
+                                <span class="product__props-title">Калорийность (на 100г):</span>
+                                <span class="product__props-text">50 ккал;</span>
                             </li>
-                            <li class="product__characteristics-item">
-                                <h3 class="product__characteristics-title">Условия хранения:</h3>
-                                <span class="product__characteristics-text">температура от +3 до +8;</span>
+                            <li class="product__props-item">
+                                <span class="product__props-title">Условия хранения:</span>
+                                <span class="product__props-text">температура от +3 до +8;</span>
                             </li>
-                            <li class="product__characteristics-item">
-                                <h3 class="product__characteristics-title">Другие названия:</h3>
-                                <span class="product__characteristics-text">Драконов фрукт, Глаз дракона;</span>
+                            <li class="product__props-item">
+                                <span class="product__props-title">Другие названия:</span>
+                                <span class="product__props-text">Драконов фрукт, Глаз дракона;</span>
                             </li>
-                            <li class="product__characteristics-item">
+                            <li class="product__props-item">
                                 <h3 class="product__characteristics-title">Страна происхождения: </h3>
                                 <span class="product__characteristics-text">Вьетнам;</span>
                             </li>
-                            <li class="product__characteristics-item">
-                                <h3 class="product__characteristics-title">Срок хранения: </h3>
-                                <span class="product__characteristics-text">до 5 дней.</span>
+                            <li class="product__props-item">
+                                <span class="product__props-title">Срок хранения: </span>
+                                <span class="product__props-text">до 5 дней.</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="product__items" id="tab-3">
+                    <div class="product__content-item" id="tab-3">
                         <h2 class="product__tabs-title">
                             мнения наших клиентов
                         </h2>
-                        <ul class="product__comments-list">
-                            <li class="product__comments-item">
-                                @@include('../components/global/comments.html', {
+                        <ul class="product__comment-list">
+                            <li class="product__comment-item">
+                                @@include('../components/product/comment.html', {
                                 'img' : '1',
                                 'name' : 'Андрей',
                                 'datetime' : '2021-06-10',
-                                'data' : '10.06.2021',
+                                'date' : '10.06.2021',
                                 'text' : 'Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!',
                                 'grey' : 'product-star__btn--grey'
                                 })
                             </li>
-                            <li class="product__comments-item">
-                                @@include('../components/global/comments.html', {
+                            <li class="product__comment-item">
+                                @@include('../components/product/comment.html', {
                                 'img' : '1',
                                 'name' : 'Екатерина Белая',
                                 'datetime' : '2021-06-7',
-                                'data' : '7.06.2021',
+                                'date' : '7.06.2021',
                                 'text' : 'Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.',
                                 'grey' : ''
                                 })
                             </li>
                         </ul>
-                        <h2 class="product__tabs-title">оставить отзыв</h2>
-                        @@include('../components/global/feedback.html')
+                        @@include('../components/product/feedback.html')
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="interest">
-        <div class="container interest__container">
-            <div class="interest__top">
-                <h2 class="title interest__title">
-                    вас может заинтересовать 
+    <section class="offers">
+        <div class="container offers__container">
+            <div class="offers__top">
+                <h2 class="title offers__title">
+                    вас может заинтересовать
                 </h2>
-                <div class="interest__arrows">
-                    <button class="interest__btn interest__btn--prev" disabled type="button">
+                <div class="offers__buttons">
+                    <button class="offers__btn offers__btn--prev" disabled type="button">
                         <span class="sr-only">предыдущий слайд</span>
                         <svg class="icon interest__icon" width="19" height="32">
                             <use href="images/icon/sprite.svg#arrow-big"></use>
                         </svg>
                     </button>
-                    <button class="interest__btn interest__btn--next" type="button">
+                    <button class="offers__btn offers__btn--next" type="button">
                         <span class="sr-only">следующий слайд</span>
                         <svg class="icon interest__icon" width="19" height="32">
                             <use href="images/icon/sprite.svg#arrow-big"></use>
@@ -328,108 +339,108 @@
                     </button>
                 </div>
             </div>
-                <div class="interest__review swiper4 mySwiper4 ">
-                    <div class="interest__list swiper-wrapper">
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : 'none',
-                                'ends' : 'none',
-                                'not-available' : '',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : 'none',
-                                'hit' : 'none',
-                                'imagFileName' : '5',
-                                'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
-                                'oldPrice' : 'none',
-                                'oldPriceVaule' : '',
-                                'currentPriceVaule' : '60'
-                                })
-                        </div>
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : '',
-                                'ends' : 'none',
-                                'not-available' : 'none',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : 'none',
-                                'hit' : '',
-                                'imagFileName' : '6',
-                                'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
-                                'oldPrice' : 'none',
-                                'oldPriceVaule' : '',
-                                'currentPriceVaule' : '19'
-                                })
-                        </div>
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : 'none',
-                                'ends' : '',
-                                'not-available' : 'none',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : '',
-                                'hit' : 'none',
-                                'imagFileName' : '7',
-                                'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
-                                'oldPriceVaule' : '49',
-                                'currentPriceVaule' : '19'
-                                })
-                        </div>
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : 'none',
-                                'ends' : '',
-                                'not-available' : 'none',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : '',
-                                'hit' : 'none',
-                                'imagFileName' : '7',
-                                'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
-                                'oldPriceVaule' : '49',
-                                'currentPriceVaule' : '19'
-                                })
-                        </div>
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : '',
-                                'ends' : 'none',
-                                'not-available' : 'none',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : 'none',
-                                'hit' : '',
-                                'imagFileName' : '6',
-                                'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
-                                'oldPrice' : 'none',
-                                'oldPriceVaule' : '',
-                                'currentPriceVaule' : '19'
-                                })
-                        </div>
-                        <div class="interest__item  swiper-slide">
-                            @@include('../components/global/product-card.html', {
-                                'new' : 'none',
-                                'stock' : '',
-                                'ends' : 'none',
-                                'not-available' : 'none',
-                                'star' : '4.5',
-                                'discount50' : 'none',
-                                'discount30' : 'none',
-                                'hit' : '',
-                                'imagFileName' : '6',
-                                'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
-                                'oldPrice' : 'none',
-                                'oldPriceVaule' : '',
-                                'currentPriceVaule' : '19'
-                                })
-                      </div>
+            <div class="offers__wrapper swiper4 mySwiper4 ">
+                <div class="offers__swiper-wrapper swiper-wrapper">
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : 'none',
+                        'ends' : 'none',
+                        'not-available' : '',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : 'none',
+                        'imagFileName' : '5',
+                        'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '60'
+                        })
+                    </div>
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '6',
+                        'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '19'
+                        })
+                    </div>
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : 'none',
+                        'ends' : '',
+                        'not-available' : 'none',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : '',
+                        'hit' : 'none',
+                        'imagFileName' : '7',
+                        'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+                        'oldPriceVaule' : '49',
+                        'currentPriceVaule' : '19'
+                        })
+                    </div>
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : 'none',
+                        'ends' : '',
+                        'not-available' : 'none',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : '',
+                        'hit' : 'none',
+                        'imagFileName' : '7',
+                        'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
+                        'oldPriceVaule' : '49',
+                        'currentPriceVaule' : '19'
+                        })
+                    </div>
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '6',
+                        'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '19'
+                        })
+                    </div>
+                    <div class="offers__swiper-slide  swiper-slide">
+                        @@include('../components/global/product-card.html', {
+                        'new' : 'none',
+                        'stock' : '',
+                        'ends' : 'none',
+                        'not-available' : 'none',
+                        'star' : '4.5',
+                        'discount50' : 'none',
+                        'discount30' : 'none',
+                        'hit' : '',
+                        'imagFileName' : '6',
+                        'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
+                        'oldPrice' : 'none',
+                        'oldPriceVaule' : '',
+                        'currentPriceVaule' : '19'
+                        })
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,6 +2,13 @@
     max-width: 690px;
     width: 100%;
 
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+    }
+
     &__top {
         display: flex;
         gap: 18px;
@@ -106,15 +113,15 @@
         pointer-events: none;
 
         &:checked+.feedback__checkbox-fake {
-            border-color: #505050;
+            outline-color: #505050;
 
             .feedback__checkbox-icon {
                 fill: #505050;
             }
         }
 
-        &:focus+.feedback__checkbox-fake:before {
-            outline: 3px solid #E0EDCF;
+        &:focus+.feedback__checkbox-fake {
+            outline: 1px solid #E0EDCF;
         }
     }
 
@@ -124,11 +131,11 @@
         align-items: center;
         width: 24px;
         height: 24px;
-        border :1px solid #c1c1c1;
+        outline: 1px solid #c1c1c1;
         border-radius: 3px;
         background-color: #fff;
         cursor: pointer;
-        transition: border-color 0.5s, outline 0.5s;
+        transition: outline-color 0.5s;
 
         &::before {
             content: '';
