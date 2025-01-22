@@ -1,4 +1,4 @@
-.feedback {
+.feedback-form {
     max-width: 690px;
     width: 100%;
 
@@ -107,21 +107,25 @@
 
     }
 
-    &__input-checkbox {
+    &__checkbox {
         position: absolute;
         opacity: 0;
         pointer-events: none;
 
-        &:checked+.feedback__checkbox-fake {
+        &:checked+.feedback-form__checkbox-fake {
             outline-color: #505050;
 
-            .feedback__checkbox-icon {
+            .feedback-form__icon {
                 fill: #505050;
             }
         }
 
-        &:focus+.feedback__checkbox-fake {
-            outline: 1px solid #E0EDCF;
+        &:hover+.feedback-form__checkbox-fake {
+            outline-color: $green;
+        }
+
+        &:focus+.feedback-form__checkbox-fake {
+            outline: 3px solid  $green;
         }
     }
 
@@ -135,7 +139,7 @@
         border-radius: 3px;
         background-color: #fff;
         cursor: pointer;
-        transition: outline-color 0.5s;
+        transition: opacity 0.5s, outline-color 0.5s;
 
         &::before {
             content: '';
@@ -148,7 +152,7 @@
         }
     }
 
-    &__checkbox-icon {
+    &__icon {
         fill: transparent;
         flex-shrink: 0;
         transition: fill 0.5s;

@@ -196,16 +196,16 @@
             </span>
         </span>
     </div>
-    <form class="counter">
-        <div class="counter__box">
-            <button class="counter__btn counter__btn--minus" type="button">
+    <form class="counter-form">
+        <div class="counter-form__box">
+            <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
             </button>
-            <label class="counter__form-label" for="pineapple">
+            <label class="counter-form__label" for="pineapple">
                 <span class="sr-only">введите количество товара</span>
-                <input class="counter__form-input" name="pineapple" id="pineapple" type="number" value="1" required>
+                <input class="counter-form__input" name="pineapple" id="pineapple" type="number" value="1" required>
             </label>
-            <button class="counter__btn counter__btn--plus" type="button">
+            <button class="counter-form__btn counter-form__btn--plus" type="button">
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
@@ -238,16 +238,16 @@
             </span>
         </span>
     </div>
-    <form class="counter">
-        <div class="counter__box">
-            <button class="counter__btn counter__btn--minus" type="button">
+    <form class="counter-form">
+        <div class="counter-form__box">
+            <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
             </button>
-            <label class="counter__form-label" for="pitahaya">
+            <label class="counter-form__label" for="pitahaya">
                 <span class="sr-only">введите количество товара</span>
-                <input class="counter__form-input" name="pitahaya" id="pitahaya" type="number" value="1" required>
+                <input class="counter-form__input" name="pitahaya" id="pitahaya" type="number" value="1" required>
             </label>
-            <button class="counter__btn counter__btn--plus" type="button">
+            <button class="counter-form__btn counter-form__btn--plus" type="button">
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
@@ -542,7 +542,7 @@
                     </button>
                 </div>
                 <div class="product__info">
-                    <h1 class="title product__info-title">Питахайя красная с белой мякотью</h1>
+                    <h1 class="title product__title">Питахайя красная с белой мякотью</h1>
                     <div class="product__badges-wrap">
                         <div class="badges">
                             <span class="badges__item badges__item--new none">
@@ -557,63 +557,64 @@
                             <span class="badges__item badges__item--hit badges__item--big">
                                 хит
                             </span>
-                        </div> 
+                        </div>
                     </div>
                     <div class="product__info-top">
                         <div class="product__info-box">
                             <span class="product__info-number">
-                                Код: 
+                                Код:
                                 <span class="article-number">
                                     0111111
                                 </span>
                             </span>
-                            <div class="product-star product-star--left">
+                            <div class="product-star product__star-left">
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">звезда 1</span>
+                                    <span class="sr-only">поставить оценку</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">звезда 2</span>
+                                    <span class="sr-only">поставить оценку</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">звезда 3</span>
+                                    <span class="sr-only">поставить оценку</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">звезда 4</span>
+                                    <span class="sr-only">поставить оценку</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">звезда 5</span>
+                                    <span class="sr-only">поставить оценку</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                             </div>
                             <div class="available">
-                                <span class="available__item available__item--green available__item--big">в наличии</span>
+                                <span class="available__item available__item--green available__item--big">в
+                                    наличии</span>
                                 <span class="available__item available__item--red none">заканчивается</span>
                                 <span class="available__item available__item--grey none">нет в наличии</span>
                             </div>
                         </div>
                         <div class="product__price">
                             <span class="product__price-item product__price-item--old">
-                                101
+                                199
                                 <span class="currency">
                                     &#8372;
                                 </span>
                             </span>
                             <span class="product__price-item">
-                                199
+                                101
                                 <span class="currency">
                                     &#8372;
                                 </span>
@@ -622,22 +623,24 @@
                     </div>
                     <div class="product__info-bottom">
                         <div class="product__counter">
-                            <form class="counter product__counter-form">
-                                <div class="counter__box">
-                                    <button class="counter__btn counter__btn--minus product__counter-btn" type="button">
+                            <form class="counter-form product__counter-form">
+                                <div class="counter-form__box">
+                                    <button class="counter-form__btn counter-form__btn--minus counter-form__btn--big"
+                                        type="button">
                                         <span class="sr-only">уменьшить количество единиц товара</span>
                                     </button>
-                                    <label class="counter__form-label" for="number">
+                                    <label class="counter-form__label" for="number">
                                         <span class="sr-only">введите количество товара</span>
-                                        <input class="counter__form-input product__counter-input" name="number"
+                                        <input class="counter-form__input counter-form__input--big" name="number"
                                             id="number" type="number" value="1" required>
                                     </label>
-                                    <button class="counter__btn counter__btn--plus product__counter-btn" type="button">
+                                    <button class="counter-form__btn counter-form__btn--plus counter-form__btn--big"
+                                        type="button">
                                         <span class="sr-only">добавить количество единиц товара</span>
                                     </button>
                                 </div>
-                                <button class="counter__btn-card" type="button">
-                                    <svg class="icon button-basket__icon" width="16" height="16">
+                                <button class="counter-form__btn-card" type="button">
+                                    <svg class="icon counter-form__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>
                                     добавить в корзину
@@ -653,16 +656,16 @@
                         <h2 class="product__info-title">Доставка и оплата</h2>
                         <ul class="product__info-list">
                             <li class="priduct__info-item">
-                                    Минимальная сумма заказа - 100 грн.
-                            </li>
-                            <li class="priduct__info-item">                             
-                                    Время доставки заказа - 60-120 мин.                               
-                            </li>
-                            <li class="priduct__info-item">     
-                                    Оплата осуществляется только банковской картой.
+                                Минимальная сумма заказа - 100 грн.
                             </li>
                             <li class="priduct__info-item">
-                                    Окончательная сумма заказа формируется после сбора товаров.
+                                Время доставки заказа - 60-120 мин.
+                            </li>
+                            <li class="priduct__info-item">
+                                Оплата осуществляется только банковской картой.
+                            </li>
+                            <li class="priduct__info-item">
+                                Окончательная сумма заказа формируется после сбора товаров.
                             </li>
                         </ul>
                         <a class="product__info-link" href="#">
@@ -743,7 +746,7 @@
                         <ul class="product__comment-list">
                             <li class="product__comment-item">
                                 <div class="comment">
-    <blockquote class="comment__quote comments__quote--left">
+    <blockquote class="comment__quote">
         <div class="comment__inner">
             <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
             <div class="comment__box comment__box--left">
@@ -752,31 +755,31 @@
             </div>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 1</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 2</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 3</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 4</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn product-star__btn--grey" type="button">
-                    <span class="sr-only">звезда 5</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
@@ -791,7 +794,7 @@
                             </li>
                             <li class="product__comment-item">
                                 <div class="comment">
-    <blockquote class="comment__quote comments__quote--left">
+    <blockquote class="comment__quote">
         <div class="comment__inner">
             <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
             <div class="comment__box comment__box--left">
@@ -800,31 +803,31 @@
             </div>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 1</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 2</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 3</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">звезда 4</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn " type="button">
-                    <span class="sr-only">звезда 5</span>
+                    <span class="sr-only">поставить оценку</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
@@ -838,75 +841,75 @@
 </div>
                             </li>
                         </ul>
-                        <form class="feedback">
-    <h2 class="feedback__title">оставить отзыв</h2>
-    <div class="feedback__top">
-        <span class="feedback__title-small">Ваша оценка *</span>
+                        <form class="feedback-form">
+    <h2 class="feedback-form__title">оставить отзыв</h2>
+    <div class="feedback-form__top">
+        <span class="feedback-form__subtitle">Ваша оценка *</span>
         <div class="product-star">
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">звезда 1</span>
+                <span class="sr-only">поставить оценку</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">звезда 2</span>
+                <span class="sr-only">поставить оценку</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">звезда 3</span>
+                <span class="sr-only">поставить оценку</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">звезда 4</span>
+                <span class="sr-only">поставить оценку</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">звезда 5</span>
+                <span class="sr-only">поставить оценку</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
         </div>
     </div>
-    <div class="feedback__inner">
-        <label class="feedback__label  feedback__label--area" for="text">
+    <div class="feedback-form__inner">
+        <label class="feedback-form__label  feedback-form__label--area" for="text">
             Ваш отзыв *
-            <textarea class="feedback__input feedback__input--area" name="text" id="text" placeholder="Введите ваше имя"
+            <textarea class="feedback-form__input feedback-form__input--area" name="text" id="text" placeholder="Введите ваше имя"
                 required></textarea>
         </label>
-        <div class="feedback__box">
-            <label class="feedback__label" for="name">
+        <div class="feedback-form__box">
+            <label class="feedback-form__label" for="name">
                 Имя
-                <input class="feedback__input" type="text" name="name" id="name" placeholder="Введите ваше имя"
+                <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Введите ваше имя"
                     required>
             </label>
-            <label class="feedback__label" for="email">
+            <label class="feedback-form__label" for="email">
                 Email *
-                <input class="feedback__input" type="email" name="email" id="email" placeholder="youremail@mail.com"
+                <input class="feedback-form__input" type="email" name="email" id="email" placeholder="youremail@mail.com"
                     required>
             </label>
         </div>
     </div>
-    <label class="feedback__label-checkbox" for="checkbox">
-        <input class="feedback__input-checkbox" name="checkbox" id="checkbox" type="checkbox">
-        <span class="feedback__checkbox-fake">
-            <svg class="icon feedback__checkbox-icon" width="12" height="9">
+    <label class="feedback-form__label-checkbox" for="checkbox">
+        <input class="feedback-form__checkbox" name="checkbox" id="checkbox" type="checkbox">
+        <span class="feedback-form__checkbox-fake">
+            <svg class="icon feedback-form__icon" width="12" height="9">
                 <use href="images/icon/sprite.svg#checkbox"></use>
             </svg>
         </span>
-        <span class="feedback__text">
+        <p class="feedback-form__text">
             Сохранить моё имя, email и адрес сайта в этом браузере
             для последующих моих комментариев.
-        </span>
+        </p>
     </label>
-    <button class="button feedback__button" type="submit">Оставить отзыв</button>
+    <button class="button feedback-form__button" type="submit">Оставить отзыв</button>
 </form>
                     </div>
                 </div>
@@ -1427,7 +1430,6 @@
         </div>
     </section>
 </main>
-
 
 <footer class="footer">
     <div class="container">

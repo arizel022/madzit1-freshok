@@ -1,4 +1,4 @@
-.counter {
+.counter-form {
     display: flex;
     align-items: center;
     margin-top: auto;
@@ -12,12 +12,12 @@
         display: flex;
     }
 
-    &__form-label {
+    &__label {
         display: block;
         margin-right: 12px;
     }
 
-    &__form-input {
+    &__input {
         text-align: center;
         width: 36px;
         height: 24px;
@@ -26,6 +26,12 @@
         background-color: #EFF6E7;
         color: #505050;
         transition: outline 0.5s;
+
+        &--big{
+            font-size: 20px;
+            width: 77px;
+            height: 44px;
+        }
 
         &:focus {
             outline: 1px solid #E0EDCF;
@@ -90,6 +96,16 @@
                 transform: rotate(0deg);
             }
         }
+
+        &--big {
+            width: 44px;
+            height: 44px;
+    
+            &::before,
+            &::after {
+                max-width: 29px;
+            }
+        }
     }
 
     &__price {
@@ -124,7 +140,6 @@
             box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         }       
     }
-
 
     //  обнулил свойство по умолчанию у инпута
 
