@@ -2,12 +2,15 @@
     
     &__inner {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 36px;
     }
 
-    &__img {
-        margin-right: 24px;
+    &__author{
+        display: flex;
+        align-items: center;
+        gap: 24px;
     }
 
     &__box{
@@ -19,8 +22,8 @@
             margin-right: auto;
         }
     }
-
-    &__author {
+    
+    &__name{
         font-weight: 700;
         font-style: normal;
     }

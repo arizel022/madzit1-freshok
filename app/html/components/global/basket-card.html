@@ -14,7 +14,7 @@
             </span>
         </span>
     </div>
-    <form class="counter-form">
+    <form class="counter-form basket-card__counter-form">
         <div class="counter-form__box">
             <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
@@ -27,12 +27,18 @@
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
-        <span class="counter__price">
+        <span class="counter-form__price">
             @@price2
-            <span class="currency">
+            <span class="currency counter-form__currency">
                 &#8372;
             </span>
         </span>
+        <button class="counter-form__btn-basket none" type="button">
+            <svg class="icon counter-form__icon" width="16" height="16">
+                <use href="images/icon/sprite.svg#cart"></use>
+            </svg>
+            добавить в корзину
+        </button>
     </form>
     <button class="basket-card__close-btn" type="button">
         <span class="sr-only">удалить этот товар</span>

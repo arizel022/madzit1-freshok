@@ -3,7 +3,7 @@
 })
 @@include('../components/global/header.html')
 <main class="main">
-    <div class="breadcrumbs-wrraper">
+    <div class="product__breadcrumbs-wrraper">
         <div class="breadcrumbs">
             <div class="container">
                 <ul class="breadcrumbs__list">
@@ -117,33 +117,33 @@
                                     0111111
                                 </span>
                             </span>
-                            <div class="product-star product__star-left">
+                            <div class="product-star product__product-star">
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                <button class="product-star__btn product-star__btn--grey" type="button">
+                                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
@@ -173,7 +173,7 @@
                     </div>
                     <div class="product__info-bottom">
                         <div class="product__counter">
-                            <form class="counter-form product__counter-form">
+                            <form class="counter-form">
                                 <div class="counter-form__box">
                                     <button class="counter-form__btn counter-form__btn--minus counter-form__btn--big"
                                         type="button">
@@ -189,7 +189,13 @@
                                         <span class="sr-only">добавить количество единиц товара</span>
                                     </button>
                                 </div>
-                                <button class="counter-form__btn-card" type="button">
+                                <span class="counter-form__price none">
+                                    @@price2
+                                    <span class="currency counter-form__currency">
+                                        &#8372;
+                                    </span>
+                                </span>
+                                <button class="counter-form__btn-basket" type="button">
                                     <svg class="icon counter-form__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>

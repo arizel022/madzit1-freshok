@@ -196,7 +196,7 @@
             </span>
         </span>
     </div>
-    <form class="counter-form">
+    <form class="counter-form basket-card__counter-form">
         <div class="counter-form__box">
             <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
@@ -209,12 +209,18 @@
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
-        <span class="counter__price">
+        <span class="counter-form__price">
             198
-            <span class="currency">
+            <span class="currency counter-form__currency">
                 &#8372;
             </span>
         </span>
+        <button class="counter-form__btn-basket none" type="button">
+            <svg class="icon counter-form__icon" width="16" height="16">
+                <use href="images/icon/sprite.svg#cart"></use>
+            </svg>
+            добавить в корзину
+        </button>
     </form>
     <button class="basket-card__close-btn" type="button">
         <span class="sr-only">удалить этот товар</span>
@@ -238,7 +244,7 @@
             </span>
         </span>
     </div>
-    <form class="counter-form">
+    <form class="counter-form basket-card__counter-form">
         <div class="counter-form__box">
             <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
@@ -251,12 +257,18 @@
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
-        <span class="counter__price">
+        <span class="counter-form__price">
             202
-            <span class="currency">
+            <span class="currency counter-form__currency">
                 &#8372;
             </span>
         </span>
+        <button class="counter-form__btn-basket none" type="button">
+            <svg class="icon counter-form__icon" width="16" height="16">
+                <use href="images/icon/sprite.svg#cart"></use>
+            </svg>
+            добавить в корзину
+        </button>
     </form>
     <button class="basket-card__close-btn" type="button">
         <span class="sr-only">удалить этот товар</span>
@@ -453,7 +465,7 @@
     </div>
 </header>
 <main class="main">
-    <div class="breadcrumbs-wrraper">
+    <div class="product__breadcrumbs-wrraper">
         <div class="breadcrumbs">
             <div class="container">
                 <ul class="breadcrumbs__list">
@@ -567,33 +579,33 @@
                                     0111111
                                 </span>
                             </span>
-                            <div class="product-star product__star-left">
+                            <div class="product-star product__product-star">
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
                                 <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
                                 </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">поставить оценку</span>
+                                <button class="product-star__btn product-star__btn--grey" type="button">
+                                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
                                     <svg class="icon product-star__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#star"></use>
                                     </svg>
@@ -623,7 +635,7 @@
                     </div>
                     <div class="product__info-bottom">
                         <div class="product__counter">
-                            <form class="counter-form product__counter-form">
+                            <form class="counter-form">
                                 <div class="counter-form__box">
                                     <button class="counter-form__btn counter-form__btn--minus counter-form__btn--big"
                                         type="button">
@@ -639,7 +651,13 @@
                                         <span class="sr-only">добавить количество единиц товара</span>
                                     </button>
                                 </div>
-                                <button class="counter-form__btn-card" type="button">
+                                <span class="counter-form__price none">
+                                    @@price2
+                                    <span class="currency counter-form__currency">
+                                        &#8372;
+                                    </span>
+                                </span>
+                                <button class="counter-form__btn-basket" type="button">
                                     <svg class="icon counter-form__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>
@@ -748,38 +766,40 @@
                                 <div class="comment">
     <blockquote class="comment__quote">
         <div class="comment__inner">
-            <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
-            <div class="comment__box comment__box--left">
-                <cite class="comment__author">Андрей</cite>
-                <time class="comment__date" datetime="2021-06-10">10.06.2021</time>
-            </div>
+            <cite class="comment__author">
+                <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
+                <div class="comment__box">
+                    <span class="comment__name">Андрей</span>
+                    <time class="comment__date" datetime="2021-06-10">10.06.2021</time>
+                </div>
+            </cite>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn product-star__btn--grey" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
@@ -796,38 +816,40 @@
                                 <div class="comment">
     <blockquote class="comment__quote">
         <div class="comment__inner">
-            <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
-            <div class="comment__box comment__box--left">
-                <cite class="comment__author">Екатерина Белая</cite>
-                <time class="comment__date" datetime="2021-06-7">7.06.2021</time>
-            </div>
+            <cite class="comment__author">
+                <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
+                <div class="comment__box">
+                    <span class="comment__name">Екатерина Белая</span>
+                    <time class="comment__date" datetime="2021-06-7">7.06.2021</time>
+                </div>
+            </cite>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn" type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
                 </button>
                 <button class="product-star__btn " type="button">
-                    <span class="sr-only">поставить оценку</span>
+                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
                     <svg class="icon product-star__icon" width="16" height="16">
                         <use href="images/icon/sprite.svg#star"></use>
                     </svg>
@@ -847,31 +869,31 @@
         <span class="feedback-form__subtitle">Ваша оценка *</span>
         <div class="product-star">
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">поставить оценку</span>
+                <span class="sr-only">оценить товар в 1 звезду из 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">поставить оценку</span>
+                <span class="sr-only">оценить товар в 2 звезды из 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">поставить оценку</span>
+                <span class="sr-only">оценить товар в 3 звезды из 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">поставить оценку</span>
+                <span class="sr-only">оценить товар в 4 звезды из 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
             </button>
             <button class="product-star__btn product-star__btn--grey" type="button">
-                <span class="sr-only">поставить оценку</span>
+                <span class="sr-only">оценить товар в 5 звезд из 5</span>
                 <svg class="icon product-star__icon" width="16" height="16">
                     <use href="images/icon/sprite.svg#star"></use>
                 </svg>
