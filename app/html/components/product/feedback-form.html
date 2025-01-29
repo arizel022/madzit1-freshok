@@ -1,0 +1,70 @@
+<form class="feedback-form">
+    <h2 class="feedback-form__title">оставить отзыв</h2>
+    <div class="feedback-form__top">
+        <span class="feedback-form__subtitle">Ваша оценка *</span>
+        <div class="product-star">
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">оценить товар в 1 звезду из 5</span>
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">оценить товар в 2 звезды из 5</span>
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">оценить товар в 3 звезды из 5</span>
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">оценить товар в 4 звезды из 5</span>
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+            <button class="product-star__btn product-star__btn--grey" type="button">
+                <span class="sr-only">оценить товар в 5 звезд из 5</span>
+                <svg class="icon product-star__icon" width="16" height="16">
+                    <use href="images/icon/sprite.svg#star"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="feedback-form__inner">
+        <label class="feedback-form__label  feedback-form__label--area" for="text">
+            Ваш отзыв *
+            <textarea class="feedback-form__input feedback-form__input--area" name="text" id="text" placeholder="Введите ваше имя"
+                required></textarea>
+        </label>
+        <div class="feedback-form__box">
+            <label class="feedback-form__label" for="name">
+                Имя
+                <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Введите ваше имя"
+                    required>
+            </label>
+            <label class="feedback-form__label" for="email">
+                Email *
+                <input class="feedback-form__input" type="email" name="email" id="email" placeholder="youremail@mail.com"
+                    required>
+            </label>
+        </div>
+    </div>
+    <label class="feedback-form__label-checkbox" for="checkbox">
+        <input class="feedback-form__checkbox" name="checkbox" id="checkbox" type="checkbox">
+        <span class="feedback-form__checkbox-fake">
+            <svg class="icon feedback-form__icon" width="12" height="9">
+                <use href="images/icon/sprite.svg#checkbox"></use>
+            </svg>
+        </span>
+        <p class="feedback-form__text">
+            Сохранить моё имя, email и адрес сайта в этом браузере
+            для последующих моих комментариев.
+        </p>
+    </label>
+    <button class="button feedback-form__button" type="submit">Оставить отзыв</button>
+</form>

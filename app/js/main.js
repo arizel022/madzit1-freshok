@@ -57,13 +57,30 @@ $(function () {
         });
     });
 
+    $(document).ready(function () {
+        $('.zoomBtn').click(function (evenet) {
+            $('.product').addClass('active')
+            $('.product__gallery').addClass('active')
+            $('body').addClass('lock')
+        });
+    });
 
+    $(document).ready(function () {
+        $('.closeBtnZoom').click(function (evenet) {
+            $('.product').removeClass('active')
+            $('.product__gallery').removeClass('active')
+            $('body').removeClass('lock')
+        });
+    });
 
+    $('.product__tabs-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.active').removeClass('active');
+        $(this).addClass('active');
 
-
-    // $('before').not('.catalog__aside').click(function() { 
-    //     $('.catalog__aside').removeClass('catalog__aside'); 
-    // });
+        $('.product__content-item').removeClass('active');
+        $($(this).attr('id')).addClass('active');
+    });
 });
 
 (() => {
@@ -102,8 +119,9 @@ $(function () {
     }
 })();
 
-$('.counter__btn--minus').click(function () {
-    var $input = $(this).parent().parent().find('.counter__form-input');
+
+$('.counter-form__btn--minus').click(function () {
+    var $input = $(this).parent().parent().find('.counter-form__input');
     var count = parseInt($input.val()) - 1;
     count = count < 1 ? 1 : count;
     $input.val(count);
@@ -111,8 +129,8 @@ $('.counter__btn--minus').click(function () {
     return false;
 });
 
-$('.counter__btn--plus').click(function () {
-    var $input = $(this).parent().parent().find('.counter__form-input');
+$('.counter-form__btn--plus').click(function () {
+    var $input = $(this).parent().parent().find('.counter-form__input');
     $input.val(parseInt($input.val()) + 1);
     $input.change();
     return false;
@@ -196,21 +214,6 @@ $inputTo.on("change", function () {
 
     $(this).prop("value", val);
 });
-
-
-
-// let btnCatalog = $('.btnCatalog');
-// let catalogAside = $('.catalog__aside');
-
-// $(document).mouseup(function (e) {
-//     if (! btnCatalog.is(e.target) && btnCatalog.has(e.target).length === 0 &&
-
-//         ! catalogAside.is(e.target) && catalogAside.has(e.target).length === 0
-
-//     ) {
-//         catalogAside.fadeOut();
-//     }
-// });
 
 $(document).ready(function () {
     let btnCatalog = $('.btnCatalog'); // Кнопка для открытия меню

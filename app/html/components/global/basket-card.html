@@ -14,25 +14,31 @@
             </span>
         </span>
     </div>
-    <form class="counter">
-        <div class="counter__box">
-            <button class="counter__btn counter__btn--minus" type="button">
+    <form class="counter-form basket-card__counter-form">
+        <div class="counter-form__box">
+            <button class="counter-form__btn counter-form__btn--minus" type="button">
                 <span class="sr-only">уменьшить количество единиц товара</span>
             </button>
-            <label class="counter__form-label" for="@@for">
+            <label class="counter-form__label" for="@@for">
                 <span class="sr-only">введите количество товара</span>
-                <input class="counter__form-input" name="@@name" id="@@id" type="number" value="1" required>
+                <input class="counter-form__input" name="@@name" id="@@id" type="number" value="1" required>
             </label>
-            <button class="counter__btn counter__btn--plus" type="button">
+            <button class="counter-form__btn counter-form__btn--plus" type="button">
                 <span class="sr-only">добавить количество единиц товара</span>
             </button>
         </div>
-        <span class="counter__price">
+        <span class="counter-form__price">
             @@price2
-            <span class="currency">
+            <span class="currency counter-form__currency">
                 &#8372;
             </span>
         </span>
+        <button class="counter-form__btn-basket none" type="button">
+            <svg class="icon counter-form__icon" width="16" height="16">
+                <use href="images/icon/sprite.svg#cart"></use>
+            </svg>
+            добавить в корзину
+        </button>
     </form>
     <button class="basket-card__close-btn" type="button">
         <span class="sr-only">удалить этот товар</span>

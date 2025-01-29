@@ -130,7 +130,6 @@
                </button>
                <form class="checkbox-form" action="#">
                   <label class="checkbox-form__label" for="checkboxCocaCola">
-                   
                      <input class="checkbox-form__input" type="checkbox" name="checkboxCocaCola" id="checkboxCocaCola">
                      <span class="checkbox-form__fake">
                         <svg class="icon checkbox-form__icon" width="12" height="9">
@@ -249,9 +248,8 @@
                </button>
             </div>
             <ul class="grid grid--3fr">
-
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'fruits',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -262,13 +260,14 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '9',
+               'boxNone' : '',
                'productName' : 'Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л',
                'oldPriceVaule' : '199',
                'currentPriceVaule' : '99',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'vegetables',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -279,13 +278,14 @@
                'hit' : 'none',
                'imagFileName' : '2',
                'productName' : 'Лимон, 1кг',
+               'boxNone' : '',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '49',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'vegetables',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -295,14 +295,15 @@
                'discount30' : 'none',
                'hit' : '',
                'imagFileName' : '3',
+               'boxNone' : '',
                'productName' : 'Питахайя красная с белой мякотью, 1шт',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '101'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'fruits',
                'new' : 'none',
                'stock' : 'none',
                'ends' : 'none',
@@ -312,14 +313,15 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '5',
+               'boxNone' : '',
                'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '60'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'drinks',
                'new' : 'none',
                'stock' : '',
                'ends' : 'none',
@@ -334,9 +336,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '19'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'drinks',
                'new' : 'none',
                'stock' : 'none',
                'ends' : '',
@@ -346,13 +348,14 @@
                'discount30' : '',
                'hit' : 'none',
                'imagFileName' : '7',
+               'boxNone' : '',
                'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
                'oldPriceVaule' : '49',
                'currentPriceVaule' : '19'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : '',
@@ -367,9 +370,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '219'
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -384,8 +387,9 @@
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -395,14 +399,15 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '1',
+               'boxNone' : '',
                'productName' : 'Ананас, 1кг',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : '',
@@ -412,13 +417,15 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '5',
+               'boxNone' : '',
                'productName' : 'Морковь молодая с бабушкиной грядки, 1кг',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : '',
                'ends' : 'none',
@@ -428,14 +435,15 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '6',
+               'boxNone' : '',
                'productName' : 'Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
-
+            </li>
+            <li class="grid__item">
                @@include('../components/global/product-card.html', {
-               'category' : 'grocery',
                'new' : '',
                'stock' : 'none',
                'ends' : 'none',
@@ -445,11 +453,13 @@
                'discount30' : 'none',
                'hit' : 'none',
                'imagFileName' : '7',
+               'boxNone' : '',
                'productName' : 'Кофе с коноплей органический Caffé Salomoni 250г',
                'oldPrice' : 'none',
                'oldPriceVaule' : '',
                'currentPriceVaule' : '100',
                })
+          </li>
             </ul>
             <div class="catalog__bottom">
                <a class="catalog__link button" href="#">Показать еще</a>
