@@ -18,6 +18,11 @@
     &__inner {
         display: flex;
         margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 18px;
+        }
     }
 
     &__box {
@@ -34,6 +39,11 @@
         &--area {
             max-width: 400px;
             margin-right: 30px;
+
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -95,6 +105,10 @@
         &:focus {
             outline: 3px solid #E0EDCF;
         }
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
     }
 
     &__label-checkbox {
@@ -125,7 +139,7 @@
         }
 
         &:focus+.feedback-form__checkbox-fake {
-            outline: 3px solid  $green;
+            outline: 3px solid $green;
         }
     }
 
@@ -133,6 +147,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
         width: 24px;
         height: 24px;
         outline: 1px solid #c1c1c1;

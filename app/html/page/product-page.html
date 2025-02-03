@@ -111,43 +111,45 @@
                     </div>
                     <div class="product__info-top">
                         <div class="product__info-box">
-                            <span class="product__info-number">
-                                Код:
-                                <span class="article-number">
-                                    0111111
+                            <div class="product__info-wrap">
+                                <span class="product__info-number">
+                                    Код:
+                                    <span class="article-number">
+                                        0111111
+                                    </span>
                                 </span>
-                            </span>
-                            <div class="product-star product__product-star">
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn product-star__btn--grey" type="button">
-                                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
+                                <div class="product-star">
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 1 звезду из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 2 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 3 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 4 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn product-star__btn--grey" type="button">
+                                        <span class="sr-only">оценить товар в 5 звезд из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="available">
                                 <span class="available__item available__item--green available__item--big">в
@@ -181,11 +183,9 @@
                                     </button>
                                     <label class="counter-form__label" for="number">
                                         <span class="sr-only">введите количество товара</span>
-                                        <input class="counter-form__input counter-form__input--big" name="number"
-                                            id="number" type="number" value="1" required>
+                                        <input class="counter-form__input counter-form__input--big" name="number" id="number" type="number" value="1" required>
                                     </label>
-                                    <button class="counter-form__btn counter-form__btn--plus counter-form__btn--big"
-                                        type="button">
+                                    <button class="counter-form__btn counter-form__btn--plus counter-form__btn--big" type="button">
                                         <span class="sr-only">добавить количество единиц товара</span>
                                     </button>
                                 </div>
@@ -195,11 +195,11 @@
                                         &#8372;
                                     </span>
                                 </span>
-                                <button class="counter-form__btn-basket" type="button">
+                                <button class="counter-form__btn-cart" type="button">
                                     <svg class="icon counter-form__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>
-                                    добавить в корзину
+                                    <span class="counter-form__btn-text">добавить в корзину</span>
                                 </button>
                             </form>
                             <button class="button-favorites button-favorites--grey" type="button">
@@ -451,10 +451,10 @@
                         })
                     </div>
                 </div>
+                <div class="swiper-pagination offers__swiper-pagination"></div>
             </div>
         </div>
-    </section>
+    </section> 
 </main>
-
 @@include('../components/global/footer.html')
 @@include('../components/global/footer-scripts.html')

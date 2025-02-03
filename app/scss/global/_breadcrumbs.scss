@@ -1,11 +1,15 @@
 .breadcrumbs {
     background-color: #f6f6f6;
-   
+
     &__list {
         display: flex;
         justify-content: left;
         padding: 10px 0;
         margin-left: -10px;
+
+        @media (max-width: 576px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
@@ -37,8 +41,8 @@
         border-radius: 3px;
         transition: opacity 0.5s, outline 0.5s, color 0.5s;
 
-        &.current{
-            pointer-events: none;   
+        &.current {
+            pointer-events: none;
         }
 
         &:hover {
@@ -52,5 +56,5 @@
         &:active {
             color: #E0EDCF;
         }
-    } 
+    }
 }
