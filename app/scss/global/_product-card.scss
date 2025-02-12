@@ -172,6 +172,12 @@
         left: 125px;
         transform: translateY(-200px);
         transition: transform 0.8s, background-color 0.5s, color 0.5s, outline 0.5s, box-shadow 0.5s;
+
+        @media (max-width: 576px) {
+            top: 48px;
+            left: 60px;
+        }
+    
     }
 
     &__title {
@@ -188,6 +194,7 @@
 
         @media(max-width:576px) {
             padding: 0 12px;
+            max-width: 154px;
         }
     }
 

@@ -25,7 +25,6 @@ var swiper2 = new Swiper(".mySwiper2",{
   });
 
 
-
 const swiper3 = new Swiper('.mySwiper3', {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -44,9 +43,8 @@ const swiper3 = new Swiper('.mySwiper3', {
 });
 
 const swiper4 = new Swiper('.mySwiper4', {
-  slidesPerView: 4,
-  spaceBetween: 0,
-  autoHeight: true,
+  slidesPerView: 2,
+  spaceBetween: 5,
 
   navigation: {
     nextEl: '.offers__btn--next',
@@ -54,12 +52,9 @@ const swiper4 = new Swiper('.mySwiper4', {
   },
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-
-    768: {
+    550: {
       slidesPerView: 3,
+      spaceBetween: 10,
     },
 
     1200: {

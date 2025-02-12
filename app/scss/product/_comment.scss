@@ -1,5 +1,5 @@
 .comment {
-    
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -7,23 +7,23 @@
         margin-bottom: 36px;
     }
 
-    &__author{
+    &__author {
         display: flex;
         align-items: center;
         gap: 24px;
     }
 
-    &__box{
+    &__box {
         display: flex;
         flex-direction: column;
         gap: 4px;
 
-        &--left{
+        &--left {
             margin-right: auto;
         }
     }
-    
-    &__name{
+
+    &__name {
         font-weight: 700;
         font-style: normal;
     }
@@ -36,6 +36,12 @@
 
     &__text {
         font-size: 16px;
-        line-height: 1.7;
+        line-height: 1.6;
+
+
+        @media (max-width: 576px) {
+            max-width: 334px;
+            width: 100%;
+        }
     }
 }

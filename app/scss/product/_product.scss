@@ -37,7 +37,7 @@
         }
 
         @media (max-width: 768px) {
-            padding-bottom: 18px;
+            padding-bottom: 30px;
         }
     }
 
@@ -53,7 +53,7 @@
         border: 1px solid #c1c1c1;
         border-radius: 4px;
         margin-right: 30px;
-      
+
         &.active {
             max-width: 1700px;
             width: 100%;
@@ -64,11 +64,17 @@
             transform: translate(-50%);
             z-index: 20;
             transition: max-width 0.5s;
-           
-            @media (max-width: 576px) {
-                max-width: 375px;
-                height: 667px;
-                transition: max-width 0.8s;
+
+            @media (max-width: 768px) {
+                height: 100vh;
+                top: 0;
+                border-radius: 0;
+            }
+
+            @media (max-width: 320px),
+            (max-width: 1200px) and (orientation: landscape) {
+                top: 0;
+                height: 100vh;
             }
 
             .product__gallery-btn {
@@ -89,7 +95,7 @@
                     }
                 }
 
-                @media (max-width: 576px) {
+                @media (max-width: 1200px) {
                     display: block;
                     background-color: rgba(255, 255, 255, 0.8)
                 }
@@ -100,15 +106,40 @@
                 position: absolute;
                 top: 38px;
                 right: 38px;
+                z-index: 10;
+
+                @media (max-width: 576px) {
+                    top: 26px;
+                    right: 26px;
+                }
+
+
+                @media (max-width: 320px),
+                (max-width: 1200px) and (orientation: landscape) {
+                    top: 20px;
+                    right: 20px;
+                }
+
             }
 
             .product__gallery-img {
                 width: 750px;
                 height: 750px;
 
+                @media (max-width: 992px) {
+                    width: 500px;
+                    height: 500px;
+                }
+
                 @media (max-width: 576px) {
                     width: 360px;
                     height: 360px;
+                }
+
+                @media (max-width: 320px),
+                (max-width: 1200px) and (orientation: landscape) {
+                    width: 300px;
+                    height: 300px;
                 }
             }
 
@@ -125,6 +156,11 @@
 
                 @media (max-width: 576px) {
                     bottom: 114px;
+                }
+
+                @media (max-width: 320px),
+                (max-width: 1200px) and (orientation: landscape) {
+                    bottom: 20px;
                 }
             }
 
@@ -161,7 +197,7 @@
             top: 60px;
         }
 
-        @media (max-width: 576px){
+        @media (max-width: 576px) {
             top: 90px;
         }
     }
@@ -173,6 +209,7 @@
     }
 
     &__gallery-img {
+
         @media (max-width: 576px) {
             width: 270px;
             height: 270px;
@@ -245,7 +282,7 @@
             background-color: #f3f3f2;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 1200px) {
             display: none;
         }
     }
@@ -261,23 +298,23 @@
 
     &__badges-wrap {
         margin-bottom: 18px;
+
+        @media (max-width: 1200px) {
+            padding-top: 456px;
+        }
+
+        @media (max-width: 576px) {
+            padding-top: 345px;
+        }
+
     }
 
     &__title {
         line-height: 1.2;
+        font-weight: 400;
+        text-transform: none;
+        text-align: left;
         margin-bottom: 18px;
-
-        @media (max-width: 1200px) {
-           padding-bottom: 445px;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 26px;
-            text-align: left;
-            max-width: 345px;
-            width: 100%;
-            padding-bottom: 302px;
-        }
     }
 
     &__info-box {
@@ -296,7 +333,6 @@
         gap: 12px;
 
         @media (max-width: 576px) {
-            margin-bottom: 0;
             margin-bottom: 18px;
         }
     }
@@ -483,8 +519,6 @@
     }
 
     &__props-list {
-        font-size: 16px;
-        line-height: 1.6;
         color: #505050;
     }
 
@@ -493,15 +527,17 @@
     }
 
     &__props-item {
-        display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 2px;
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 1.6;
 
         &:not(:last-child) {
             margin-bottom: 10px;
         }
+
+    }
+
+    &__props-title {
+        margin-right: 2px;
     }
 
     &__tabs-title {
@@ -517,7 +553,7 @@
 
     }
 
-    &__comment-list{
+    &__comment-list {
         margin-bottom: 30px;
     }
 
