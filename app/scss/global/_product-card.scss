@@ -116,6 +116,10 @@
         @media (max-width: 768px) {
             padding: 0 12px;
         }
+
+        @media (max-width: 375px) {
+           flex-wrap: wrap;
+        }
     }
 
     &__link {
@@ -192,9 +196,13 @@
         text-align: left;
         padding: 0 18px;
 
-        @media(max-width:576px) {
+        @media (max-width: 576px) {
             padding: 0 12px;
             max-width: 154px;
+        }
+
+        @media (max-width: 375px) {
+            max-width: 140px;
         }
     }
 
