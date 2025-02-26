@@ -18,6 +18,7 @@
 </head>
 
 
+<body data-lock>
 <header class="header">
     <div class="container">
         <nav class="menu">
@@ -215,11 +216,11 @@
                 &#8372;
             </span>
         </span>
-        <button class="counter-form__btn-basket none" type="button">
+        <button class="counter-form__btn-cart none" type="button">
             <svg class="icon counter-form__icon" width="16" height="16">
                 <use href="images/icon/sprite.svg#cart"></use>
             </svg>
-            добавить в корзину
+            <span class="counter-form__btn-text">добавить в корзину</span>
         </button>
     </form>
     <button class="basket-card__close-btn" type="button">
@@ -263,11 +264,11 @@
                 &#8372;
             </span>
         </span>
-        <button class="counter-form__btn-basket none" type="button">
+        <button class="counter-form__btn-cart none" type="button">
             <svg class="icon counter-form__icon" width="16" height="16">
                 <use href="images/icon/sprite.svg#cart"></use>
             </svg>
-            добавить в корзину
+            <span class="counter-form__btn-text">добавить в корзину</span>
         </button>
     </form>
     <button class="basket-card__close-btn" type="button">
@@ -573,43 +574,45 @@
                     </div>
                     <div class="product__info-top">
                         <div class="product__info-box">
-                            <span class="product__info-number">
-                                Код:
-                                <span class="article-number">
-                                    0111111
+                            <div class="product__info-wrap">
+                                <span class="product__info-number">
+                                    Код:
+                                    <span class="article-number">
+                                        0111111
+                                    </span>
                                 </span>
-                            </span>
-                            <div class="product-star product__product-star">
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 1 звезду из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 2 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 3 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn" type="button">
-                                    <span class="sr-only">оценить товар в 4 звезды из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
-                                <button class="product-star__btn product-star__btn--grey" type="button">
-                                    <span class="sr-only">оценить товар в 5 звезд из 5</span>
-                                    <svg class="icon product-star__icon" width="16" height="16">
-                                        <use href="images/icon/sprite.svg#star"></use>
-                                    </svg>
-                                </button>
+                                <div class="product-star">
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 1 звезду из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 2 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 3 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn" type="button">
+                                        <span class="sr-only">оценить товар в 4 звезды из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-star__btn product-star__btn--grey" type="button">
+                                        <span class="sr-only">оценить товар в 5 звезд из 5</span>
+                                        <svg class="icon product-star__icon" width="16" height="16">
+                                            <use href="images/icon/sprite.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="available">
                                 <span class="available__item available__item--green available__item--big">в
@@ -657,11 +660,11 @@
                                         &#8372;
                                     </span>
                                 </span>
-                                <button class="counter-form__btn-basket" type="button">
+                                <button class="counter-form__btn-cart" type="button">
                                     <svg class="icon counter-form__icon" width="16" height="16">
                                         <use href="images/icon/sprite.svg#cart"></use>
                                     </svg>
-                                    добавить в корзину
+                                    <span class="counter-form__btn-text">добавить в корзину</span>
                                 </button>
                             </form>
                             <button class="button-favorites button-favorites--grey" type="button">
@@ -732,24 +735,24 @@
                     <div class="product__content-item" id="tab-2">
                         <ul class="product__props-list">
                             <li class="product__props-item">
-                                <span class="product__props-title">Вес:</span>
-                                <span class="product__props-text">250-350 г;</span>
+                                    <span class="product__props-title">Вес:</span>
+                                    <span class="product__props-text">250-350 г;</span>
                             </li>
                             <li class="product__props-item">
-                                <span class="product__props-title">Калорийность (на 100г):</span>
-                                <span class="product__props-text">50 ккал;</span>
+                                    <span class="product__props-title">Калорийность (на 100г):</span>
+                                    <span class="product__props-text">50 ккал;</span>
                             </li>
                             <li class="product__props-item">
-                                <span class="product__props-title">Условия хранения:</span>
-                                <span class="product__props-text">температура от +3 до +8;</span>
+                                    <span class="product__props-title">Условия хранения:</span>
+                                    <span class="product__props-text">температура от +3 до +8;</span>
                             </li>
                             <li class="product__props-item">
-                                <span class="product__props-title">Другие названия:</span>
-                                <span class="product__props-text">Драконов фрукт, Глаз дракона;</span>
+                                    <span class="product__props-title">Другие названия:</span>
+                                    <span class="product__props-text">Драконов фрукт, Глаз дракона;</span>
                             </li>
                             <li class="product__props-item">
-                                <h3 class="product__characteristics-title">Страна происхождения: </h3>
-                                <span class="product__characteristics-text">Вьетнам;</span>
+                                    <span class="product__props-title">Страна происхождения:</span>
+                                    <span class="product__props-text">Вьетнам;</span>
                             </li>
                             <li class="product__props-item">
                                 <span class="product__props-title">Срок хранения: </span>
@@ -768,10 +771,10 @@
         <div class="comment__inner">
             <cite class="comment__author">
                 <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
-                <div class="comment__box">
+                <span class="comment__box">
                     <span class="comment__name">Андрей</span>
                     <time class="comment__date" datetime="2021-06-10">10.06.2021</time>
-                </div>
+                </span>
             </cite>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
@@ -818,10 +821,10 @@
         <div class="comment__inner">
             <cite class="comment__author">
                 <img class="comment__img" src="./images/comments/1-1x.jpg" alt="аватарка" width="70" height="70">
-                <div class="comment__box">
+                <span class="comment__box">
                     <span class="comment__name">Екатерина Белая</span>
                     <time class="comment__date" datetime="2021-06-7">7.06.2021</time>
-                </div>
+                </span>
             </cite>
             <div class="product-star">
                 <button class="product-star__btn" type="button">
@@ -926,10 +929,10 @@
                 <use href="images/icon/sprite.svg#checkbox"></use>
             </svg>
         </span>
-        <p class="feedback-form__text">
+        <span class="feedback-form__text">
             Сохранить моё имя, email и адрес сайта в этом браузере
             для последующих моих комментариев.
-        </p>
+        </span>
     </label>
     <button class="button feedback-form__button" type="submit">Оставить отзыв</button>
 </form>
@@ -939,7 +942,7 @@
         </div>
     </section>
     <section class="offers">
-        <div class="container offers__container">
+        <div class="container">
             <div class="offers__top">
                 <h2 class="title offers__title">
                     вас может заинтересовать
@@ -959,7 +962,7 @@
                     </button>
                 </div>
             </div>
-            <div class="offers__wrapper swiper4 mySwiper4 ">
+            <div class="offers__wrapper mySwiper4 ">
                 <div class="offers__swiper-wrapper swiper-wrapper">
                     <div class="offers__swiper-slide  swiper-slide">
                         <article class="product-card">
@@ -1448,11 +1451,11 @@
 </article>
                     </div>
                 </div>
+                <div class="swiper-pagination offers__swiper-pagination"></div>
             </div>
         </div>
     </section>
 </main>
-
 <footer class="footer">
     <div class="container">
         <h2 class="sr-only">Дополнительная информация</h2>
@@ -1576,3 +1579,6 @@
 </footer>
 <script src="js/main.min.js"></script>
 
+
+</body>
+</html>

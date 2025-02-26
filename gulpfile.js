@@ -69,7 +69,6 @@ function scripts() {
         'node_modules/swiper/swiper-bundle.js',
         'node_modules/mixitup/dist/mixitup.min.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'app/js/**/*.js',
         '!app/js/main.min.js'
     ])

@@ -5,6 +5,7 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: $bg;
     color: $default;
+    overflow-x: hidden;
 
     &.lock {
         overflow: hidden;
@@ -317,6 +318,7 @@ body {
         align-items: center;
         border-radius: 3px;
         color: #FFB800;
+        position: relative;
         transition: color 0.5s, outline 0.5s, opacity 0.5s;
 
         &--grey {
@@ -333,6 +335,13 @@ body {
 
         &:active {
             opacity: 0.50;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 44px;
         }
     }
 }
